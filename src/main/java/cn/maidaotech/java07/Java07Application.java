@@ -8,7 +8,7 @@ public class Java07Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Java07Application.class, args);
-		System.out.println("testsetsets");
+		System.out.println("testssetsets");
 	}
 
 }
