@@ -9,5 +9,6 @@ public class NumberTest {
         System.out.println("byte最小值：" + Byte.MIN_VALUE);
         System.out.println("byte最大值：" + Byte.MAX_VALUE);
         //short和long跟byte相似
+        //测试
     }
 }
