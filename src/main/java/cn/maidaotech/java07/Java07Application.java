@@ -8,9 +8,7 @@ public class Java07Application {
 
 	public static void main(String[] args) {
 		System.out.println("修改测试");
-		System.out.println("暂存至栈测试");
 		SpringApplication.run(Java07Application.class, args);
 	}
 
 }
-‘’                                                                                                                    
