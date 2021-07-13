@@ -8,6 +8,7 @@ public class Java07Application {
 
 	public static void main(String[] args) {
 		//yumengmengg
+		System.out.println("llll");
 		SpringApplication.run(Java07Application.class, args);
 	}
 
