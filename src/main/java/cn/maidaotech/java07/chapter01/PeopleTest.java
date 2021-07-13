@@ -1,6 +1,6 @@
 package cn.maidaotech.java07.chapter01;
 
-public class people {
+public class PeopleTest {
     private String name;
 
     public String getName() {
