@@ -8,7 +8,7 @@ public class Java07Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Java07Application.class, args);
-		//git@gitee.com:dawnlizhenwei/dawn.git
+		//git@git.maidaotech.cn:dawn/dawn.git
 	}
 
 }
