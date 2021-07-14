@@ -1,10 +1,17 @@
 package cn.maidaotech.java07.chapter02;
-
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Scanner;
 public class Exercise {
-
     
-public static void main(String[] args) {
-    String str1 = "hello";
-    String str2 = new String("hello");
-    System.out.println(str1==str2);
+public static void main(String[] args)  {
+   
 }}
+
+
+
+
+
+       
+    
+
