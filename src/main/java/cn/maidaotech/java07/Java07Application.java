@@ -1,16 +1,18 @@
 package cn.maidaotech.java07;
 
+import java.util.Calendar;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import cn.maidaotech.java07.dawn.HelloWorld;
 
 @SpringBootApplication
 public class Java07Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Java07Application.class, args);
-		HelloWorld.seyHi();
+		Calendar calendar= Calendar.getInstance();
+		System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
 	}
 
 }
