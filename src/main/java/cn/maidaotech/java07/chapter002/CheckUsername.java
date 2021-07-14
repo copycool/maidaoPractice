@@ -46,16 +46,16 @@ public class CheckUsername {
         return true;
     }
 //正则表达式的检查方法
-//     private static boolean CheckUsername(String username) {
-//         Pattern Username_Pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-zA-Z])(.{8,20})$");
-//         Matcher matcher = Username_Pattern.matcher(username);
-//         Pattern firstPattern = Pattern.compile("[A-Z]*");
-//         Matcher isBiger = firstPattern.matcher(username.charAt(0)+"");
-//         if (matcher.matches() && isBiger.matches()) {
-//             return true;
-//         }
-//         return false;
-//    }
+    private static boolean CheckUsername(String username) {
+        Pattern Username_Pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-zA-Z])(.{8,20})$");
+        Matcher matcher = Username_Pattern.matcher(username);
+        Pattern firstPattern = Pattern.compile("[A-Z]*");
+        Matcher isBiger = firstPattern.matcher(username.charAt(0)+"");
+        if (matcher.matches() && isBiger.matches()) {
+            return true;
+        }
+        return false;
+   }
    public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
        System.out.println("请输入用户名：");
