@@ -23,7 +23,7 @@ public class CheckPhone {
        }
 
        //第二位是否为数字3、5、6、7、8、9。
-       if (Integer.parseInt(phone.charAt(1)+"") % 2 == 0 || phone.charAt(1) == '1') {
+       if ("356789".contains(phone.charAt(1)+"")) {
            System.out.println("第二位不是数字3、5、6、7、8、9");
            return false;
        }

@@ -73,7 +73,7 @@ public class CheckID {
         return false;
     }
 
-    //TODO: 我想要起一个好名字，在明天之前
+    //验证公式
     public static boolean handleFormula(String id){
         //反转字符串
         StringBuilder reverseId = new StringBuilder(id).reverse();
