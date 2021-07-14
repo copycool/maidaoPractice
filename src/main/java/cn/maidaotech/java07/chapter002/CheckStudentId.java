@@ -1,10 +1,24 @@
 package cn.maidaotech.java07.chapter002;
 
+import java.util.Scanner;
+
 public class CheckStudentId {
     public static void main(String[] args) {
-        System.out.println(""+getYear(20190112));
-        System.out.println(""+getIssue(20190112));
-        System.out.println(""+getNumber(20190112));
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入学号：XXXXXXXX(8位)");
+        int Id = sc.nextInt();
+        System.out.println("入学年份为："+getYear(Id));
+        if ((Id % 10000 / 100) < 10) {
+            System.out.println("期数为：0"+getIssue(Id));
+        }else{
+            System.out.println("期数为："+getIssue(Id));
+        }
+        if ((Id % 100) < 10) {
+            System.out.println("序号为：0"+getNumber(Id));
+        }else{
+            System.out.println("序号为："+getNumber(Id));
+        }
+       
 
     }
     private static Integer getYear(Integer Id){
