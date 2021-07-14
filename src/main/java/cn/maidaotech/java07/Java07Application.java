@@ -18,13 +18,11 @@ public class Java07Application {
         System.out.println(newString); 
     } 
 
-public static void main(String args[]) {
-   zhl("abcd");
     
 
   }
     
-}   
+   
 	
 
 	
