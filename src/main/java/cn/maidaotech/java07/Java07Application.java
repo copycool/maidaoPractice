@@ -1,15 +1,8 @@
 package cn.maidaotech.java07;
 
-import java.time.Year;
 import java.util.Scanner;
-import java.util.regex.Pattern;
-
-import javax.management.InstanceAlreadyExistsException;
-
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cglib.beans.BulkBean;
 
 @SpringBootApplication
 public class Java07Application {
