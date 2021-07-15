@@ -75,7 +75,11 @@ public class CheckEmail {
         }
         return true;
     }
-
+   /** 
+    *int index = host.indexOf(".");
+    *index > 0 && index < host.length() - 1
+    *上述判断条件在判断‘qq.com.’时会时index提前赋值为2导致不能检测最后一位是‘.’
+    */ 
     private static char[] separateString(String str) {
         char[] character = new char[str.length()];
         for (int i = 0; i < str.length(); i++) {
