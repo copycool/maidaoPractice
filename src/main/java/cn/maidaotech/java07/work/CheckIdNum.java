@@ -104,13 +104,6 @@ public class CheckIdNum {
         for (int i = 1; i <= idNum.length(); i++) {
             sum += Integer.parseInt(arr[i]) * arr.length - i;
         }
-
         return true;
-    }
-}
-
-class a {
-    public static void main(String[] args) {
-        System.out.println(Integer.parseInt("123"));
     }
 }

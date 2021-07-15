@@ -18,6 +18,9 @@ public class DaffodilNumber {
 
     /**
      * 查看指定数值是否是水仙花数
+     * 
+     * @param daffodilNum 被检验的数值
+     * @return 水仙花数为：true 不是水仙花数返回false
      */
     private static boolean check(int daffodilNum) {
 
@@ -28,7 +31,7 @@ public class DaffodilNumber {
         int s = daffodilNum % 100 / 10;
         int b = daffodilNum / 100;
 
-        if ((g * g * g) + (s * s * s) + (b * b * b) != daffodilNum) {
+        if ((g * g * g) + (s * s * s) + (b * b * b) == daffodilNum) {
             return true;
         } else {
             return false;

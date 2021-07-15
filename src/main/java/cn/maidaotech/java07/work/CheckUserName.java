@@ -1,42 +1,36 @@
 package cn.maidaotech.java07.work;
 
-import java.util.regex.Pattern;
+import cn.maidaotech.java07.util.StringUtils;
 
 public class CheckUserName {
     public static void main(String[] args) {
-        String userName = "";
-        boolean res = check(userName);
-        if(res){
-            System.out.println("Success");
-        }else{
-            System.out.println("Error");
-        }
+        System.out.println(check("Agdhs123"));
+        System.out.println(check("a12314"));
+        System.out.println(check("gfugfyuguygyu"));
+        System.out.println(check("1dasfafa"));
+        System.out.println(check("Djh456546"));
     }
 
-    /**
-     * 检测用户名是否合法该方法内规则如下： 1. 长度 8 到 20 个字符 2. 只能英文、数字、下划线 3. 必须以字母开头
-     * 
-     * @param userName 用户名
-     * @return boolean类型的值，符合规则返回`true` 不符合规则为`false`
-     */
     public static boolean check(String userName) {
         if (userName == null) {
             return false;
         }
-        int len = userName.length();
-        if (len < 8 || len > 20) {
+
+        if (userName.length() < 8 || userName.length() > 20) {
             return false;
         }
-        String rule = "^['a'-'z''A'-'Z']\s$";
-        boolean isMatch = Pattern.matches(rule, userName);
-        if (!isMatch) {
-            return false;
+
+        for (int i = 0; i < userName.length(); i++) {
+            char item = userName.charAt(i);
+
+            if (i == 0 && !StringUtils.isUppperCase(item)) {
+                return false;
+            }
+            if (!(StringUtils.isAlphaNumber(item) || StringUtils. isEnglish(item))) {
+                return false;
+            }
+
         }
-        String secial = "[`~!@#$%^&*()+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？\\\\]";
-        boolean isSecial = Pattern.matches(secial, userName);
-        if (isSecial) {
-            return true;
-        }
-        return false;
+        return true;
     }
 }
