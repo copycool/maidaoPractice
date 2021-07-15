@@ -15,7 +15,7 @@ public class Sudoku {
             for (int k = 0; k < 9; k++) {
                 StringBuilder stringBuilder = new StringBuilder();
                 for (int t = 0; t < 9; t++) {
-                    stringBuilder.append(matrix[k][t]);
+                    stringBuilder.append(matrix[k][t] + "   ");
                 }
                 System.out.println(stringBuilder.toString());
             }
