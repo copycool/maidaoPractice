@@ -4,19 +4,17 @@ import java.util.Scanner;
 
 public class StuentNumber {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); {
-		System.out.println("请输入您的学号:");
-		String sid = sc.next();
+        System.out.println("请输入8位学号：");
+        Scanner num = new Scanner(System.in);
+        int num1 = num.nextInt();
+		num.close();
+        int num2 = num1/10000;
+        System.out.println(num2+"年");
 
-		int num = Integer.valueOf(sid).intValue();
-		int year = num / 10000;
-		int period = num / 100 % 100;
-		int id = num % 100;
+        int num3 = (num1/100)%100;
+        System.out.println(num3+"期");
 
-		System.out.println("年份" + year);
-		System.out.println("期数" + period);
-		System.out.println("序号" + id);
-    }
-    }
-    
+        int num4 = num1%100;
+        System.out.println(num4+"号");
+	}
 }

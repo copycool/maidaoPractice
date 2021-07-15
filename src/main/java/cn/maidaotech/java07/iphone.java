@@ -14,7 +14,7 @@ public class iphone {
         } else {
             System.out.println("非法输入");
         }
-        book.close();
+        Sca.close();
     }
 
     public static boolean validateMobile(String mobil) {
