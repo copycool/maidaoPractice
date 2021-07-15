@@ -1,12 +1,9 @@
 package cn.maidaotech.java07.chapter02;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
 
 public class Emaile {
-    private static final Pattern EMAIL_CHECKER = Pattern
-            .compile("^([a-z0-9A-Z]+[-|\\._]?)+@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$");
-
     public static void main(String[] args) {
         System.out.println(checkEmail("Like2020@maidaotech.cn"));
         System.out.println(checkEmail("Li_ke@maidaotech.cn"));
