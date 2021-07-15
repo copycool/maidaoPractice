@@ -1,7 +1,7 @@
 package cn.maidaotech.java07.utitls;
 
 public class StringUnitls {
-    
+
     public static boolean isEmpty(String str) {
         return str == null || str.length() == 0;
     }
