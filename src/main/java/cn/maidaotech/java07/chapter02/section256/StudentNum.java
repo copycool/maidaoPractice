@@ -12,9 +12,9 @@ public class StudentNum {
 		String sid = sc.next();
 
 		int num = Integer.valueOf(sid).intValue();//字符串转整形
-		int year = num / 10000;
-		int period = num / 100 % 100;
-		int id = num % 100;
+		int year = num / 10000;        //取商数
+		int period = num / 100 % 100;  
+		int id = num % 100;            //除一百除不尽剩余数
 
 		System.out.println("年份" + year);
 		System.out.println("期数" + period);

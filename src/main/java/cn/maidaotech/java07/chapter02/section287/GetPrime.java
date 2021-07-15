@@ -5,11 +5,11 @@ package cn.maidaotech.java07.chapter02.section287;
 public class GetPrime {
     public static void main(String[] args) {
         int count=0;   
-        for (int i = 101; i <200 ; i++) {
-            for (int j = 2; j <i ; j++) {
-                if(i%j==0){
+        for (int i = 101; i <200 ; i++) {      //需要判断的数
+            for (int j = 2; j <=i ; j++) {      //判断没有因数
+                if(i%j==0){     //不是素数，判断下一个
                     break;
-                }else if(j==i-1){ 
+                }else if(j==i-1){   //已经试了从2到self-1的所有数，都不是因数，self是素数
                     count++;
                     System.out.println("101-200中第"+count+"个素数为"+i);
                 }
