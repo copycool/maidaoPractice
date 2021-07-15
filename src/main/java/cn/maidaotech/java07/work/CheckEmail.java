@@ -18,7 +18,7 @@ public class CheckEmail {
     public static boolean checkEmailIsTrue(String email){
 
         //判断email是不是null、""
-        if (email == null || email == "") {
+        if (email == null || email == "" || !email.contains("@")) {
             System.out.println("输入的参数有误，请重新输入！！！");
             return false;
         }
