@@ -5,7 +5,7 @@ public class Diamond {
         int i;
         int k;
         int j;
-        int n=5;
+        int n=10;
         for (i = 1; i <= n; i++)// i是从上往下数的行数
         {
             k = n - i;// 每次输出的空格数k应该是n-i个

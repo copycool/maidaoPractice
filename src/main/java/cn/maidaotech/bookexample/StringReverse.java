@@ -11,7 +11,6 @@ public class StringReverse {
         StringBuffer strreverse = new StringBuffer(str);
         str = strreverse.reverse().toString();
         System.out.println(str);
-
         //注释部分为老方法，非注释部分为调用stringbuffer实现反转
         // char[] strlist= str.toCharArray();
         // for (int i = str.length()-1; i >= 0; i--) {
