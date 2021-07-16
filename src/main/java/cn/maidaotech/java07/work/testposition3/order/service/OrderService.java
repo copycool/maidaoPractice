@@ -19,6 +19,10 @@ public class OrderService implements OrderServiceInterface{
      */
     public Order createOrder(Integer accountId, Integer productId,Integer quantity){
         
+        if (quantity <= 0) {
+            throw new RuntimeException("购买数量有误，请重新输入");
+        }
+
         //判断商品是否存在
         if (!TestData.checkProductIsExist(productId)) {
             throw new RuntimeException("该商品不存在，商品id为："+productId);
@@ -49,6 +53,7 @@ public class OrderService implements OrderServiceInterface{
         order.setStatus(1);
         order.setPaymentTime(new Date());
         order.setCloseTime(new Date());
+        System.out.println("创建订单信息为：");
         return order;
     }
     

@@ -1,7 +1,6 @@
 package cn.maidaotech.java07.work.testposition3.order.model;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import cn.maidaotech.java07.work.testposition3.order.data.TestData;
@@ -20,7 +19,6 @@ public class Order {
 
     private Integer status;          //订单状态  0--未支付   1--支付
 
-    
     private Date paymentTime;
 
     private Date closeTime;

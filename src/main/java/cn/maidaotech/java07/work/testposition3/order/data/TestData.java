@@ -63,8 +63,11 @@ public class TestData {
                 break;
             }   
         }
-        
         return flag;
+    }
+
+    public static List<Account> getAccountList(){
+        return accountList;
     }
 
 
@@ -178,12 +181,12 @@ public class TestData {
           account.setBalance(BigDecimal.valueOf(1000000));
           account.setAddress("河南省周口市太康县");
           Account account2 = new Account();
-          account.setAccountId(2);
-          account.setUsername("李四");
-          account.setPhone("13253776298");
-          account.setEmail("1615702594@qq.com");
-          account.setBalance(BigDecimal.valueOf(100000));
-          account.setAddress("河南省周口市常营镇");
+          account2.setAccountId(2);
+          account2.setUsername("李四");
+          account2.setPhone("13253776298");
+          account2.setEmail("1615702594@qq.com");
+          account2.setBalance(BigDecimal.valueOf(100000));
+          account2.setAddress("河南省周口市常营镇");
           accountList.add(account);
           accountList.add(account2);
     }
