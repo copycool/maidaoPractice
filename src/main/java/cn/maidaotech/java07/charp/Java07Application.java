@@ -1,4 +1,4 @@
-package cn.maidaotech.java07;
+package cn.maidaotech.java07.charp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

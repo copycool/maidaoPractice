@@ -1,5 +1,5 @@
-package cn.maidaotech.java07;
-
+package cn.maidaotech.java07.charp;
+//反转字符串
 public class rotation {
     public static void main(String[] args) {
         String[] s = "Hello Word Java".split(" ");

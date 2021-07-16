@@ -1,5 +1,5 @@
 package cn.maidaotech.java07.chapter02;
-
+//数独
 import java.util.Arrays;
 
 public class ShuduSimple {

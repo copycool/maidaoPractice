@@ -1,5 +1,5 @@
-package cn.maidaotech.java07;
-
+package cn.maidaotech.java07.charp;
+//验证学号
 import java.util.Scanner;
 
 public class StuentNumber {

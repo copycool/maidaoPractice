@@ -1,6 +1,6 @@
-package cn.maidaotech.java07;
-
-public class xin {
+package cn.maidaotech.java07.charp;
+//正方形
+public class Square {
     public static void main(String[] args) {
         printHollowSquare(10);
         System.out.println("｜==我是一条分割线==｜");

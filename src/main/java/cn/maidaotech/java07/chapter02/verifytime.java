@@ -3,7 +3,7 @@ package cn.maidaotech.java07.chapter02;
 import java.util.Calendar;
 import java.util.Date;
 
-public class time {
+public class verifytime {
 
     private static final long MILLISECOND_OF_DAY = 24 * 60 * 60 * 1000;
 

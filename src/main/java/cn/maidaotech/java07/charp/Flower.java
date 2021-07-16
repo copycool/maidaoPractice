@@ -1,5 +1,5 @@
-package cn.maidaotech.java07;
-
+package cn.maidaotech.java07.charp;
+//水仙花数
 public class Flower {
     public static void main(String[] args) {
         for (int i = 100; i < 1000; i++) {

@@ -1,5 +1,5 @@
-package cn.maidaotech.java07;
-
+package cn.maidaotech.java07.charp;
+//替换字符
 public class replace {
     public static void main(String[] args) {
         String str = "I follow Bill Gate Tome Gate Join Gate";

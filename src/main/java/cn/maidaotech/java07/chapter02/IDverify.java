@@ -2,9 +2,9 @@ package cn.maidaotech.java07.chapter02;
 
 import java.util.regex.Pattern;
 
+        //验证身份证
 
-
-public class IdentityUtils {
+public class IDverify {
     private static final Pattern IDENTITY_CHECKER = Pattern
             .compile("^[1-9]\\d{5}(19|20)\\d{2}((0[1-9])|10|11|12)(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]");
 
