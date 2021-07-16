@@ -1,4 +1,4 @@
-package cn.maidaotech.chapter03;
+package cn.maidaotech.chapter03.example;
 
 public class Address {
     private String country;
@@ -6,20 +6,7 @@ public class Address {
     private String city;
     private String block;
     private Integer postNumber;
-    public static void main(String[] args) {
-        Address address1 = new Address();
-        address1.setCountry("漂亮国");
-        address1.setProvince("add州");
-        address1.setCity("洛杉矶");
-        address1.setBlock("唐人街");
-        address1.setPostNumber(123);
-        System.out.println(address1.getCountry());
-        System.out.println(address1.getProvince());
-        System.out.println(address1.getCity());
-        System.out.println(address1.getBlock());
-        System.out.println(address1.getPostNumber());
-    }
-    
+
     public String getCountry() {
         return country;
     }
@@ -59,5 +46,21 @@ public class Address {
     public void setPostNumber(Integer postNumber) {
         this.postNumber = postNumber;
     }
-    
+
+    public String addressMessage() {
+        return "国家是" + this.country + "，省份是" + this.province + "，城市是" + this.city + "，街道是" + this.block + "，邮编是"
+                + this.postNumber;
+    }
+
+    public Address() {
+    }
+
+    public Address(String country, String province, String city, String block, Integer postNumber) {
+        this.country = country;
+        this.province = province;
+        this.city = city;
+        this.block = block;
+        this.postNumber = postNumber;
+    }
+
 }

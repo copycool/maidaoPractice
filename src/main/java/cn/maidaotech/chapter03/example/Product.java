@@ -1,4 +1,4 @@
-package cn.maidaotech.chapter03;
+package cn.maidaotech.chapter03.example;
 
 public class Product {
     private String name;
