@@ -7,7 +7,7 @@ public class OrderAction {
     public static void main(String[] args) {
         OrderService orderService  = new OrderService();
 
-        Order order =  orderService.createOrder(1, 1, 40);
+        Order order =  orderService.createOrder(1, 323, 40);
 
         System.out.println(order.toString());;
     }

@@ -43,6 +43,12 @@ public class TestData {
         creactAccountInfo();
     }
 
+    //添加账户信息
+    public static boolean insertAccount(Account account){
+        accountList.add(account);
+        return true;
+    }
+
     //获取账户信息
     public static Account getAccountById(Integer accountId){
         return accountList.get(accountId-1);
@@ -50,10 +56,14 @@ public class TestData {
 
     //判断账户信息是否存在
     public static boolean checkAccountIsExist(Integer accountId){
-        if (accountId != 1 && accountId !=2) {
-            return false;
+        boolean flag = false;
+        for (Account accountObj : accountList) {
+            if (accountObj.getAccountId() == accountId) {
+                flag = true;
+                break;
+            }   
         }
-        return true;
+        return flag;
     }
 
 
@@ -102,16 +112,6 @@ public class TestData {
         return order;
     }
 
-
-    public static void main(String[] args) {
-        List<Product> list2  = list;
-        for (Product product : list2) {
-            System.out.println(product.toString());
-        }
-        //System.out.println(getProductById(2).toString());
-    }
-
-
     //添加商品
     public static boolean insertProduct(Product product){
         list.add(product);
@@ -125,24 +125,35 @@ public class TestData {
 
     //根据指定id获取商品
     public static Product getProductById(Integer productId){
-        if (list.size()<productId) {
+        Product product = null;
+        for (Product productObj : list) {
+            if (productObj.getId() == productId) {
+                product = productObj;
+                break;
+            }
+        }
+        if (product == null) {
             throw new RuntimeException("商品不存在");
         }
-        return list.get(productId-1);
+        return product;
     }
 
     //判断商品是否存在
     public static boolean checkProductIsExist(Integer id){
-        if (id>list.size()) {
-            return false;
+        boolean flag = false;
+        for (Product product : list) {
+            if (product.getId() == id) {
+                flag = true;
+                break;
+            }
         }
-        return true;
+        return flag;
     }
 
     //判断商品库存是否充足
     public static boolean checkStockIsEnough(Integer productId,Integer quantity){
         //获取该商品
-        Product product = list.get(productId);
+        Product product = getProductById(productId);
         //判断库存是否充足
         if (product.getStock() < quantity) {
             return false;
