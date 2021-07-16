@@ -45,4 +45,10 @@ public class Dog {
     public String dogMessage() {
         return "狗狗的名字是" + this.name + "，狗狗的颜色是" + this.color + "，狗狗的年龄是" + this.age;
     }
+
+    @Override
+    public String toString() {
+        return "Dog [age=" + age + ", color=" + color + ", name=" + name + "]";
+    }
+
 }

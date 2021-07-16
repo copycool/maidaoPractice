@@ -10,8 +10,10 @@ public class AddressTest {
         address1.setCity("洛杉矶");
         address1.setBlock("唐人街");
         address1.setPostNumber(123);
-        Address address2 = new Address("中国","山东","菏泽曹县","牛*",666);
-        System.out.println(address1.addressMessage());
-        System.out.println(address2.addressMessage());
+        Address address2 = new Address("中国", "山东", "菏泽曹县", "牛*", 666);
+        //System.out.println(address1.addressMessage());
+        //System.out.println(address2.addressMessage());
+        System.out.println(address1.toString());
+        System.out.println(address2.toString());
     }
 }

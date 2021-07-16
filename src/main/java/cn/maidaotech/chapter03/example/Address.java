@@ -7,6 +7,17 @@ public class Address {
     private String block;
     private Integer postNumber;
 
+    public Address() {
+    }
+
+    public Address(String country, String province, String city, String block, Integer postNumber) {
+        this.country = country;
+        this.province = province;
+        this.city = city;
+        this.block = block;
+        this.postNumber = postNumber;
+    }
+
     public String getCountry() {
         return country;
     }
@@ -52,15 +63,10 @@ public class Address {
                 + this.postNumber;
     }
 
-    public Address() {
-    }
-
-    public Address(String country, String province, String city, String block, Integer postNumber) {
-        this.country = country;
-        this.province = province;
-        this.city = city;
-        this.block = block;
-        this.postNumber = postNumber;
+    @Override
+    public String toString() {
+        return "Address [block=" + block + ", city=" + city + ", country=" + country + ", postNumber=" + postNumber
+                + ", province=" + province + "]";
     }
 
 }
