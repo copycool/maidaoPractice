@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.work;
+package cn.maidaotech.java07.work.testposition02;
 
 public class CheckPhone {
     
