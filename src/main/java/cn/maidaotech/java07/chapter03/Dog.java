@@ -13,6 +13,7 @@ public class Dog {
         this.color = color;
         this.age = age;
     }
+   
     public static void outPut(Dog dog) {
         System.out.println("名字："+dog.name);
         System.out.println("颜色："+dog.color);

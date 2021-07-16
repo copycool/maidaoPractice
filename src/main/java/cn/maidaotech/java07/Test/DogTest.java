@@ -1,4 +1,4 @@
-package cn.Test;
+package cn.maidaotech.java07.Test;
 
 import cn.maidaotech.java07.chapter03.Dog;
 
