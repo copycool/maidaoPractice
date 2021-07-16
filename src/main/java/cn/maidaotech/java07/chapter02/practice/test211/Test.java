@@ -13,7 +13,6 @@ public class Test {
             System.out.println(PhoneNumValid.valid("15517509252")); // true
         }
     }
-
     static class EmailTest {
         public static void main(String[] args) {
             System.out.println(EmailValid.valid("e1-mail@xx.x")); // 1. false
@@ -24,7 +23,6 @@ public class Test {
             System.out.println(EmailValid.valid("e1_mail@xx.x")); // 6.true
         }
     }
-
     static class IdTest {
         public static void main(String[] args) {
             System.out.println(IdValid.valid("411327199812060311"));
