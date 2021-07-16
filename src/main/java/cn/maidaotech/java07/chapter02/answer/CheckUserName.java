@@ -8,7 +8,7 @@ public class CheckUserName {
     private final static String ALL_UPPER_CASE="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
-    }
+    
     public static boolean check(String username){
         if(username==null){
             return false;
