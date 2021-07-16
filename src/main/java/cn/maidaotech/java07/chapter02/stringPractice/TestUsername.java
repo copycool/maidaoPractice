@@ -1,38 +1,55 @@
 package cn.maidaotech.java07.chapter02.stringPractice;
 
-import java.util.Scanner;
 
 public class TestUsername {
     public static void main(String[] args) {
-        int i = judgeUsername("Abfd12312");
-        if (i ==0){
-            System.out.println("不合法");
-        }
-        if (i ==1){
-            System.out.println("合法");
-        }
+        System.out.println(check("Agdhs123"));
+        System.out.println(check("a12314"));
+        System.out.println(check("gfugfyuguygyu"));
+        System.out.println(check("1dasfafa"));
+        System.out.println(check("Djh456546"));
     }
 
-    private static int judgeUsername(String username) {
-
-        if (username.length() >= 8 && username.length() <= 20){
-            if (username.charAt(0)>= 'A' &&username.charAt(0) <= 'Z'){
-                    if (username.contains(username)) {
-
-                        return 1;
-                    } else {
-                        System.out.println("用户名包含非数字或者字母！");
-                    }
-            }else {
-                System.out.println("首字母没有大写！");
+    public static boolean check(String username){
+        if(username == null){
+            return false;
+        }
+        if(username.length()<8||username.length()>20){
+            return false;
+        }
+        for (int i = 0; i < username.length(); i++) {
+            char c = username.charAt(i);
+            if(i == 0 && !isUpperCase(c)){
+                return false;
             }
+            if(isNum(c)||isLowerCase(c)||isNum(c)){
+                return true;
+            }
+            return false;
 
-        }else {
-            System.out.println("用户名小于8或者大于20");
         }
+        return true;
 
-        return 0;
     }
-
-
+    private static boolean isUpperCase(char c){
+        if(c>='A'&& c<='Z'){
+            return true;
+        }
+        // if(str.indexOf(c) != -1){
+        //     return true;
+        // }
+        return false;
+    }
+    private static boolean isLowerCase(char c){
+        if(c>='a'&&c<='z'){
+            return true;
+        }
+        return false;
+    }
+    private static boolean isNum(char c){
+        if(c<'0'&&c>'9'){
+            return false;
+        }
+        return true;
+    }
 }

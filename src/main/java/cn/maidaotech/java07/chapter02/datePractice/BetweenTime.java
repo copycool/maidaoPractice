@@ -3,7 +3,6 @@ package cn.maidaotech.java07.chapter02.datePractice;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
 
 //计算两个Date类型对象之间相隔的天数
 public class BetweenTime {

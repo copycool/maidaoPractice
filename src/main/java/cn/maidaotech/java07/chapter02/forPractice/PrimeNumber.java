@@ -11,7 +11,7 @@ public class PrimeNumber {
     }
 
     static void prime(Integer num) {
-        for (int j = 2;j < num;j++){
+        for (int j = 2;j < num;j++) {
             if (num%j == 0){
                 break;
             }else {

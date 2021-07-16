@@ -11,6 +11,7 @@ public class LingXing {
         Scanner scanner = new Scanner(System.in);
         //行数
         int i = scanner.nextInt();
+        scanner.close();
         for (int j = 0; j < i; j++) {
             //  空白
             for (int k = 0; k < Math.abs(i / 2 - j); k++) {

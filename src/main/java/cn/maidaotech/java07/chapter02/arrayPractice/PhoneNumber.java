@@ -12,12 +12,22 @@ public class PhoneNumber {
         }else {
             System.out.println("错误格式");
         }
+        num.close();
     }
 
     private static int judgementPhoneNum(String num) {
         char c = num.charAt(1);
         char c1 = num.charAt(0);
-        if (num.length()>0&&num.length()<=11&&c1=='1'){
+        char[] char1 = num.toCharArray();
+        if(char1.length<0||char1.length>11){
+            return 0;
+        }
+        for (char d : char1) {
+            if(d<'0'||d>'9'){
+                return 0;
+            }
+        }
+        if (c1=='1'){
             if (c=='3'||c=='5'||c=='6'||c=='7'||c=='8'||c=='9'){
 
                 return 1;

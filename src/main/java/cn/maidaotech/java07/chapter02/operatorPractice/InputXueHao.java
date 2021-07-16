@@ -7,6 +7,7 @@ public class InputXueHao {
         System.out.println("请输入8位学号：");
         Scanner num = new Scanner(System.in);
         int num1 = num.nextInt();
+        num.close();
 
         int num2 = num1/10000;
         System.out.println(num2+"年");
