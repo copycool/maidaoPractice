@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter002;
+package cn.maidaotech.java07.chapter02;
 
 import java.util.Scanner;
 
@@ -34,14 +34,14 @@ public class CheckPhoneNumber {
         
     } 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("请输入手机号：");
-        String phoneNumber = sc.nextLine();
+        // Scanner sc = new Scanner(System.in);
+        // System.out.println("请输入手机号：");
+        // String phoneNumber = sc.nextLine();
        
-        if (checkPhoneNumber(phoneNumber)) {
-            System.out.println("手机号："+phoneNumber+"合法");
+        if (checkPhoneNumber("13545678999")) {
+            System.out.println("手机号："+"13545678999"+"合法");
         }else{
-            System.out.println("手机号："+phoneNumber+"不合法");
+            System.out.println("手机号："+"13545678999"+"不合法");
         }
         
     }

@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter002;
+package cn.maidaotech.java07.chapter02;
 
 import cn.maidaotech.java07.utitls.StringUnitls;
 

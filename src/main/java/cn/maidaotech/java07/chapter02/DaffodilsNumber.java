@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter002;
+package cn.maidaotech.java07.chapter02;
 
 public class DaffodilsNumber {
     public static void main(String[] args) {
