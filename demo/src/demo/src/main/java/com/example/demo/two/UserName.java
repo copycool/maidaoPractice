@@ -1,12 +1,9 @@
-package com.example.demo;
+package com.example.demo.two;
 
-import javax.swing.Spring;
-
-import org.apache.tomcat.util.buf.Ascii;
+import com.example.demo.StringUntil;
 
 public class UserName {
     public static void main(String[] args) {
-     
         System.out.println(check("zhangsan1234"));
         System.out.println(check("zhangsa*n1234"));
     }
@@ -18,16 +15,16 @@ public class UserName {
         if (userName.length() <8) {
             return false;
         }
-        if (userName.length() >11) {
+        if (userName.length() >11) {  
             return false;
         }
 
         for (int i = 0; i < userName.length(); i++) {
             char c = userName.charAt(i);
-            if(i==0 && !isAlpha(c)){
+            if(i==0 && !StringUntil.isAlpha(c)){
                 return false;
             }
-            if(!isAlpahNumber(c)){
+            if(!StringUntil.isNumber(c)){
                 return false;
             }
         }
@@ -35,11 +32,6 @@ public class UserName {
 
     }
 
-    private static boolean isAlpha(char c){
-
-    }
-
-    private static boolean isAlpahNumber(char c){
-
-    }
+   
+    
 }

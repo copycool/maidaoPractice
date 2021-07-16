@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.two;
 
 public class Flowers {
     public static void main(String[] args){
