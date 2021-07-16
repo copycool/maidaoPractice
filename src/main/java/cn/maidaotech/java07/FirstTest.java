@@ -1,6 +1,7 @@
 package cn.maidaotech.java07;
 
 
+import java.lang.reflect.Type;
 import java.util.Scanner;
 //从键盘输入学生学号，例如2019年01期12号，输入20190112，使用“/”和“%”运算符分解学号获得年份、期数和序号，并分别输出。
 public class FirstTest{
@@ -18,7 +19,7 @@ public class FirstTest{
             System.out.println("学号: " + s4);
                                 
 //判断某一年是否为闰年。
-   checkYearIsLeap(2000);
+        checkYearIsLeap(2000);
 		checkYearIsLeap(1999);
 	}
 	public static void checkYearIsLeap(int year){

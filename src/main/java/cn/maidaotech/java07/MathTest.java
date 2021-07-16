@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MathTest {
   
 public static void main(String[] args){
+    
 // 字符替换 
 String s = "I follow Bill Gate Tome Gate John Gate";
 String s1 = s.replaceAll("Gate","Gates");
@@ -35,7 +36,7 @@ System.out.println("请输入你的用户名 ；" );
             String name4 = "ABCDEFGHIJKLMNOPQRSTUYWSYZ";
    for (int i = 0; i < name.length(); i++) {
              if(!name2.contains(name.charAt(i)+"") && !name3.contains(name.charAt(i)+"")){
-                    System.out.println("不符合");   
+                    System.out.println("不符合");   //char c = name.charAt(i); isUpperCase (c)
                     break;
              } 
              if( !name4.contains(name.charAt(0)+"")){
@@ -45,5 +46,17 @@ System.out.println("请输入你的用户名 ；" );
          }
 }
 }
-
-
+ /**char c = name.charAt(i); 
+  if{i = 0  isUpperCase (c))
+{
+   return false;
+}
+private static boolean  isUpperCase (cha c){
+    if (c >= 'A') && C <='Z'){
+        return true;
+    }
+    if(c >= 65 && c<= 97){
+        return true;
+    }
+}
+**/
