@@ -1,6 +1,6 @@
 package cn.maidaotech.java07.chapter02;
 
-import cn.maidaotech.java07.utitls.StringUnitls;
+import cn.maidaotech.java07.utitls.StringUntitls;
 
 /**
  * 要求 验证邮箱是否符合规则; name@host: 满足以下规则; name只能由字母、数字、下划线组成; 只能以字母开头;
@@ -26,22 +26,22 @@ public class CheckEmail {
         boolean hasLine = false;
         char[] partOneChar = separateString(part);
         for (int i = 0; i < partOneChar.length; i++) {
-            if (i == 0 && !StringUnitls.isAlpha(partOneChar[i])) {
+            if (i == 0 && !StringUntitls.isAlpha(partOneChar[i])) {
                 return false;
             }
-            if (!StringUnitls.isAlphaNumberUnderline(partOneChar[i])) {
+            if (!StringUntitls.isAlphaNumberUnderline(partOneChar[i])) {
                 return false;
             }
             if (hasLine || partOneChar[i] == '_') {
                 hasLine = true;
             }
-            if (hasLower || StringUnitls.isLowerCase(partOneChar[i])) {
+            if (hasLower || StringUntitls.isLowerCase(partOneChar[i])) {
                 hasLower = true;
             }
-            if (hasNumber || StringUnitls.isNumber(partOneChar[i])) {
+            if (hasNumber || StringUntitls.isNumber(partOneChar[i])) {
                 hasNumber = true;
             }
-            if (hasUpper || StringUnitls.isUpperCase(partOneChar[i])) {
+            if (hasUpper || StringUntitls.isUpperCase(partOneChar[i])) {
                 hasUpper = true;
             }
         }

@@ -1,6 +1,6 @@
 package cn.maidaotech.java07.chapter02;
 
-import java.util.Scanner;
+
 
 public class CheckPhoneNumber {
     private static boolean checkPhoneNumber(String number){

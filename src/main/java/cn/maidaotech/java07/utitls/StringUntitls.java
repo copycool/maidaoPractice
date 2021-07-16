@@ -1,6 +1,6 @@
 package cn.maidaotech.java07.utitls;
 
-public class StringUnitls {
+public class StringUntitls {
 
     public static boolean isEmpty(String str) {
         return str == null || str.length() == 0;
@@ -39,5 +39,12 @@ public class StringUnitls {
             return false;
         }
         return true;
+    }
+    public static char[] separateString(String str) {
+        char[] character = new char[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            character[i] = str.charAt(i);
+        }
+        return character;
     }
 }
