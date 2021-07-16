@@ -35,5 +35,6 @@ public class Java02_2_6_7 {
             }
 
         }
+        input.close();
     }
 }

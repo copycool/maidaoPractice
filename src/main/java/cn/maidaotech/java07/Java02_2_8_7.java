@@ -5,7 +5,7 @@ public class Java02_2_8_7 {
     public static void main(final String[] args) {
         int max=0;
         int min=0;
-        final Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("请输入第一个数");
          int one = input.nextInt();
          System.out.println("请输入第二个数");
@@ -18,6 +18,7 @@ public class Java02_2_8_7 {
           min=(min<three)?min:three;
          System.out.println("最大数是"+max);
          System.out.println("最小数是"+min);
+         input.close();
     }
 
      

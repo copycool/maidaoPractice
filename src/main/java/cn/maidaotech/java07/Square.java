@@ -1,7 +1,5 @@
 package cn.maidaotech.java07;
 
-import org.springframework.boot.system.SystemProperties;
-
 public class Square {
     public static void main(String[] args) {
         /* 乘法表 */
