@@ -63,6 +63,7 @@ public class TestData {
                 break;
             }   
         }
+        
         return flag;
     }
 
@@ -158,6 +159,7 @@ public class TestData {
         if (product.getStock() < quantity) {
             return false;
         }
+        product.hashCode();
         return true;
     }
 
