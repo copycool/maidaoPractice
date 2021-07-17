@@ -14,14 +14,16 @@ public class Rectangle extends Shape {
 
     // 长方形面积
     @Override
-    public void area() {
-        System.out.println("长方形面积是：" + (this.length * this.width));
+    public double area() {
+        return this.length * this.width;
+        // System.out.println("长方形面积是：" + (this.length * this.width));
     }
 
     // 长方形周长
     @Override
-    public void perimeter() {
-        System.out.println("长方形周长是：" + 2 * (length + width));
+    public double perimeter() {
+        return 2 * (length + width);
+        // System.out.println("长方形周长是：" + 2 * (length + width));
     }
 
     // public void rectangle(){

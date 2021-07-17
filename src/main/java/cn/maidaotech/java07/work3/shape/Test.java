@@ -6,11 +6,8 @@ public class Test {
         Shape rectangle = new Rectangle(3, 4);
         Shape regularTriangle = new RegularTriangle(6);
         Shape circle = new Circle(6);
-        rectangle.area();
-        rectangle.perimeter();
-        regularTriangle.area();
-        regularTriangle.perimeter();
-        circle.area();
-        circle.perimeter();
+        System.out.println("矩形面积是："+rectangle.area() +",周长是："+ rectangle.perimeter());
+        System.out.println("正三角面积是："+regularTriangle.area()  +",周长是："+regularTriangle.perimeter());
+        System.out.println("圆面积是："+circle.area() +",周长是："+ circle.perimeter());
     }
 }

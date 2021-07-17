@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.work3;
+package cn.maidaotech.java07.work3.person;
 
 // Person中含有4个私有成员变量姓名（name）、地址（address）、
 // 性别（sex）和年龄（age），

@@ -14,8 +14,8 @@ public class DogTest {
         list.add(dog2);
         list.add(dog3);
         for (int i = 0; i < list.size(); i++) {
-            // System.out.print(list.get(i).output());
-            list.get(i).output();
+            System.out.println(list.get(i).toString());
+            // list.get(i).output();
 
         }
     }

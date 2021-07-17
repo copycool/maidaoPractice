@@ -1,6 +1,6 @@
 package cn.maidaotech.java07.work3;
 
-import java.util.List;
+
 
 public class Dog {
     private String name;
@@ -21,10 +21,10 @@ public class Dog {
         return "Dog [age=" + age + ", color=" + color + ", name=" + name + "]";
     }
 
-    public void output() {
-        System.out.println(this.name + "的体色是：" + this.color + ",年龄是：" + this.age);
+    // public void output() {
+    //     System.out.println(this.name + "的体色是：" + this.color + ",年龄是：" + this.age);
 
-    }
+    // }
 
     public String getAge() {
         return age;

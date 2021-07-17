@@ -1,7 +1,5 @@
 package cn.maidaotech.java07.work3.person;
 
-import cn.maidaotech.java07.work3.Person;
-
 // Student类继承Person类，
 // 并增加成员数学(math)成绩和英语(english)成绩，
 // 用一个6个参数的构造函数初始化属性，
