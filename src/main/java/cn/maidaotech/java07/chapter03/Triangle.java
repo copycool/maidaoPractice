@@ -1,12 +1,12 @@
 package cn.maidaotech.java07.chapter03;
 
-public class Triangle extends Shape{
-private double a;
-private double b;
-private double c;
+public class Triangle extends Shape {
+    private double a;
+    private double b;
+    private double c;
 
     public Triangle() {
-}
+    }
 
     public Triangle(double a, double b, double c) {
         this.a = a;
@@ -40,14 +40,14 @@ private double c;
 
     @Override
     public double area() {
-        double p=this.perimeter()/2;
-        return  Math.sqrt(p*(p-a)*(p-b)*(p-c));
+        double p = this.perimeter() / 2;
+        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
     }
 
     @Override
     public double perimeter() {
-        
-        return a+b+c;
+
+        return a + b + c;
     }
-    
+
 }

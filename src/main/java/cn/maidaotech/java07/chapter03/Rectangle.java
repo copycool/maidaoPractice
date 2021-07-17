@@ -30,13 +30,13 @@ public class Rectangle extends Shape {
 
     @Override
     public double area() {
-       return  this.length*this.width;
-        
+        return this.length * this.width;
+
     }
 
     @Override
     public double perimeter() {
-       return 2*(this.length+this.width);
+        return 2 * (this.length + this.width);
     }
 
 }

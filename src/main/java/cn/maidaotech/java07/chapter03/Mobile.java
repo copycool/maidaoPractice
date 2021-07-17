@@ -2,8 +2,8 @@ package cn.maidaotech.java07.chapter03;
 
 import java.util.Date;
 
-public class Mobile extends Product implements Comparable<Mobile>{
- 
+public class Mobile extends Product implements Comparable<Mobile> {
+
     public Mobile() {
     }
 
@@ -13,13 +13,12 @@ public class Mobile extends Product implements Comparable<Mobile>{
 
     @Override
     public int compareTo(Mobile o) {
-        if(this.getPrice()>o.getPrice()){
+        if (this.getPrice() > o.getPrice()) {
             return 1;
-        }
-        else if(this.getPrice()<o.getPrice()){
+        } else if (this.getPrice() < o.getPrice()) {
             return -1;
         }
         return 0;
     }
-    
+
 }
