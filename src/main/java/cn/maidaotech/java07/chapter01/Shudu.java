@@ -1,7 +1,5 @@
 package cn.maidaotech.java07.chapter01;
 
-import java.util.Scanner;
-
 /**
  * @program: MyCode
  * @description: 数独问题
@@ -30,24 +28,6 @@ public class Shudu {
         long time = end - start;
         System.out.println((succes ? "成功" : "失败") + "用时" + time + "毫秒");
         print(x);
-    }
-
-    private static int[][] init() {
-        int[][] grid = new int[9][9];
-        for (int i = 0; i < grid.length; i++) {
-            System.out.print("请输入第" + (i + 1) + "行:");
-            Scanner scan = new Scanner(System.in); // 从键盘接收数据
-            String str = scan.next();
-            while (str == null || str.length() != 9) {
-                System.out.println("请重新输入第" + (i + 1) + "行：");
-                scan = new Scanner(System.in); // 从键盘接收数据
-                str = scan.next();
-            }
-            for (int j = 0; j < grid.length; j++) {
-                grid[i][j] = Integer.parseInt(String.valueOf(str.charAt(j)));
-            }
-        }
-        return grid;
     }
 
     /**

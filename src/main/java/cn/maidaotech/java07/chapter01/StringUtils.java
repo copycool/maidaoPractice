@@ -1,8 +1,6 @@
 package cn.maidaotech.java07.chapter01;
 
 public class StringUtils {
-    private final static String ALL_UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
     public static boolean isEmpty(String str) {
         return str == null || str.length() == 0;
     }
