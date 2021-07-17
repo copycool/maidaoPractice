@@ -25,20 +25,7 @@ public class TestData {
 
     static{
         //生成商品信息
-        Product product = null;
-        for (int i = 0; i < 20; i++) {
-            product = new Product();
-            product.setId(i+1);
-            product.setCategoryId(new Random().nextInt(10)+1);
-            product.setName("product--"+(i+1));
-            product.setMainImage("https://gimg2.baidu.com/image_search/"+new Random().nextInt(100)+1);
-            product.setPrice(BigDecimal.valueOf(new Random().nextInt(9999)+1));
-            product.setStock(new Random().nextInt(100)+1);
-            product.setStatus(1);
-            product.setCreateTime(new Date());
-            product.setUpdateTime(new Date());
-            list.add(product);
-        }
+        createProductInfo();
         //生成账户信息
         creactAccountInfo();
     }
@@ -189,5 +176,22 @@ public class TestData {
           account2.setAddress("河南省周口市常营镇");
           accountList.add(account);
           accountList.add(account2);
+    }
+
+    public static void createProductInfo() {
+        Product product = null;
+        for (int i = 0; i < 20; i++) {
+            product = new Product();
+            product.setId(i+1);
+            product.setCategoryId(new Random().nextInt(10)+1);
+            product.setName("product--"+(i+1));
+            product.setMainImage("https://gimg2.baidu.com/image_search/"+new Random().nextInt(100)+1);
+            product.setPrice(BigDecimal.valueOf(new Random().nextInt(9999)+1));
+            product.setStock(new Random().nextInt(100)+1);
+            product.setStatus(1);
+            product.setCreateTime(new Date());
+            product.setUpdateTime(new Date());
+            list.add(product);
+        }
     }
 }

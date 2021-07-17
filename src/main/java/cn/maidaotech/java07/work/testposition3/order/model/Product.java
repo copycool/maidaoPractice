@@ -101,5 +101,9 @@ public class Product {
                 + mainImage + ", name=" + name + ", price=" + price + ", status=" + status + ", stock=" + stock
                 + ", updateTime=" + updateTime + "]";
     }
+
+    public String   printName(){
+        return name;
+    }
     
 }
