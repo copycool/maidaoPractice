@@ -9,13 +9,13 @@ public class Circle extends Shape {
 
     @Override
     public Double area() {
-        Double area = Math.PI * this.r * this.r;
+        Double area = Math.PI * r * r;
         return area;
     }
 
     @Override
     public Double perimeter() {
-        Double perimeter = Math.PI * this.r * 2;
+        Double perimeter = Math.PI * r * 2;
         return perimeter;
     }
 
