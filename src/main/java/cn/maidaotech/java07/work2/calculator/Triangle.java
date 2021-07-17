@@ -1,8 +1,8 @@
 package cn.maidaotech.java07.work2.calculator;
 
 public class Triangle extends Shep {
-    private Double side;
-    private Double high;
+    private Number side;
+    private Number high;
 
     public Triangle() {
     }
@@ -14,29 +14,27 @@ public class Triangle extends Shep {
 
     @Override
     public void area() {
-        // TODO Auto-generated method stub
-        System.out.println((this.side * this.high) / 2);
+        System.out.println((this.side.doubleValue() * this.high.doubleValue()) / 2);
     }
 
     @Override
     public void perimeter() {
-        // TODO Auto-generated method stub
-        System.out.println(this.side + this.side + this.side);
+        System.out.println(this.side.doubleValue() + this.side.doubleValue() + this.side.doubleValue());
     }
 
-    public Double getside() {
+    public Number getside() {
         return side;
     }
 
-    public void setside(Double side) {
+    public void setside(Number side) {
         this.side = side;
     }
 
-    public Double getHigh() {
+    public Number getHigh() {
         return high;
     }
 
-    public void setHigh(Double high) {
+    public void setHigh(Number high) {
         this.high = high;
     }
 

@@ -25,11 +25,6 @@ public abstract class Persion {
 
     public abstract String message();
 
-    @Override
-    public String toString() {
-        return "Persion [address=" + address + ", age=" + age + ", name=" + name + ", sex=" + sex + "]";
-    }
-
     public String getName() {
         return name;
     }

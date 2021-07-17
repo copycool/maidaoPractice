@@ -14,13 +14,11 @@ public class Rectangle extends Shep {
 
     @Override
     public void area() {
-        // TODO Auto-generated method stub
         System.out.println(this.longs * this.wide);
     }
 
     @Override
     public void perimeter() {
-        // TODO Auto-generated method stub
         System.out.println((this.longs + this.wide) * 2);
     }
 

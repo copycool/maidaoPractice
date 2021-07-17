@@ -17,28 +17,23 @@ public class Number {
         this.y = y;
     }
 
-    public void plus() {
-        System.out.println(this.x + " + " + this.y + " = " +( this.x + this.y));
+    public int plus() {
+        return this.x + this.y;
     }
 
-    public void minus() {
-        System.out.println(this.x + " - " + this.y + " = " + (this.x - this.y));
-
-    }
-
-    public void multipy() {
-        System.out.println(this.x + " X " + this.y + " = " + (this.x * this.y));
+    public int minus() {
+        return this.x - this.y;
 
     }
 
-    public void division() {
-        System.out.println(this.x + " / " + this.y + " = " + (this.x / this.y));
+    public int multipy() {
+        return this.x * this.y;
 
     }
 
-    @Override
-    public String toString() {
-        return "Number [x=" + x + ", y=" + y + "]";
+    public double division() {
+        return this.x / this.y;
+
     }
 
     public Integer getX() {
