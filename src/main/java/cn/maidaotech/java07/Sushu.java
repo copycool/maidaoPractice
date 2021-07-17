@@ -4,8 +4,8 @@ package cn.maidaotech.java07;
     public class Sushu
 {
     public static void main(String[] args){
-        int i=2;
-        for(i=2; i<=100; i++){
+        int i=101;
+        for(i=101; i<=200; i++){
          boolean flag =true; 
          for(int j=2; j<i; j++ ){
 

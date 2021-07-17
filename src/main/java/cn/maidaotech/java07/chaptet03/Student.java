@@ -3,6 +3,9 @@ package cn.maidaotech.java07.chaptet03;
 public class  Student extends Person{
     private int math;
     private int english;
+    public Student(){
+        
+    }
 
     public Student(String name,String address,String sex,int age,int math,int english){
         super(name,address,sex,age);

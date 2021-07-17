@@ -10,6 +10,7 @@ public class Hhw {
 
     private void Hhw() {
         System.out.println("meth");
+       
     }
 
     
