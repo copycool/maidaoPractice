@@ -1,4 +1,4 @@
-package cn.maidaotech.javaedu.chapter03.practice07;
+package cn.maidaotech.java07.chapter03.practice07;
 
 public class Car implements Vehicle {
     @Override
