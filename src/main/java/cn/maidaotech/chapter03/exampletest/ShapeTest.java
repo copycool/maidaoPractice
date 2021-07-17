@@ -1,8 +1,8 @@
 package cn.maidaotech.chapter03.exampletest;
 
-import cn.maidaotech.chapter03.example.Circle;
-import cn.maidaotech.chapter03.example.Rectangle;
-import cn.maidaotech.chapter03.example.Triangle;
+import cn.maidaotech.chapter03.example.shape.Circle;
+import cn.maidaotech.chapter03.example.shape.Rectangle;
+import cn.maidaotech.chapter03.example.shape.Triangle;
 
 public class ShapeTest {
     

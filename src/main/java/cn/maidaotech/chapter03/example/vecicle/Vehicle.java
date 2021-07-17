@@ -1,4 +1,4 @@
-package cn.maidaotech.chapter03.example;
+package cn.maidaotech.chapter03.example.vecicle;
 
 public interface Vehicle {
 

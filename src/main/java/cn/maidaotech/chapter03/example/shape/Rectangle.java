@@ -1,4 +1,4 @@
-package cn.maidaotech.chapter03.example;
+package cn.maidaotech.chapter03.example.shape;
 
 public class Rectangle extends Shape {
     // 这里的重写要和抽象类的传参保持一致即无参

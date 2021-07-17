@@ -1,4 +1,4 @@
-package cn.maidaotech.chapter03.example;
+package cn.maidaotech.chapter03.example.shape;
 
 public class Triangle extends Shape{
     private Double length;

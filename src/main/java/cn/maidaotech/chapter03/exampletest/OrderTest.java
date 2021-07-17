@@ -1,5 +1,5 @@
 package cn.maidaotech.chapter03.exampletest;
 
-public class OrderServiceTest {
+public class OrderTest {
     
 }
