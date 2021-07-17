@@ -16,26 +16,26 @@ private static final long MILLISECOND_OF_DAY = 24 * 60 * 60 * 1000;
 
     public static void main(String[] args) {
         //获取当前时间的时间戳
-        System.out.println(System.currentTimeMillis());//1.
+        System.out.println(System.currentTimeMillis());//1.  1626436274703
         Calendar calendar = Calendar.getInstance();
         long createTime = calendar.getTimeInMillis();
-        System.out.println(createTime);//2
+        System.out.println(createTime);//2.  1626436274714
         Instant now = Instant.now(); 
-        System.out.println("Current Timestamp = " + now);//3
+        System.out.println("Current Timestamp = " + now);//3.  Current Timestamp = 2021-07-16T11:51:14.737Z
 
          // 获取前一天当前时间的时间戳
          Calendar cal = Calendar.getInstance();
          cal.add(Calendar.DATE, -1);
          Date time = cal.getTime();
-         System.out.println("昨天的时间" + time);
+         System.out.println("昨天的时间" + time);  //昨天的时间Thu Jul 15 19:51:14 CST 2021
          Long lastTime = time.getTime();
-         System.out.println("获取前一天当前时间的时间戳: " + lastTime);
+         System.out.println("获取前一天当前时间的时间戳: " + lastTime);  //获取前一天当前时间的时间戳: 1626349874830
 
 
         
         //当前时间的年月日
         LocalDate today = LocalDate.now(); 
-        System.out.println(today);
+        System.out.println(today);      //2021-07-16
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         System.out.println("输出当前时间的年月日:" + sdf.format(date));

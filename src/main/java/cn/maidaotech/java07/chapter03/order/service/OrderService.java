@@ -1,5 +1,10 @@
 package cn.maidaotech.java07.chapter03.order.service;
 
-public class OrderService {
-    
+import cn.maidaotech.java07.chapter03.order.model.Account;
+import cn.maidaotech.java07.chapter03.order.model.Order;
+import cn.maidaotech.java07.chapter03.order.model.Product;
+
+public interface OrderService {
+
+    public void createOrder(Product product, int num, Account account);
 }

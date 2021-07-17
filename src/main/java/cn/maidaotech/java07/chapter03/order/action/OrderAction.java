@@ -1,4 +1,10 @@
 package cn.maidaotech.java07.chapter03.order.action;
+
+import cn.maidaotech.java07.chapter03.order.model.Account;
+import cn.maidaotech.java07.chapter03.order.model.Order;
+import cn.maidaotech.java07.chapter03.order.model.Product;
+import cn.maidaotech.java07.chapter03.order.service.OrderServiceImpl;
+
 // 创建一个 order 包，
 // 其下创建 model 包、service 包和 action 包。
 // 在 model 包中包含 Product 类、 Order 类和 Account 类，
@@ -12,5 +18,12 @@ package cn.maidaotech.java07.chapter03.order.action;
 // 在 action 包中创建 OrderAction 类，
 //     编写 mian 方法调用创建订单的方法，打印输出订单 信息。
 public class OrderAction {
+    public static void main(String[] args) {
+        Account account = new Account("小明",10.0);
+        Product product = new Product("Mac pro",100.0,0);
+        OrderServiceImpl osi = new OrderServiceImpl();
+        osi.createOrder(product, 1, account);
+    
+    }
     
 }

@@ -5,5 +5,10 @@ package cn.maidaotech.java07.chapter03.vehicle;
 // 创建一个名为 VehicleDemo 的类，
 // 并编写 main 函数创建 Car 和 Bus 对象，并访问 两个方法。
 public class Bus {
-    
+    public void start(){
+        System.out.println("公交车要走了");
+    }
+    public void stop(){
+        System.out.println("公交车到站了");
+    }
 }

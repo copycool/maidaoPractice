@@ -4,6 +4,13 @@ package cn.maidaotech.java07.chapter03.shape;
 // 分别用来计算形状的 面积和周长。
 // 定义一些二维形状类，
 // 如矩形、三角形、圆等，都是 shape 的子类。
-public class Circle {
-    
+public class Circle extends Shape{
+    static double radius;
+    static double PI = Math.PI;
+    public double area(){
+        return PI*Math.pow(radius, 2);
+    }
+    public double perimeter(){
+        return 2*PI*radius;
+    }
 }
