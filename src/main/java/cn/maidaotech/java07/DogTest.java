@@ -20,7 +20,7 @@ public class DogTest {
             this.age = age;
         }
         public String dogOut(){
-
+              
             String[] dog = new String[]{name,coloer,age};
             StringBuilder builder = new StringBuilder();
             for(int i = 0;i < dog.length;i++){
