@@ -1,8 +1,8 @@
-package cn.maidaotech.java07.order.service;
+package cn.maidaotech.java07.chapter03.order.service;
 
-import cn.maidaotech.java07.order.model.Account;
-import cn.maidaotech.java07.order.model.Order;
-import cn.maidaotech.java07.order.model.Product;
+import cn.maidaotech.java07.chapter03.order.model.Account;
+import cn.maidaotech.java07.chapter03.order.model.Order;
+import cn.maidaotech.java07.chapter03.order.model.Product;
 
 public class ReallyOrder implements OrderService {
 

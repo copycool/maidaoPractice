@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.demo;
+package cn.maidaotech.java07.chapter03.demo;
 
 import cn.maidaotech.java07.chapter03.Bus;
 import cn.maidaotech.java07.chapter03.Car;

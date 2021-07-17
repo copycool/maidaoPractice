@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.order.model;
+package cn.maidaotech.java07.chapter03.order.model;
 
 public class Product {
     private String name;
@@ -8,6 +8,15 @@ public class Product {
     public Product() {
     }
     
+  
+
+    @Override
+    public String toString() {
+        return "Product [inventory=" + inventory + ", name=" + name + ", price=" + price + "]";
+    }
+
+
+
     public Product(String name, Double price, Integer inventory) {
         this.name = name;
         this.price = price;
