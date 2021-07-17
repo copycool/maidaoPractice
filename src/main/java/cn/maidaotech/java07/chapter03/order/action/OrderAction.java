@@ -19,11 +19,16 @@ import cn.maidaotech.java07.chapter03.order.service.OrderServiceImpl;
 //     编写 mian 方法调用创建订单的方法，打印输出订单 信息。
 public class OrderAction {
     public static void main(String[] args) {
-        Account account = new Account("小明",10.0);
-        Product product = new Product("Mac pro",100.0,0);
+        Account account = new Account("小明",99999.0);
+        Product product = new Product("Mac pro",100.0,9);
         OrderServiceImpl osi = new OrderServiceImpl();
-        osi.createOrder(product, 1, account);
-    
+        String res = osi.createOrder(product, 3, account);
+        String[] ordermsg = res.split(",");
+        if(ordermsg.length<=2){
+            System.out.println(res);
+        }else{
+            System.out.println(ordermsg[0]+"\t恭喜您购买成功了"+ordermsg[1]+"个"+ordermsg[2]);
+        }
     }
     
 }

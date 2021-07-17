@@ -6,5 +6,5 @@ import cn.maidaotech.java07.chapter03.order.model.Product;
 
 public interface OrderService {
 
-    public void createOrder(Product product, int num, Account account);
+    public String createOrder(Product product, int num, Account account);
 }
