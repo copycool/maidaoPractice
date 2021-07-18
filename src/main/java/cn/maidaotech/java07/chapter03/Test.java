@@ -1,32 +1,43 @@
 package cn.maidaotech.java07.chapter03;
 
-import cn.maidaotech.java07.chapter02.Student;
 
-public class Test {
+
+
+
+public class Test  {
     public static void main(String[] args) {
-        Address address = new Address("中国", "河南", "郑州", "中国", 7777);
-        System.out.println(address.toString());
-
-        Dog[] dogs = new Dog[10];
-        for (int i = 0; i < 10; i++) {
-            dogs[i] = new Dog("白色" + i, "阿伟" + i, i);
-
+        Address address = new Address();
+        address.setCountry("中国");
+        address.setProvince("菏泽");
+        address.setCity("曹县");
+        address.setStreet("ttt");
+        address.setDetail("dddd");
+        address.setCode(6666);
+        System.out.println(address.allMessage());
+        
+        Dog[]dogs = new Dog[3];
+        dogs[0] = new Dog("白色","旺财", 3);
+        dogs[1] = new Dog("粉色","毛球", 1);
+        dogs[2] = new Dog("紫色","富贵", 2);
+        for(Dog dog : dogs){
+            System.out.println(dog.message());
         }
-        for (int i = 0; i < dogs.length; i++) {
-            System.out.println(dogs[i].toString());
 
-        }
+        Number num = new Number(0, 5);
+        System.out.println(num.getX() + "+" + num.getY() + "=" + num.plus());
+        System.out.println(num.getX() + "-" + num.getY() + "=" + num.minus());
+        System.out.println(num.getX() + "*" + num.getY() + "=" + num.multiply());
+        System.out.println(num.getX() + "/" + num.getY() + "=" + num.division());
 
-        Number number = new Number(0, 5);
-        System.out.println(number.plus());
-        System.out.println(number.division());
-        System.out.println(number.multiply());
-        System.out.println(number.minus());
+        Student mess = new Student("name", "address", new Byte("1"), 2,44, 33);
+        System.out.println(mess.message());
 
-        Person message = new Person("666", 0, "11111", 112);
-        System.out.println(message.toString());
-        Student student = new Student("name", 1, "sdf", 1, 14, 14);
-        System.out.println(student.message());
+       
+        
+
+
+
+      
     }
 
 }

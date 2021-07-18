@@ -5,22 +5,12 @@ public class Address {
     private String province;
     private String city;
     private String street;
-    private int postcode;
+    private String detail;
+    private Integer code;
 
-    public Address(String country, String province, String city, String street, int postcode) {
-        
-        this.country = country;
-        this.province = province;
-        this.city = city;
-        this.street = street;
-        this.postcode = postcode;
-    }
-
-    @Override
-    public String toString() {
-        
-        return "Address [city=" + city + ", country=" + country + ", postcode=" + postcode + ", province=" + province
-                + ", street=" + street + "]";
+    public String allMessage() {
+        return new StringBuilder().append(this.country).append("/").append(this.province).append("/").append(this.city)
+                .append("\n").append(this.street).append(" ").append(this.detail).append(this.code).toString();
     }
 
     public String getCountry() {
@@ -55,14 +45,22 @@ public class Address {
         this.street = street;
     }
 
-    public int getPostcode() {
-        return postcode;
+    public String getDetail() {
+        return detail;
     }
 
-    public void setPostcode(int postcode) {
-        this.postcode = postcode;
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+    
     
     
 
