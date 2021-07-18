@@ -12,6 +12,11 @@ public class Student extends Person{
         this.english = english;
     }
 
+    
+    public Student(String name, String address, String sex, int age) {
+        super(name, address, sex, age);
+    }
+
     public int getMath() {
         return math;
     }

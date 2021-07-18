@@ -5,13 +5,14 @@ public class Computer {
     // 定义Number类，其中有两个成员变量x和y，用构造函数赋值x和y的初始值。
     // 定义加plus、减minus、乘multiply、除division等公有成员方法，分别对两个成员变量执行加减乘除的运算。
     // 在main方法中创建Number对象并调用各个方法，显示计算结果。
-    private int x;
-    private int y;
-
-    public Computer(int x, int y) {
+    private Number x;
+    private Number y;
+	
+    public Computer(Number x, Number y) {
         this.x = x;
         this.y = y;
     }
+
 
     public void add(){
 		System.out.println(x+"+"+y+"="+addition());
@@ -27,19 +28,19 @@ public class Computer {
 	}
 
     
-    public int addition(){
-		return this.x+this.y;
+    public Number addition(){
+		return this.x.doubleValue()+this.y.doubleValue();
 	}
 	//减subtration
-	public int subtration(){
-		return this.x-this.y;
+	public Number subtration(){
+		return this.x.doubleValue()-this.y.doubleValue();
 	}
 	//乘multiplication
-	public int multiplication(){
-		return this.x*this.y;
+	public Number multiplication(){
+		return this.x.doubleValue()*this.y.doubleValue();
 	}
 	//除division
 	public double division(){
-		return this.x/this.y;
+		return this.x.doubleValue()/this.y.doubleValue();
 	}
 }

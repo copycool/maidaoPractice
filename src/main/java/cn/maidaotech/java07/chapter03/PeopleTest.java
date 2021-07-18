@@ -19,7 +19,7 @@ public class PeopleTest {
         Worker p = new Worker("2","孙师傅",30,6700);        
         System.out.println(w.toString());        
         System.out.println(p.toString());    
-        System.out.println(s.toString());  
+        System.out.println(s);  
       
     }
     
