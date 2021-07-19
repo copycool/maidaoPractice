@@ -3,7 +3,6 @@ package cn.maidaotech.java07.chapter02;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
@@ -16,25 +15,38 @@ public class GetTimeStamp {
         // 输出当前时间的年月日，格式为“yyyy-MM-dd”
         // 分别获取今天、昨天的开始时间和结束时间的时间戳
         // 计算两个Date类型对象之间相隔的天数
+
         LocalDateTime today = LocalDateTime.now();
         System.out.println("今天的当前时间戳："+today);
         System.out.println("昨天的当前时间戳："+today.minusDays(1));
 
+
         Date date = new Date();
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         System.out.println("当前时间的年月日:"+format.format(date));
+
+        Long timeStamp = System.currentTimeMillis();
+        System.out.println("当前时间戳"+timeStamp);
+
+        Date d = new Date();
+        Long x = d.getTime();
+        System.out.println("当前时间戳："+x);
+
+
         System.out.println("昨天的开始时间戳："+ getYesterdayStartTime().getTime());
         System.out.println("昨天的结束时间戳："+getYesterdayEndTime().getTime());
         System.out.println("今天的开始时间戳："+ getTodayStartTime().getTime());
         System.out.println("今天的结束时间戳："+ getTodayEndTime().getTime());
 
-        LocalDate date1 = LocalDate.of(2020, 4, 11);
-        LocalDate date2 = LocalDate.of(2020, 7, 11);
-        Period period = Period.between(date1, date2);
-        System.out.println("相差"+ period.getYears() + "年" 
-        + period.getMonths() + "月（共" + period.toTotalMonths() + "个月）" 
-        + period.getDays() + "天");
+
+        //计算两个Date类型对象之间相隔的天数
+       LocalDate d1 = LocalDate.of(2020, 01, 12);
+       LocalDate d2 = LocalDate.of(2021, 12, 02);       
+        Period period = Period.between(d1, d2);
+        System.out.println("相差："+period.getYears()+"."+period.getMonths()+"."+period.getDays());
     }
+
+
     public static Date getYesterdayStartTime() {
         Calendar yesterdayStart = Calendar.getInstance();
         yesterdayStart.add(Calendar.DATE, -1);

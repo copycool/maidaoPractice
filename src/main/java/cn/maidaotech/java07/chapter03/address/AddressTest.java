@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.address;
 
 public class AddressTest {
     public static void main(String args[]){

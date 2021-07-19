@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.address;
 
 public class Address {
     //编写一个代表地址的Address类，地址信息由国家，省份，城市，街道，邮编组成，并可以调用方法返回完整的地址信息。

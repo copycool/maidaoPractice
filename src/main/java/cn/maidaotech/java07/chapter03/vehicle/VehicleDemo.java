@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.vehicle;
 
 public class VehicleDemo {
     // 创建一个名为VehicleDemo的类，并编写main函数分别创建变量类型为Vehicle的Car和Bus对象，并分别访问两个方法

@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.vehicle;
 
 public class Car implements Vehicle{
     

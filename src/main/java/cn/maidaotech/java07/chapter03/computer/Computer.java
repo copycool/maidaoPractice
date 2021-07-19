@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.computer;
 
 public class Computer {
     // 编写Java程序模拟简单的计算器。

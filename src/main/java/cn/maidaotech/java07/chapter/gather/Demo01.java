@@ -1,66 +1,38 @@
 package cn.maidaotech.java07.chapter.gather;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.stream.Collector;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class Demo01 {
     public static void main(String[] args) {
-        List <String> stringList = new ArrayList<>();
-        stringList.add("a");
-        stringList.add("b");
-        stringList.add("c");
-        stringList.add("i");
-        stringList.add("j");
-        stringList.add("a");
-
-        //一、求交集
-        //方法1：直接通过retainAll直接过滤
-        List<String> stringList1 =  new ArrayList<>(Arrays.asList("a,b,c,d,e,f,g,h".split(",")));
-        stringList1.retainAll(stringList);
-        System.out.println("交集1: " + stringList1);
-
-        //方法2：通过过滤掉存在于stringList的数据
-        List<String> stringList1_2 = new ArrayList<>(Arrays.asList("a,b,c,d,e,f,g,h".split(",")));
-        List<String> strings = stringList1_2.stream()
-                .filter(item -> stringList.contains(item))
-                .collect(toList());
-        System.out.println("交集2：" + strings);
-
-        //二、并集
-        //有重并集
-        List<String> stringList2 =  new ArrayList<>(Arrays.asList("a,b,c,d,e,f,g,h".split(",")));
-        stringList2.addAll(stringList);
-        System.out.println("并集: " + stringList2);
-
-        //无重并集
-        List<String> stringList2_2 =  new ArrayList<>(Arrays.asList("a,b,c,d,e,f,g,h".split(",")));
-        List<String> stringList_1 =  new ArrayList<>(Arrays.asList("a,b,c,i,j,a".split(",")));
-        stringList2_2.removeAll(stringList_1);
-        stringList_1.addAll(stringList2_2);
-
-        System.out.println("无重并集: " + stringList_1);
-
-        //三、求差集
-        //方法1：直接使用removeAll()方法
-        List<String> stringList3 =  new ArrayList<>(Arrays.asList("a,b,c,d,e,f,g,h".split(",")));
-        stringList3.removeAll(stringList);
-        System.out.println("差集1: " + stringList3);
-
-        //方法2：通过过滤掉不存在于stringList的数据，然后和本数组进行交集处理
-    //     List<String> stringList3_2 = new ArrayList<>(Arrays.asList("a,b,c,d,e,f,g,h".split(",")));
-    //     stringList3_2.retainAll(stringList3_2.stream()
-    //             .filter(item -> !stringList.contains(item))
-    //             .collect(toList()));
-    //     System.out.println("差集2：" + stringList3_2);
-
-    //     SpringApplication.run(DemoApplication.class, args);
-    // }
-
-  
-    }
-
+		Scanner sc = new Scanner(System.in);
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		int num = sc.nextInt();
+		while (num != 0) {
+			if (map.get(num) == null) {
+				map.put(num, 1);
+			} else {
+				int value = map.get(num);
+				map.put(num, value + 1);
+			}
+			num = sc.nextInt();
+		}
+		Collection<Integer> v = map.values();
+		Object[] vl = v.toArray();
+		int len = vl.length, flag = 0;
+		Arrays.sort(vl);
+		Object max = vl[len - 1];
+		Object k = null;
+		for (Map.Entry entry : map.entrySet()) {
+			if (max == entry.getValue()) {
+				k = entry.getKey();
+				System.out.println(k);
+			}
+			
+		}
+	}
 	}
 
