@@ -45,7 +45,7 @@ public class Question04 {
         System.out.println("去重并集："+set);
 
         //打印最初的list1
-        System.out.println("最初的list1:"+list1);
+        System.out.println("最初的list1:"+list1 );
         //打印最初的list2
         System.out.println("最初的list2:"+list2);
     }

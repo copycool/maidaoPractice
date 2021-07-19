@@ -15,7 +15,7 @@ public class Test2 {
 //        List<Integer> integerList = list.subList(17,20);
 //        System.out.println(integerList);
         for (int i = 0; i < 100; i++) {
-            System.out.println(new Random().nextInt(3)+1);
+            System.out.println(new Random().nextInt(3)+1 );
         }
     }
 }

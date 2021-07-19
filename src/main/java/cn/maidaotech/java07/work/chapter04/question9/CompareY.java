@@ -5,7 +5,7 @@ public class CompareY implements  Comparable<Point>{
     public int x;
     public int y;
 
-    public CompareY(int x, int y) {
+    public CompareY(int x, int y ) {
         this.x = x;
         this.y = y;
     }

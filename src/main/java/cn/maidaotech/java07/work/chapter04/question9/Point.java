@@ -15,7 +15,7 @@ public class Point implements Comparable{
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(Object o ) {
         if (!(o instanceof Point)){
             throw new RuntimeException("转换Point类失败");
         }

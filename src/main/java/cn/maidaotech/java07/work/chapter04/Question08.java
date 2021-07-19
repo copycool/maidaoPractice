@@ -42,7 +42,7 @@ public class Question08 {
         //利用 groupingBy 进行多字段分组    把相同的数分成一组，在统计出现次数，放入map集合中
         Map<Integer, Long> map = list.stream()
                                      .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        System.out.println("集合统计表为：");
+        System.out.println("集合统计表为：" );
         map.forEach((k, v)->{
             System.out.println("k= "+k+", v= "+v);
         });

@@ -13,6 +13,6 @@ public class Question06 {
             set.add(new Random().nextInt(30)+1);
         }
 
-        System.out.println(set);
+        System.out.println(set );
     }
 }

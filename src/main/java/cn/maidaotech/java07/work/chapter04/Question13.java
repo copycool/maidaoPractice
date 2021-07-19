@@ -34,7 +34,7 @@ public class Question13 {
      * 打印集合
      * @param list
      */
-    public static void printList(List<Student> list){
+    public static void printList(List<Student> list ){
         list.stream().forEach(item-> System.out.println(item.toString()));
     }
 }

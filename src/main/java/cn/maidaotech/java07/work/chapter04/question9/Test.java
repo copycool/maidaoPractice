@@ -25,7 +25,7 @@ public class Test {
         /**
          * 按照x坐标的升序排列为：
          */
-        System.out.println("======================================");
+        System.out.println("======================================" );
         System.out.println("按照x坐标的升序排列为 Arrays.sort");
         Arrays.sort(pointArr,Point::compareTo);
         System.out.println("排序后的数组为：");

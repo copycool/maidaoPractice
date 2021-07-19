@@ -27,7 +27,7 @@ public class Question12 {
 
 
     //根据储户ID获取其余额信息。
-    public static BigDecimal getCalance(Integer id){
+    public static BigDecimal getCalance(Integer id ){
         Set<Integer> set = map.keySet();
         if (!set.contains(id)){
             throw new RuntimeException("该用户不存在");

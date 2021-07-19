@@ -20,6 +20,6 @@ public class Question05 {
 
     public static void duplicatRemoval(List<Integer> list) {
         Set<Integer> set = list.stream().collect(Collectors.toSet());
-        System.out.println("去重之后："+set);
+        System.out.println("去重之后："+set );
     }
 }

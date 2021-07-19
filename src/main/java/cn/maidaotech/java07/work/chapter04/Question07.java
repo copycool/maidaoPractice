@@ -15,6 +15,6 @@ public class Question07 {
         System.out.println("排序前："+list1);
 
         List<String> collect = Arrays.stream(splitStr).sorted().collect(Collectors.toList());
-        System.out.println("排序后："+collect);
+        System.out.println("排序后："+collect );
     }
 }

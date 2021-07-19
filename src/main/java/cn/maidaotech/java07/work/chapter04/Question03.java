@@ -25,6 +25,6 @@ public class Question03 {
             }
         }
 
-        System.out.println(list);
+        System.out.println(list );
     }
 }

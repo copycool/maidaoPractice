@@ -86,7 +86,7 @@ public class Question14 {
                 player3.getPoker().add(list.get(i));
                 continue;
             }
-            if (i >= 51 && i < 54){
+            if (i >= 51 && i < 54 ){
                 aHandList.add(list.get(i));
                 continue;
             }
