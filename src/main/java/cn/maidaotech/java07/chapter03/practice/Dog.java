@@ -1,8 +1,5 @@
 package cn.maidaotech.java07.chapter03.practice;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Dog {
     private String name;
     private String color;
@@ -49,7 +46,6 @@ public class Dog {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((name == null) ? 0 : name.hashCode());
-        ArrayList list = new ArrayList();
         return result;
     }
 

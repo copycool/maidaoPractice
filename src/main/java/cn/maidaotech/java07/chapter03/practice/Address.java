@@ -7,6 +7,21 @@ public class Address {
     private String street;
     private String postalCode;
 
+    public Address(String country, String province, String city, String street, String postalCode) {
+        this.country = country;
+        this.province = province;
+        this.city = city;
+        this.street = street;
+        this.postalCode = postalCode;
+    }
+
+    @Override
+    public String toString() {
+        return new StringBuilder().append(this.country).append("/").append(this.province).append("/").append(this.city)
+                .append("\n").append(this.street).toString();
+
+    }
+
     public String getCountry() {
         return country;
     }
@@ -47,10 +62,4 @@ public class Address {
         this.postalCode = postalCode;
     }
 
-    @Override
-    public String toString() {
-        return "Address [city=" + city + ", country=" + country + ", postalCode=" + postalCode + ", province="
-                + province + ", street=" + street + "]";
-    }
-    
 }
