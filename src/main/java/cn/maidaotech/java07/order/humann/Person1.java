@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.order.human1;
+package cn.maidaotech.java07.order.humann;
 
 public class Person1 {
     public static void main(String[] args) {

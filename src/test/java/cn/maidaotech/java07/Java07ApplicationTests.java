@@ -10,5 +10,4 @@ class Java07ApplicationTests {
 	void contextLoads() {
 		System.out.println("我是测试");
 	}
-
 }

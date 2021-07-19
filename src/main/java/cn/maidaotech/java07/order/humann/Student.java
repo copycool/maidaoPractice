@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.order.human1;
+package cn.maidaotech.java07.order.humann;
 
 public class Student extends Person{
    private  int math;
