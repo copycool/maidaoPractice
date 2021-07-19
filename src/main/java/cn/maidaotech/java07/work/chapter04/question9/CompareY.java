@@ -1,6 +1,8 @@
 package cn.maidaotech.java07.work.chapter04.question9;
 
-public class CompareY implements  Comparable<Point>{
+import java.util.Comparator;
+
+public class CompareY implements Comparator<Point> {
 
     public int x;
     public int y;
@@ -14,11 +16,12 @@ public class CompareY implements  Comparable<Point>{
 
     }
 
+
     @Override
-    public int compareTo(Point o) {
-        if (this.y == o.y){
-            return this.x - o.x;
+    public int compare(Point o1, Point o2) {
+        if (o1.y == o2.y){
+            return o1.x -o2.x;
         }
-        return this.y - o.y;
+        return o1.y - o2.y;
     }
 }

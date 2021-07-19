@@ -38,9 +38,17 @@ public class Test {
          * 按照y坐标的升序排列为：
          */
         System.out.println("======================================");
+        System.out.println("按照y坐标的升序排列为  Collections.sort");
+        Collections.sort(list,new CompareY());
+        printList(list);
+
+        /**
+         * 按照y坐标的升序排列为：
+         */
+        System.out.println("======================================");
         System.out.println("按照y坐标的升序排列为  Arrays.sort");
-//        Arrays.sort(pointArr,new CompareY().compareTo());
-//        printList(list);
+        Arrays.sort(pointArr,new CompareY());
+        printArray(pointArr);
     }
 
     public static void printArray(Point[] pointArr){
