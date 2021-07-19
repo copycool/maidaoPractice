@@ -1,4 +1,4 @@
-package cn.maidaotech.java07;
+package cn.maidaotech.java07.text;
 import java.util.Scanner;
 
 

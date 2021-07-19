@@ -1,7 +1,4 @@
-package cn.maidaotech.java07;
-
-import org.springframework.util.SystemPropertyUtils;
-
+package cn.maidaotech.java07.Address;
 public class Addresstext {
 // 编写一个代表地址的 Address 类，地址信息由国家，省份，城市，街道，邮编组成，并可以调 
 // 用方法返回完整的地址信息。

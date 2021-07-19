@@ -1,4 +1,4 @@
-package cn.maidaotech.java07;
+package cn.maidaotech.java07.Dog;
 
 public class Dog {
     public static void main(String[] args) {
@@ -7,13 +7,21 @@ public class Dog {
 Dog1 d1=new Dog1("小花","白",4);
 
 System.out.println(d1.toString());
-    }
+Dog1[] dogs = new Dog1[3];
+    dogs[0] = new Dog1("小白", "白色", 1);
+    dogs[1] = new Dog1("小粉", "粉色", 2);
+    dogs[2] = new Dog1("小蓝", "蓝色", 3);
+
+    for (Dog1 d2 : dogs) {
+        System.out.println(d2.toString());
 }
+    }
+    }
 class Dog1{
     String name;
     String color;
     int age;
-    public Dog1(String name,String color,int age){
+   public Dog1(String name,String color,int age){
         this.name=name;
         this.color=color;
         this.age=age;
@@ -21,7 +29,8 @@ class Dog1{
     @Override
     public String toString() {
         return "Dog age:" + age + ", color:" + color + ", name:" + name + "]";
-    }
+    }    
 }
+
    
 

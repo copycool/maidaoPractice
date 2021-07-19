@@ -1,7 +1,5 @@
-package cn.maidaotech.java07;
+package cn.maidaotech.java07.text;
 import java.util.Scanner;
-
-import org.springframework.util.SystemPropertyUtils;
 
 public class homeWork3 {
 
@@ -68,9 +66,9 @@ if(num2>num1){
         }
     }
     //1编写一个方法验证用户输入的手机号，要求：11位数字、只能以数字1开头，第二位可以是数字3、5、6、7、8
-    Scanner scanner=new Scanner(System.in);
+    Scanner scanner1=new Scanner(System.in);
     System.out.println("请输入手机号");
-  String number = scanner.nextLine();
+  String number = scanner1.nextLine();
    String number1="3,5,6,7,8";
     if(number.length()==11&&number.charAt(0)=='1'&&number1.contains(number.charAt(1)+"")){
          System.out.println("成功");

@@ -1,7 +1,6 @@
-package cn.maidaotech.java07;
+package cn.maidaotech.java07.text;
 import java.util.Scanner;
 //从键盘输入学生学号，例如2019年01期12号，输入20190112，使用“/”和“%”运算符分解学号获得年份、期数和序号，并分别输出
-import ch.qos.logback.core.net.SyslogOutputStream;
 public class homeWork {
   public static void main(String[] args){
    Scanner scanner=new Scanner(System.in);

@@ -1,4 +1,4 @@
-package cn.maidaotech.java07;
+package cn.maidaotech.java07.Num;
 
 public class NumberText {
     public static void main(String[] args) {
