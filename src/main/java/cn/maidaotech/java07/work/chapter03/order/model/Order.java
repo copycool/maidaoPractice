@@ -1,9 +1,9 @@
-package cn.maidaotech.java07.work.testposition3.order.model;
+package cn.maidaotech.java07.work.chapter03.order.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
-import cn.maidaotech.java07.work.testposition3.order.data.TestData;
+import cn.maidaotech.java07.work.chapter03.order.data.TestData;
 
 public class Order {
 

@@ -1,7 +1,7 @@
-package cn.maidaotech.java07.work.testposition3.order.action;
+package cn.maidaotech.java07.work.chapter03.order.action;
 
-import cn.maidaotech.java07.work.testposition3.order.model.Order;
-import cn.maidaotech.java07.work.testposition3.order.service.OrderService;
+import cn.maidaotech.java07.work.chapter03.order.model.Order;
+import cn.maidaotech.java07.work.chapter03.order.service.OrderService;
 
 public class OrderAction {
     public static void main(String[] args) {

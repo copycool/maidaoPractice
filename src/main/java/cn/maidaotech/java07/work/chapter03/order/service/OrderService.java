@@ -1,8 +1,8 @@
-package cn.maidaotech.java07.work.testposition3.order.service;
+package cn.maidaotech.java07.work.chapter03.order.service;
 import java.util.Date;
 import java.util.Random;
-import cn.maidaotech.java07.work.testposition3.order.data.TestData;
-import cn.maidaotech.java07.work.testposition3.order.model.Order;
+import cn.maidaotech.java07.work.chapter03.order.data.TestData;
+import cn.maidaotech.java07.work.chapter03.order.model.Order;
 /**
  * 生成订单
  */

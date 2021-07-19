@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.work.testposition3.order.data;
+package cn.maidaotech.java07.work.chapter03.order.data;
 
 /**
  * 构建出商品信息
@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-import cn.maidaotech.java07.work.testposition3.order.model.*;
+import cn.maidaotech.java07.work.chapter03.order.model.*;
 /**
  * 用来生成测试数据，满足测试需求
  */

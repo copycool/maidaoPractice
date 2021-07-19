@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.work.testposition3.order.model;
+package cn.maidaotech.java07.work.chapter03.order.model;
 
 import java.math.BigDecimal;
 
