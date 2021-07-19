@@ -5,10 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Question14 {
@@ -42,10 +39,20 @@ public class Question14 {
         List<String>  aHandList = new ArrayList<>();     //存放三个底牌
         playersPlayCards(list,playersList,aHandList);
         System.out.println("输出三位玩家的牌：");
-        playersList.stream().forEach(players -> System.out.println(players.getName()+"的牌为："+players.getPoker()));
+        playersList.stream().forEach(
+                players -> System.out.println(players.getName()+"的牌为："+players.getPoker())
+        );
         //底牌为：
-        System.out.println("底牌为：");
-        aHandList.stream().forEach(s -> System.out.println(s));
+        System.out.println("底牌为："+aHandList);
+
+        //抢地主：随机一名游戏者获得3张底牌
+        grabTheLandlord(aHandList,playersList);
+
+        //看牌：打印输出每位游戏者的手牌
+        System.out.println("抢完地主后三位玩家的牌：");
+        playersList.stream().forEach(
+                players -> System.out.println(players.getName()+"的牌为："+players.getPoker())
+        );
     }
 
     /**
@@ -56,19 +63,49 @@ public class Question14 {
         Collections.shuffle(list);
     }
 
+    /**
+     * 分牌
+     * @param list
+     * @param playersList
+     * @param aHandList
+     */
     public static void playersPlayCards(List<String> list,List<Players> playersList,List<String>  aHandList){
         Players player1 = new Players("张三",new ArrayList<>());
         Players player2 = new Players("李四",new ArrayList<>());
         Players player3 = new Players("王五",new ArrayList<>());
-
-
-        for (int i = 1; i <= list.size(); i++) {
-
+        for (int i = 0; i < list.size(); i++) {
+            if (i >= 0 && i < 17){
+                player1.getPoker().add(list.get(i));
+                continue;
+            }
+            if (i >= 17 && i < 34){
+                player2.getPoker().add(list.get(i));
+                continue;
+            }
+            if (i >= 34 && i < 51){
+                player3.getPoker().add(list.get(i));
+                continue;
+            }
+            if (i >= 51 && i < 54){
+                aHandList.add(list.get(i));
+                continue;
+            }
         }
-
         playersList.add(player1);
         playersList.add(player2);
         playersList.add(player3);
+    }
+
+    /**
+     * 抢地主,并把底牌给地主
+     * @param aHandList
+     * @param list
+     */
+    public static void grabTheLandlord(List<String> aHandList,List<Players> list){
+        //随机获取一位玩家
+        Players players = list.get(new Random().nextInt(2)+1);
+        players.getPoker().addAll(aHandList);
+        System.err.println("地主为:"+players.getName());
     }
 }
 @Data
