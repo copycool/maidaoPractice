@@ -139,7 +139,6 @@ select CONCAT(first_name," ",last_name) as user_name from student;
   insert into 表1 (列名1,列名2,列名3) values(列1,列2,(select 列3 from 表2));
 ```
 
-
 7:
 
 设计一个大学生成绩系统使用的数据库表，要求至少涉及学生信息、班级信息、课程信息、成绩信息等。要求：
@@ -359,5 +358,57 @@ UPDATE stu_score set score = 86 where sno = 20182512770001 and course_no = 10003
 
 b.统计每门课的学生人数
 SELECT course_no '课程编号' , COUNT(sno) '选课人数' from stu_score GROUP BY course_no 
+
+c.查询课程编号为10001的不及格的学生信息
+SELECT s.*
+from student s RIGHT JOIN stu_score sc on s.sno = sc.sno
+where sc.course_no=10001 and sc.score <60;
+
+d.查询某一个学生的各科成绩
+select * from stu_score where sno = 20182512770001;
+
+e.查询一个班级每个学生的总成绩，并按总成绩由高到低排序；
+SELECT s.stu_name  '学生名称', SUM(ss.score) '各科总成绩' 
+from stu_score as ss,student as s 
+where s.cno=10001 and ss.sno=s.sno  
+GROUP BY s.stu_name 
+ORDER BY SUM(ss.score) DESC;
+
+f.查询每门课都大于80分的学生信息
+//方法一：
+SELECT * from student where sno in
+(SELECT DISTINCT sno from stu_score where sno not in
+(select distinct  sno from stu_score where score<=80));
+//方法二：
+SELECT * FROM student where sno in
+(SELECT sno from stu_score GROUP BY sno HAVING MIN(score)>80);
+
+g.查询至少有一门课程不及格的学生信息
+//方法一：
+SELECT * from student where 
+EXISTS
+(SELECT * from stu_score where stu_score.sno=student.sno AND score<60);
+//方法二：
+SELECT DISTINCT s.* from student s,stu_score ss 
+where s.sno=ss.sno AND ss.score<60;
+
+h.查询某一门课各个班级的平均学生成绩，并按成绩由高到低排序
+select s.cno '班级编号', AVG(ss.score) '平均分' 
+FROM stu_score ss,student s 
+where s.sno=ss.sno and ss.course_no=10001 
+GROUP BY s.cno ORDER BY AVG(ss.score) desc;
+
+i.查询各科成绩最高分、最低分和平均分
+select course_no '课程编号',MAX(score) '最高分',MIN(score) '最低分',AVG(score) '平均分'
+from stu_score GROUP BY course_no
+
+j.(附加题)有如下形式的表格：课程ID、课程名称、最高分、最低分、平均分、及格率、中等率、优良率、优秀率（及格为>=60，中等为70-80，优良为：80-90，优秀为>=90）按照平均分降序排列。思考并尝试编写查询SQL语句。
+select ss.course_no '课程编号', 
+(SELECT course_name from course where course_no=ss.course_no) '课程名称',
+MAX(score) '最高分',MIN(score) '最低分',AVG(score) '平均分',
+SUM(ss.score>=60)/COUNT(*) '及格率',
+SUM(ss.score>=90)/COUNT(*) '优秀率'
+ from stu_score ss GROUP BY ss.course_no ORDER BY AVG(score) desc;
+
 ```
 
