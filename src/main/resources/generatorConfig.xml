@@ -40,7 +40,7 @@
 
             <!--<table tableName="student" domainObjectName="Student" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
             <!--<table tableName="course" domainObjectName="Course" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
-            <table tableName="class_info" domainObjectName="Classinfo" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
+            <table tableName="big_data" domainObjectName="Bigdata" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>
             <!--<table tableName="score" domainObjectName="Score" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false"/>-->
             <!--<table tableName="mall_product" domainObjectName="Product" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">-->
                 <!--<columnOverride column="detail" jdbcType="VARCHAR" />-->
