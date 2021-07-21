@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.maidaotech.java07.work.chapter05.question10.dao.StudentMapper">
+  <resultMap id="BaseResultMap" type="cn.maidaotech.java07.work.chapter05.question10.pojo.Student">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="sno" jdbcType="BIGINT" property="sno" />
+    <result column="created_at" jdbcType="BIGINT" property="createdAt" />
+    <result column="updated_at" jdbcType="BIGINT" property="updatedAt" />
+    <result column="stu_name" jdbcType="VARCHAR" property="stuName" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="cno" jdbcType="BIGINT" property="cno" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, sno, created_at, updated_at, stu_name, age, sex, cno
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from student
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll"  resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from student
+  </select>
+  <select id="selectFailStudentCountByCourdeId" parameterType="java.lang.Long"  resultMap="BaseResultMap">
+    SELECT s.*
+    from student s RIGHT JOIN score sc on s.sno = sc.sno
+    where sc.course_no=#{courseId,jdbcType=BIGINT} and sc.score &lt; 60;
+  </select>
+  <select id="selectAllCourseScoreExceedEighty" resultMap="BaseResultMap">
+    SELECT * FROM student where sno in
+    (SELECT sno from score GROUP BY sno HAVING MIN(score)&gt;80);
+  </select>
+  <select id="selectAtLeastOneFailed" resultMap="BaseResultMap">
+    SELECT DISTINCT s.* from student s,score ss
+    where s.sno=ss.sno AND ss.score &lt; 60;
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from student
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Student">
+    insert into student (id, sno, created_at, 
+      updated_at, stu_name, age, 
+      sex, cno)
+    values (#{id,jdbcType=BIGINT}, #{sno,jdbcType=BIGINT}, #{createdAt,jdbcType=BIGINT}, 
+      #{updatedAt,jdbcType=BIGINT}, #{stuName,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
+      #{sex,jdbcType=INTEGER}, #{cno,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Student">
+    insert into student
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sno != null">
+        sno,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="updatedAt != null">
+        updated_at,
+      </if>
+      <if test="stuName != null">
+        stu_name,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="cno != null">
+        cno,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="sno != null">
+        #{sno,jdbcType=BIGINT},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=BIGINT},
+      </if>
+      <if test="updatedAt != null">
+        #{updatedAt,jdbcType=BIGINT},
+      </if>
+      <if test="stuName != null">
+        #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="cno != null">
+        #{cno,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Student">
+    update student
+    <set>
+      <if test="sno != null">
+        sno = #{sno,jdbcType=BIGINT},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=BIGINT},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=BIGINT},
+      </if>
+      <if test="stuName != null">
+        stu_name = #{stuName,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="cno != null">
+        cno = #{cno,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Student">
+    update student
+    set sno = #{sno,jdbcType=BIGINT},
+      created_at = #{createdAt,jdbcType=BIGINT},
+      updated_at = #{updatedAt,jdbcType=BIGINT},
+      stu_name = #{stuName,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      sex = #{sex,jdbcType=INTEGER},
+      cno = #{cno,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

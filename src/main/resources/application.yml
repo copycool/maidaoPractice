@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/student_system?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     username: root
     password: ROOT
+
     #配置连接源为druid
     type: com.alibaba.druid.pool.DruidDataSource
     #druid的一些基本配置
@@ -30,5 +31,13 @@ spring:
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.dawn.mall.pojo    #起别名
+  configuration:
+    map-underscore-to-camel-case: true        #开启驼峰命名
+    cache-enabled: true       #开启缓存
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #开启标准日志输出到控制台
+  mapper-locations: classpath:mappers/*.xml   #扫描mapper.xml文件
 server:
   port: 8085

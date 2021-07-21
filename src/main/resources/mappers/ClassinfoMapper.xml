@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.maidaotech.java07.work.chapter05.question10.dao.ClassinfoMapper">
+  <resultMap id="BaseResultMap" type="cn.maidaotech.java07.work.chapter05.question10.pojo.Classinfo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="cno" jdbcType="BIGINT" property="cno" />
+    <result column="created_at" jdbcType="BIGINT" property="createdAt" />
+    <result column="updated_at" jdbcType="BIGINT" property="updatedAt" />
+    <result column="class_name" jdbcType="VARCHAR" property="className" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, cno, created_at, updated_at, class_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from class_info
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from class_info
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Classinfo">
+    insert into class_info (id, cno, created_at, 
+      updated_at, class_name)
+    values (#{id,jdbcType=BIGINT}, #{cno,jdbcType=BIGINT}, #{createdAt,jdbcType=BIGINT}, 
+      #{updatedAt,jdbcType=BIGINT}, #{className,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Classinfo">
+    insert into class_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="cno != null">
+        cno,
+      </if>
+      <if test="createdAt != null">
+        created_at,
+      </if>
+      <if test="updatedAt != null">
+        updated_at,
+      </if>
+      <if test="className != null">
+        class_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="cno != null">
+        #{cno,jdbcType=BIGINT},
+      </if>
+      <if test="createdAt != null">
+        #{createdAt,jdbcType=BIGINT},
+      </if>
+      <if test="updatedAt != null">
+        #{updatedAt,jdbcType=BIGINT},
+      </if>
+      <if test="className != null">
+        #{className,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Classinfo">
+    update class_info
+    <set>
+      <if test="cno != null">
+        cno = #{cno,jdbcType=BIGINT},
+      </if>
+      <if test="createdAt != null">
+        created_at = #{createdAt,jdbcType=BIGINT},
+      </if>
+      <if test="updatedAt != null">
+        updated_at = #{updatedAt,jdbcType=BIGINT},
+      </if>
+      <if test="className != null">
+        class_name = #{className,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.maidaotech.java07.work.chapter05.question10.pojo.Classinfo">
+    update class_info
+    set cno = #{cno,jdbcType=BIGINT},
+      created_at = #{createdAt,jdbcType=BIGINT},
+      updated_at = #{updatedAt,jdbcType=BIGINT},
+      class_name = #{className,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
