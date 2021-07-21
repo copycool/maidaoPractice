@@ -13,7 +13,7 @@ public class CircleImpl implements Shape {
 
     @Override
     public String area() {
-        // TODO Auto-generated method stub
+        
         double area01 = Math.PI * Math.pow(radius, 2);
         return ("圆的半径为：" + radius + "\n" + "圆的面积为：" + area01);
 
@@ -21,7 +21,7 @@ public class CircleImpl implements Shape {
 
     @Override
     public String perimeter() {
-        // TODO Auto-generated method stub
+     
         double perimeter01 = 2 * Math.PI * radius;
         return ("圆的周长为：" + perimeter01);
 

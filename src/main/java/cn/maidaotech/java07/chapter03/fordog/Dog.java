@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03.forDog;
+package cn.maidaotech.java07.chapter03.fordog;
 
 public class Dog {
     private String name;
