@@ -1,13 +1,13 @@
-package cn.maidaotech.java07.chapter03.order.model01;
+package cn.maidaotech.java07.chapter03.order01.model01;
 
 public class Account {
     private String accountTitle;//账户名称
-    private Integer balance;//剩余金额
+    private Double balance;//剩余金额
 
     public Account() {
     }
 
-    public Account(String accountTitle, Integer balance) {
+    public Account(String accountTitle, Double balance) {
         this.accountTitle = accountTitle;
         this.balance = balance;
     }
@@ -20,11 +20,11 @@ public class Account {
         this.accountTitle = accountTitle;
     }
 
-    public Integer getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
-    public void setBalance(Integer balance) {
+    public void setBalance(Double balance) {
         this.balance = balance;
     }
     

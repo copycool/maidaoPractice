@@ -10,7 +10,7 @@ public class DogTest {
         dog[1] = new Dog("xiaoming",10,"白色");
         dog[2] = new Dog("xiaoming",10,"白色");
         for (Dog dog2 : dog) {
-            System.out.println(dog2);
+            System.out.println(dog2.toString());
         }
     }
     

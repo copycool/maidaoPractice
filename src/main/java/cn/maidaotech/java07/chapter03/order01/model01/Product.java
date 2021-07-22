@@ -1,14 +1,14 @@
-package cn.maidaotech.java07.chapter03.order.model01;
+package cn.maidaotech.java07.chapter03.order01.model01;
 
 public class Product {
     private String productName;
-    private Integer productPrice;
+    private Double productPrice;
     private Integer stockNum;//库存
 
     public Product() {
     }
 
-    public Product(String productName, Integer productPrice, Integer stockNum) {
+    public Product(String productName, Double productPrice, Integer stockNum) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.stockNum = stockNum;
@@ -22,11 +22,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public Integer getProductPrice() {
+    public Double getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(Integer productPrice) {
+    public void setProductPrice(Double productPrice) {
         this.productPrice = productPrice;
     }
 

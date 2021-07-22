@@ -1,6 +1,5 @@
 package cn.maidaotech.java07.chapter03.person;
 
-
 public class Person {
     private String name;
     private Integer age;
@@ -53,8 +52,8 @@ public class Person {
     public String toString() {
         return "Person [address=" + address + ", age=" + age + ", gender=" + gender + ", name=" + name + "]";
     }
-    
-    public void message(){
-        System.out.println(this.getName()+this.address+this.gender+this.getAge());
+
+    public String message() {
+        return this.getName() + this.address + this.gender + this.getAge();
     }
 }

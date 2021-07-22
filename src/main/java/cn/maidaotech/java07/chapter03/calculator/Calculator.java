@@ -6,7 +6,7 @@ package cn.maidaotech.java07.chapter03.calculator;
  */
 public class Calculator {
     public static void main(String[] args) {
-        Number num = new Number();
+        NumberCalc num = new NumberCalc();
         System.out.println(num.plus(10, 5));
         System.out.println(num.minus(-1, -2));
         System.out.println(num.multiply(10, 20));

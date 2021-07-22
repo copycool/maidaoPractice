@@ -1,4 +1,5 @@
 package cn.maidaotech.java07.chapter03.vehicle;
+
 /**
  * 创建交通工具接口Vehicle，接口中定义start()和stop()方法，
  * 在两个分别Car和Bus的类中实现Vehicle接口。创建一个名为VehicleDemo的类，
@@ -6,11 +7,11 @@ package cn.maidaotech.java07.chapter03.vehicle;
  */
 public class VehicleDemo {
     public static void main(String[] args) {
-        Vehicle car = new CarImpl();
-        Vehicle bus = new BusImpl();
-        car.start();
-        car.stop();
-        bus.start();
-        bus.stop();
+        Vehicle car = new Car();
+        Vehicle bus = new Bus();
+        System.out.println(car.start());
+        System.out.println(car.stop());
+        System.out.println(bus.start());
+        System.out.println(bus.start());
     }
 }

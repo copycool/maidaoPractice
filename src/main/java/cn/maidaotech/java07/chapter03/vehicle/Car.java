@@ -1,6 +1,6 @@
 package cn.maidaotech.java07.chapter03.vehicle;
 
-public class BusImpl implements Vehicle {
+public class Car implements Vehicle {
 
     @Override
     public String toString() {
@@ -9,17 +9,17 @@ public class BusImpl implements Vehicle {
     }
 
     @Override
-    public void start() {
-        System.out.println("Busstart");
+    public String start() {
+        return ("Carstart");
         // TODO Auto-generated method stub
 
     }
 
     @Override
-    public void stop() {
-        System.out.println("Busstop");
+    public String stop() {
+        return ("Carstop");
         // TODO Auto-generated method stub
 
     }
-    
+
 }

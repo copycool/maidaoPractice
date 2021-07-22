@@ -6,12 +6,12 @@ package cn.maidaotech.java07.chapter03.shape;
  */
 public class Test {
     public static void main(String[] args) {
-        RegularTriangleImpl triangle = new RegularTriangleImpl(20);
-        triangle.area();
-        triangle.perimeter();
-        CircleImpl circle = new CircleImpl(4.0);
-        circle.area();
-        circle.perimeter();
+        Shape triangle = new RegularTriangleImpl(20.0);
+        System.out.println(triangle.area()); 
+        System.out.println(triangle.perimeter());
+        Shape circle = new CircleImpl(4.0);
+        System.out.println(circle.area());
+        System.out.println(circle.perimeter());
     }
     
 }
