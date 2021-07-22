@@ -3,7 +3,6 @@ package cn.maidaotech.chapter03.example.order.service;
 import cn.maidaotech.chapter03.example.order.model.Account;
 import cn.maidaotech.chapter03.example.order.model.Order;
 import cn.maidaotech.chapter03.example.order.model.Product;
-import cn.maidaotech.chapter03.example.order.repository.OrderRepository;
 
 public class OrderServiceImpl implements OrderService {
     // 实现***接口的实现类叫做***Impl
