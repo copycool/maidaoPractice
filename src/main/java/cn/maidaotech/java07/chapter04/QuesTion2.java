@@ -6,15 +6,15 @@ package cn.maidaotech.java07.chapter04;
 // ArrayList删除1000个数据用时：105195纳秒
 // LinkedList添加1000个数据用时：325207纳秒
 // LinkedList删除1000个数据用时：290250纳秒
+// LinkedList集合底层数据结构是链表，链表结构的特点是增删改速度比较快。
 // 输出完成 (耗时 0 秒) - 正常终止
 // 分析：
 // 通过以上结果，我们可以看出LinkedList在对进行添加和删除的操作中，耗费时间少于ArrayList,效率上有明显的优势。
 // ArrayList集合底层的数据结构是数组，所以对定向查找速度比较快
-// LinkedList集合底层数据结构是链表，链表结构的特点是增删改速度比较快。
 
 
 import java.util.*;
-class TimeTest 
+class QuesTion2 
 {
 	public static void main(String[] args) 
 	{
