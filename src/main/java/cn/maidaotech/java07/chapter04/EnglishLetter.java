@@ -19,6 +19,7 @@ public class EnglishLetter {
         for (String temp : list) {
             System.out.println(temp + "");
         }
+       scanner.close();
 
     }
 

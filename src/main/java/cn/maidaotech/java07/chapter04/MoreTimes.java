@@ -1,8 +1,10 @@
 package cn.maidaotech.java07.chapter04;
 
+// import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+// import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -13,8 +15,12 @@ public class MoreTimes {
         System.out.println("随机数长度为：" + randomSize);
         Map<Integer, Integer> map = new HashMap<>();
         System.out.print("产生的随机数有：" + "");
+        // List<Integer> list1 = new ArrayList<>();
+        // for(int i=0;i<20;i++){
+        //     list1.add((int)(Math.random() * 10));
+        // }
 
-        for (int i = 0; i < randomSize; i++) {
+        for (int i = 0; i <randomSize ; i++) {
             int num = new Random().nextInt(10);
             System.out.println(num + "");
             if (map.get(num) == null) {

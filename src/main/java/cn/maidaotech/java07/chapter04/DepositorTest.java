@@ -8,7 +8,7 @@ public class DepositorTest {
     private static void init() {
         for (int i = 0; i < 10; i++) {
             Long id = i + 5L;
-            Depositor depositor = new Depositor(id, "qiqi ", i +100);
+            Depositor depositor = new Depositor(id, "qiqi "+i, i +100);
             depositors.put(id, depositor);
         }
       

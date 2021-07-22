@@ -16,7 +16,7 @@ public class ArrayListVSLinkedList {
         long berfore = System.currentTimeMillis();
         ArrayList<Integer> list1 = new ArrayList<Integer>();
         for (int i = 0; i < num; i++) {
-            list1.add(i);
+            list1.add(0,i);
         }
         long after = System.currentTimeMillis();
         System.out.println("ArrayList添加所用时间为：" + (after - berfore));
@@ -35,7 +35,7 @@ public class ArrayListVSLinkedList {
         long berfore = System.currentTimeMillis();
         List<Integer> list1 = new LinkedList<Integer>();
         for (int i = 0; i<num; i++) {
-            list1.add(i);        
+            list1.add(0,i);        
         } 
         long after = System.currentTimeMillis();
         System.out.println("LinkedList添加所用时间为：" + (after - berfore));
