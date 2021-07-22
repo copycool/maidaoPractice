@@ -23,6 +23,10 @@ public class CollectionRelation {
 
 	public static void fillList(List<Integer> list, int count, int min, int max){
 		Random random = new Random();
+		// strList2.retainAll(strList);
+
+		// strList2.removeAll(strList);
+        // strList2.addAll(strList);
 		while(list.size()<count){
 			int k = random.nextInt((max-min)+min);
 			if(!list.contains(k)){

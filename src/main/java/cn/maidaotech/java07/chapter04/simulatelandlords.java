@@ -3,12 +3,13 @@ package cn.maidaotech.java07.chapter04;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.TreeSet;
 
 public class simulatelandlords {
     public static void main(String[] args) {
         String[] num = {"3","4","5","6","7","8","9","10","J","Q","K","A","2"};
-        String[] color = {"红桃","黑桃","方片","梅花"};
+        String[] color = {"♥","♠","♦","♣"};
         HashMap<Integer, String> hm = new HashMap<>();
         ArrayList<Integer> list = new ArrayList<>();
         int index = 0;
@@ -28,26 +29,35 @@ public class simulatelandlords {
         //洗牌
         Collections.shuffle(list);
         //发牌
-        TreeSet<Integer> xiaowang = new TreeSet<>();
-        TreeSet<Integer> xiaoli = new TreeSet<>();
+        TreeSet<Integer> cuicancan = new TreeSet<>();
+        TreeSet<Integer> liumengmeng = new TreeSet<>();
         TreeSet<Integer> me = new TreeSet<>();
         TreeSet<Integer> dipai = new TreeSet<>();
         for(int i=0; i<list.size(); i++){
             if(i>=list.size()-3){
                 dipai.add(list.get(i));
             }else if(i % 3 == 0){
-                xiaowang.add(list.get(i));
+                cuicancan.add(list.get(i));
             }else if(i % 3 == 1){
-                xiaoli.add(list.get(i));
+                liumengmeng.add(list.get(i));
             }else{
                 me.add(list.get(i));
             }
         }
-        lookpoker(hm, xiaowang, "小王");
-        lookpoker(hm, xiaoli, "小李");
+        lookpoker(hm, cuicancan, "崔灿灿");
+        lookpoker(hm, liumengmeng, "刘梦梦");
         lookpoker(hm, me, "王雪利");
         lookpoker(hm, dipai, "底牌");
-
+        //抢地主
+        Random random = new Random();
+        int t = random.nextInt()*3;
+        if(t < 1){
+            System.out.println("崔灿灿抢到了地主！");
+        }else if(t<2){
+            System.out.println("刘梦梦抢到了地主！");
+        }else{
+            System.out.println("王雪利抢到了地主！");
+        }
     }
     // 看牌
     // 1.返回值类型void

@@ -8,9 +8,9 @@ public class BankBalance {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		HashMap<Integer, Customer> cus=new HashMap<>();
-		Customer cus1=new BankBalance().new Customer(123, "张三", 500);
-		Customer cus2=new BankBalance().new Customer(124, "张er", 300);
-		Customer cus3=new BankBalance().new Customer(125, "张六", 700);
+		Customer cus1=new BankBalance().new Customer(123, "崔灿灿", 500);
+		Customer cus2=new BankBalance().new Customer(124, "刘梦梦", 300);
+		Customer cus3=new BankBalance().new Customer(125, "王雪利", 700);
 		
 		cus.put(cus1.getID(), cus1);
 		cus.put(cus2.getID(), cus2);
@@ -24,12 +24,10 @@ public class BankBalance {
     class Customer{
 	private int ID;
 	public Customer() {
-		super();
 		// TODO Auto-generated constructor stub
 	}
 	public Customer(int iD, String name, double balance) {
-		super();
-		ID = iD;
+		this.ID = iD;
 		this.name = name;
 		this.balance = balance;
 	}

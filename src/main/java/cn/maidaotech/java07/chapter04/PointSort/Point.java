@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter04.PointSort;
+package cn.maidaotech.java07.chapter04.pointsort;
 
 //定义一个 Point 类，他的两个数据域为坐标 x 和 y，
 // 实现 comparable 接口，

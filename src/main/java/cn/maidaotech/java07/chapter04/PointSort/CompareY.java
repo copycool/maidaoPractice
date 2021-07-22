@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter04.PointSort;
+package cn.maidaotech.java07.chapter04.pointsort;
 
 import java.util.Comparator;
 

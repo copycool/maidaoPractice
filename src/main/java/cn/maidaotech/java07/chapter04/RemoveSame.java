@@ -27,5 +27,12 @@ public class RemoveSame {
     List<Integer> integerList = list2.stream().distinct().collect(Collectors.toList());
 
     System.out.println("去重后"+integerList);
+
+
+
+
+
+
+
     }
 }

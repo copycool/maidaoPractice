@@ -5,7 +5,7 @@ package cn.maidaotech.java07.chapter04;
 //能分隔的最大正方形边长是多少。(最大公约数)（用递归函数实现）
 public class LandDivide {
     public static void main(String[] args) {
-        sub_land(9,6);
+        sub_land(168,64);
     }
 //求最大公约数 
     public static void sub_land(int length, int width){
