@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class FightLandLord {
     public static List<String> deck = new ArrayList<String>();
@@ -100,26 +99,10 @@ public class FightLandLord {
     }
 
     private static void clear() {
-        ListIterator<String> listIterator1 = player1.getHandCards().listIterator();
-        ListIterator<String> listIterator2 = player1.getHandCards().listIterator();
-        ListIterator<String> listIterator3 = player1.getHandCards().listIterator();
-        ListIterator<String> cardIterator = cards.listIterator();
-        while (listIterator1.hasNext()) {
-            listIterator1.next();
-            listIterator1.remove();
-        }
-        while (listIterator2.hasNext()) {
-            listIterator2.next();
-            listIterator2.remove();
-        }
-        while (listIterator3.hasNext()) {
-            listIterator3.next();
-            listIterator3.remove();
-        }
-        while (cardIterator.hasNext()) {
-            cardIterator.next();
-            cardIterator.remove();
-        }
+        player1.getHandCards().clear();
+        player2.getHandCards().clear();
+        player3.getHandCards().clear();
+        cards.clear();
     }
 
 }

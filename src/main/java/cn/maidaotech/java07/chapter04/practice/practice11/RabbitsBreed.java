@@ -7,9 +7,12 @@ public class RabbitsBreed {
      * 临界条件：第二个月过完以前能够繁殖的兔子数都是初始值，当月份小于0时（只有迭代到最开始的月份或者计算可以繁殖兔子数的时候才会触发这个条件），繁殖能力都是兔子的初始值。
      */
     public static int breed(int month) {
-        if (month <= 0)
+        if (month == 1)
             return 1; // 起始兔子数量
-        return breed(month - 1) + breed(month - 3);
+        if (month == 2)
+            return 1;
+
+        return breed(month - 1) + breed(month - 2);
     }
 
     public static void main(String[] args) {

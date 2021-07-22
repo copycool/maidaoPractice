@@ -10,7 +10,7 @@ public class Bank {
     }
 
     private static void init() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 40; i++) {
             Long id = i + 10L;
             DepositorInfo depositorInfo = new DepositorInfo(id, "peas" + i, i + 0.1);
             depositors.put(id, depositorInfo);
