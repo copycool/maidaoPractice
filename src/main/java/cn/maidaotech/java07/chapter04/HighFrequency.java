@@ -1,11 +1,7 @@
 package cn.maidaotech.java07.chapter04;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class HighFrequency {
     // 读取个数不定的正整数，打印频率最高的，如果有多个一样的最高频率则都输出。
@@ -25,22 +21,19 @@ public class HighFrequency {
             }
         }
 
-        int maxTimes = 0;
-        int key = 0;
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             System.out.println("key:" + entry.getKey() + "value:" + entry.getValue());
         }
 
-        for (Integer k : map.keySet()) {
-            for (Integer value : map.values()) {
-                if (maxTimes < value) {
-                    maxTimes=value;
-                   
-                }
-                System.out.println(k);
-                k++;
+        int max = 0;
+        int maxTime = 0;
+        for (Entry<Integer, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > max) {
+                max = entry.getValue();
+                maxTime = entry.getKey();
+                
             }
-
         }
+        System.out.println(maxTime);
     }
 }

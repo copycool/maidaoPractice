@@ -1,5 +1,6 @@
 package cn.maidaotech.java07.chapter04;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
@@ -12,17 +13,11 @@ public class SortAlphabet {
     // "Plain" "TextThe" "identifier" "of" "the" "encoding" "used" "to" "encode"
     // "the" "bytes" "in" "value"
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        String[] a = { "Plain", "TextThe", "identifier", "of", "the", "encoding", "used", "to", "encode", "the",
-                "bytes", "in", "value" };
-        Collections.addAll(list, a);
-        list.sort(Comparator.naturalOrder());
+        ArrayList<String> list = new ArrayList<>(Arrays.asList("Plain", "TextThe", "identifier", "of", "the", "encoding", "used", "to", "encode", "the",
+        "bytes", "in", "value"));
 
-        // System.out.println(list);
+        Collections.sort(list);
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
-
-    }
+        System.out.println(list);
+    } 
 }

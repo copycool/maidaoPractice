@@ -2,36 +2,41 @@ package cn.maidaotech.java07.chapter03.order.model;
 
 public class Order {
     //Order类包含购买的什么商品和数量等属性
-    private String byeSpecies;
-    private int buyCount;
+   private Integer id;
+   private Integer price;
+   private String produceName;
 
     public Order() {
     }
-    
-    public Order(String byeSpecies, int buyCount) {
-        this.byeSpecies = byeSpecies;
-        this.buyCount = buyCount;
+
+    public Order(Integer id, Integer price, String produceName) {
+        this.id = id;
+        this.price = price;
+        this.produceName = produceName;
     }
 
-    public String getByeSpecies() {
-        return byeSpecies;
+    public Integer getId() {
+        return id;
     }
 
-    public void setByeSpecies(String byeSpecies) {
-        this.byeSpecies = byeSpecies;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getByeCount() {
-        return buyCount;
+    public Integer getPrice() {
+        return price;
     }
 
-    public void setByeCount(int byeCount) {
-        this.buyCount = byeCount;
+    public void setPrice(Integer price) {
+        this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return "Order [buyCount=" + buyCount + ", byeSpecies=" + byeSpecies + "]";
+    public String getProduceName() {
+        return produceName;
+    }
+
+    public void setProduceName(String produceName) {
+        this.produceName = produceName;
     }
 
 

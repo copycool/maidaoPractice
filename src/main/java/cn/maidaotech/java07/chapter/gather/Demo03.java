@@ -1,52 +1,38 @@
+
 package cn.maidaotech.java07.chapter.gather;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Demo03 {
-    /// 编写Java程序模拟简单的计算器。
-    // 定义Number类，其中有两个成员变量x和y，用构造函数赋值x和y的初始值。
-    // 定义加plus、减minus、乘multiply、除division等公有成员方法，分别对两个成员变量执行加减乘除的运算。
-    // 在main方法中创建Number对象并调用各个方法，显示计算结果。
-    private Number x;
-    private Number y;
+    //用一个大集合存入20个随机数字，然后筛选其中的偶数元素，放到小集合中。
+    //要求使用自定义的方法来实现筛选。
+    public static void main(String[] args) {
+        ArrayList<Integer> bigList = new ArrayList<>();
+        Random random = new Random();
 
-    public Demo03() {
+        for (int i = 0; i < 20; i++) {
+            int a = random.nextInt(100);
+            bigList.add(i);
+        }
+
+        ArrayList<Integer> smallList = getSmallList(bigList);
+        System.out.println("偶数的个数有："+smallList.size()+"个");
+        for (int i = 0; i < smallList.size()-1; i++) {
+            System.out.println(smallList.get(i));
+        }
     }
 
-    public Demo03(Number x, Number y) {
-        this.x = x;
-        this.y = y;
+    private static ArrayList<Integer> getSmallList(ArrayList<Integer> bigList) {
+        //创建一个小集合
+        ArrayList<Integer> smallList = new ArrayList<>();
+        for (int i = 0; i < bigList.size(); i++) {
+            int num = bigList.get(i);
+            if (num%2==0) {
+                smallList.add(num);
+            }
+        }
+        return smallList;
     }
-
-    public Number getX() {
-        return x;
-    }
-
-    public void setX(Number x) {
-        this.x = x;
-    }
-
-    public Number getY() {
-        return y;
-    }
-
-    public void setY(Number y) {
-        this.y = y;
-    }
-
-    public static void plus(Number x,Number y){
-        System.out.println(x+"+"+y+"="+x+y);
-    }
-
-    public static void minus(Number x,Number y){
-        System.out.println(x+"-"+y+"="+(x-y));
-    }
-
-    public static void multiply(Number x,Number y){
-        System.out.println(x+"+"+y+"="+x+y);
-    }
-
-    public static void division(Number x,Number y){
-        System.out.println(x+"+"+y+"="+x+y);
-    }
-
-
+    
 }

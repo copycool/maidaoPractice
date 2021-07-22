@@ -9,29 +9,22 @@ public class CreateFiltrate {
     public static void main(String[] args) {
         ArrayList<Integer> bigList = new ArrayList<>();
         Random random = new Random();
-
         for (int i = 0; i < 20; i++) {
-            int a = random.nextInt(100);
-            bigList.add(i);
+            bigList.add(random.nextInt(100)) ;
         }
 
-        ArrayList<Integer> smallList = getSmallList(bigList);
-        System.out.println("偶数的个数有："+smallList.size()+"个");
-        for (int i = 0; i < smallList.size()-1; i++) {
-            System.out.println(smallList.get(i));
-        }
-    }
-
-    private static ArrayList<Integer> getSmallList(ArrayList<Integer> bigList) {
-        //创建一个小集合
         ArrayList<Integer> smallList = new ArrayList<>();
         for (int i = 0; i < bigList.size(); i++) {
-            int num = bigList.get(i);
-            if (num%2==0) {
-                smallList.add(num);
+            if (bigList.get(i)%2==0) {
+                smallList.add(bigList.get(i));
             }
         }
-        return smallList;
+
+        System.out.println("小集合长度为："+smallList.size());
+
+        for (int i = 0; i < smallList.size(); i++) {
+            System.out.println(smallList.get(i));
+        }
     }
     
 }

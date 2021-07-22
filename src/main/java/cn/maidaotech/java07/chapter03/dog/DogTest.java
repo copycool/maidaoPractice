@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.dog;
 
 public class DogTest {
     public static void main(String args[]){

@@ -3,7 +3,7 @@ package cn.maidaotech.java07.chapter03.order.model;
 public class Product {
     //其中Product类至少有名称、价格和库存数量等属性
     private String productName;
-    private String ProductPrice;
+    private String productPrice;
     private int productCount;
 
     public Product() {
@@ -11,7 +11,7 @@ public class Product {
 
     public Product(String productName, String productPrice, int productCount) {
         this.productName = productName;
-        ProductPrice = productPrice;
+        this.productPrice = productPrice;
         this.productCount = productCount;
     }
     public String getProductName() {
@@ -23,11 +23,11 @@ public class Product {
     }
 
     public String getProductPrice() {
-        return ProductPrice;
+        return productPrice;
     }
 
     public void setProductPrice(String productPrice) {
-        ProductPrice = productPrice;
+        this.productPrice = productPrice;
     }
 
     public int getProductCount() {

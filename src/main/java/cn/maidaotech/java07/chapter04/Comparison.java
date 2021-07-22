@@ -42,7 +42,8 @@ public class Comparison {
         for (int i = 999; i >= 0; i--) {
             ll.remove(i);
         }
-        System.out.println("L删除1000个数据用时：" + (endTimeAddll - startTimeAddll) + "纳秒");
+        long endTimeRemovell = System.nanoTime();
+        System.out.println("L删除1000个数据用时：" + (endTimeRemovell - startTimeRemovell) + "纳秒");
 
     }
 

@@ -1,8 +1,6 @@
 package cn.maidaotech.java07.chapter03;
 
-import java.util.Date;
 
-import cn.maidaotech.java07.chapter01.People;
 
 public class PeopleTest {
     public static void main(String[] args) {

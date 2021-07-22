@@ -1,43 +1,50 @@
 package cn.maidaotech.java07.chapter04.DSortOrder;
 
-public class Point implements Comparable {
-    private String x;
-    private String y;
+import java.util.Comparator;
+
+public class Point implements Comparable<Point> {
+    private Integer x;
+    private Integer y;
 
     public Point() {
     }
 
-    public Point(String x, String y) {
+    public Point(Integer x, Integer y) {
         this.x = x;
         this.y = y;
     }
 
-    public String getX() {
+    public Integer getX() {
         return x;
     }
 
-    public void setX(String x) {
+    public void setX(Integer x) {
         this.x = x;
     }
 
-    public String getY() {
+    public Integer getY() {
         return y;
     }
 
-    public void setY(String y) {
+    public void setY(Integer y) {
         this.y = y;
     }
 
-    @Override
-    public void xCompare() {
-        // TODO Auto-generated method stub
+   
 
+    @Override
+    public String toString() {
+        return "Point [x=" + x + ", y=" + y + "]";
     }
 
     @Override
-    public void yCompare() {
-        // TODO Auto-generated method stub
-
+    public int compareTo(Point o) {
+        if (this.x!=o.getX()) {
+            return this.x-o.getX();
+        }
+        return this.y-o.getY();
     }
+
+   
 
 }

@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter03;
+package cn.maidaotech.java07.chapter03.shape;
 
 public abstract class Shape {
     //定义一个抽象类Shape，表示二维图形，拥有抽象方法area和perimeter，分别用来计算形状的面积和周长。
