@@ -1,7 +1,5 @@
 package cn.maidaotech.java07.chapter04.DSortOrder;
 
-import java.util.Comparator;
-
 public class Point implements Comparable<Point> {
     private Integer x;
     private Integer y;

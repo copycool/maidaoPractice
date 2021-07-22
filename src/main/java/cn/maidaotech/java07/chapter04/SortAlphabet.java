@@ -2,10 +2,6 @@ package cn.maidaotech.java07.chapter04;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class SortAlphabet {
     // 将如下英文其中的单词按照字母排序后打印输出

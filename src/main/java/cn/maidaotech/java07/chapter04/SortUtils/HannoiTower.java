@@ -1,6 +1,7 @@
-package cn.maidaotech.java07.arithmetic;
+package cn.maidaotech.java07.chapter04.SortUtils;
 
 public class HannoiTower {
+    //汉诺塔
     static int num = 0;
 
     public static void main(String[] args) {

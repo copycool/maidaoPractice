@@ -11,7 +11,17 @@ public class Comparison {
     // LinkedList在对进行添加和删除的操作中，耗费时间少于ArrayList,效率上有明显的优势。
     // ArrayList集合底层的数据结构是数组，所以对定向查找速度比较快
     // LinkedList集合底层数据结构是链表，链表结构的特点是增删改速度比较快。
+    public final static int TIME = 10000;
     public static void main(String[] args) {
+
+        List<Integer> array = new ArrayList<>(TIME);
+        List<Integer> linked = new ArrayList<>();
+
+        long star = System.currentTimeMillis();
+        //TODO
+        long end = System.currentTimeMillis();
+
+
 
         // 以下为ArrayList的添加删除
         ArrayList<Integer> al = new ArrayList<>();

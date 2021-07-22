@@ -1,6 +1,4 @@
 package cn.maidaotech.java07.chapter04.printScore;
-
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -11,6 +9,7 @@ public class PrintScore {
     //注：成绩相同时学号较小的优先打印，打印的信息包括学号、姓名（统一为“学生i”[i=1，2，3，4，...，40]）和成绩。
     public static void main(String[] args) {
            Collections.sort(list);
+           name();
            for (int i = 0; i < list.size(); i++) {
                int order = i+1;
                System.out.println("学生"+order+" "+list.get(i).getScore());
@@ -18,9 +17,7 @@ public class PrintScore {
         
     }
 
-    static{
-        name();
-    }
+  
 
     private static List<Student> list = new ArrayList<>();       
     private static void name(){
@@ -30,9 +27,7 @@ public class PrintScore {
         }
     }
     private static double randomScore(){
-        Double score = Math.random()*50+50;
-        BigDecimal b = new BigDecimal(score);
-        score = b.setScale(1, BigDecimal.ROUND_HALF_UP).doubleValue();
+        int score = (int)(Math.random()*50+50);
         return score;
     }
 }
