@@ -1,4 +1,4 @@
-package cn.maidaotech.chapter04;
+package cn.maidaotech.chapter04.example15;
 
 public class SortUtils {
     public void bubbleSort(){

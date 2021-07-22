@@ -20,7 +20,7 @@ public class ListExample {
         Random random = new Random();
         for (int i = 0; i < 20; i++) {
             list.add(random.nextInt(6));
-            //
+            //也可以 list.add((int) (Math.random() * 5));
         }
         System.out.println("删除前：" + list.toString());
         remove(list, 2);
