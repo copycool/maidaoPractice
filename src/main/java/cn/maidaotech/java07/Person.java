@@ -6,10 +6,18 @@ public class Person {
     private String sex;
     private int age;
 
-	public Person(String name, String address, String sex, int age) {
-	}
+   /*  public Student() {
+    }
+ */
 
-	public String getName() {
+    public Person(String name, String address, String sex, int age) {
+        this.name = name;
+        this.address = address;
+        this.sex = sex;
+        this.age = age;
+    }
+
+    public String getName() {
         return name;
     }
 
@@ -40,14 +48,8 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-    public static String message(String name,String address,String sex,int age, int i, int j){
-        if (name!=""&& address!="" && sex!=""&& age!=0) {
-            return "信息输出"+name+">>>"+address+">>>"+sex+">>>"+age;
-        }
-        return "输入信息错误，请再次调用输入！";
     
-    }
 
-	public void message() {
-	}
+
+
 }
