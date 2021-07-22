@@ -17,7 +17,7 @@ public class Address {
         this. country = country;
     }
     public String getPronvice(){
-        return country;
+        return province;
     }
     public void setProvince(String province){
         this. province = province  ;

@@ -17,7 +17,6 @@ public class OrderTest2 implements OrderServiceInterface {
        }else{
             return "购买失败";
        }
-      
     }
 }
 
