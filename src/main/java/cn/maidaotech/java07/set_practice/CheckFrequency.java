@@ -9,11 +9,8 @@ import cn.maidaotech.java07.util.ListUtils;
 public class CheckFrequency {
     public static void main(String[] args) {
         List<Integer> list = ListUtils.randumNum(20, 20);
-        System.out.println("--------------------------------------------------------");
-        list.forEach(v -> System.out.print(v + "\t"));
-        System.out.println("\n" + "--------------------------------------------------------");
         Map<Integer, Integer> map = checkFrequency(list);
-        map.forEach((k, v) -> System.out.println(k + "  出现次数为： " + v));
+        map.forEach((k, v) -> System.out.println(k + "\t出现次数为:\t" + v));
     }
 
     public static Map<Integer, Integer> checkFrequency(List<Integer> list) {

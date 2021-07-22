@@ -16,6 +16,5 @@ public class RandumNumber {
         list = ListUtils.removeAll(list, 0);
         System.out.println();
         list.forEach(v -> System.out.print(v + "\t"));
-
     }
 }

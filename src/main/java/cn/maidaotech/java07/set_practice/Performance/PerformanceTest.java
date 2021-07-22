@@ -8,88 +8,54 @@ import java.util.List;
  * 对ArrayLsit和LinkedList进行性能测试
  */
 public class PerformanceTest {
+
+    private static final int TIMES = 100000;
+
     public static void main(String[] args) {
-        List<Integer> list = arrayListAddTest();
-        List<Integer> list2 = linkedListAddTest();
-        arrayListCheckTest(list);
-        arrayListRemoveTest(list);
-        linkedListRemoveTest(list2);
-        linkedListCheckTest(list);
+        List<Integer> arrLists = new ArrayList<>();
+        List<Integer> linkeds = new LinkedList<>();
+        {
+            System.out.println("arrayList添加元素耗时:\t" + addFirst(arrLists) + "毫秒");
+            System.out.println("linkedList添加元素耗时:\t" + addFirst(linkeds) + "毫秒");
+
+        }
+        {
+            System.out.println("arrayList查找元素耗时:\t" + checkFirst(arrLists) + "毫秒");
+            System.out.println("linkedList查找元素耗时:\t" + checkFirst(linkeds) + "毫秒");
+        }
+        {
+            System.out.println("arrayList删除" + TIMES + "个元素耗时:\t" + removeFirst(arrLists) + "毫秒");
+            System.out.println("linkedList删除" + TIMES + "个元素耗时:\t" + removeFirst(linkeds) + "毫秒");
+        }
     }
 
-    public static List<Integer> arrayListAddTest() {
-        List<Integer> list = new ArrayList<>(10000);
-
+    public static long addFirst(List<Integer> list) {
         // 测试添加元素
-        long startNano = System.nanoTime();
-        for (int i = 0; i < 10000; i++) {
-            list.add(i);
+        long startNano = System.currentTimeMillis();
+        for (int i = 0; i < TIMES; i++) {
+            list.add(0, i);
         }
-        long endNano = System.nanoTime();
-        System.out.println("arrayListAddTest ------->" + (endNano - startNano + "  NS"));
-        return list;
+        long endNano = System.currentTimeMillis();
+        return (endNano - startNano);
     }
 
-    public static void arrayListRemoveTest(List<Integer> list) {
-        long startNano = System.nanoTime();
-        for (int i = 0; i < list.size(); i++) {
-            if (i < 500) {
-                list.remove(i);
+    public static long checkFirst(List<Integer> list) {
+        long startNano = System.currentTimeMillis();
+        for (int i = TIMES - 1; i > 0; i--) {
+            if (list.get(i) == 50000) {
+                // System.out.println(list.get(i));
             }
         }
-        long endNano = System.nanoTime();
-        System.out.println("arrayListRemoveTest ------->" + (endNano - startNano) + "  NS");
+        long endNano = System.currentTimeMillis();
+        return (endNano - startNano);
     }
 
-    public static List<Integer> linkedListAddTest() {
-        List<Integer> list = new LinkedList<>();
-
-        long startNano = System.nanoTime();
-        for (int i = 0; i < 10000; i++) {
-            list.add(i);
+    public static long removeFirst(List<Integer> list) {
+        long startNano = System.currentTimeMillis();
+        for (int i = 0; i < TIMES / 2; i++) {
+            list.remove(i);
         }
-        long endNano = System.nanoTime();
-
-        System.out.println("linkedListAddTest ------->" + (endNano - startNano + "  NS"));
-
-        return list;
-
-    }
-
-    public static void linkedListRemoveTest(List<Integer> list) {
-
-        long startNano = System.nanoTime();
-        for (int i = 0; i < list.size(); i++) {
-            if (i < 500) {
-                list.remove(i);
-            }
-        }
-        long endNano = System.nanoTime();
-
-        System.out.println("linkedListRemoveTest ------->" + (endNano - startNano + "  NS"));
-    }
-
-    public static void arrayListCheckTest(List<Integer> list) {
-        long startNano = System.nanoTime();
-        for (int i = list.size() - 1; i > 0; i--) {
-            if (list.get(i) == 501) {
-                System.out.println(list.get(i));
-            }
-        }
-        long endNano = System.nanoTime();
-
-        System.out.println("arrayListCheckTest ------->" + (endNano - startNano + "  NS"));
-    }
-
-    public static void linkedListCheckTest(List<Integer> list) {
-        long startNano = System.nanoTime();
-        for (int i = list.size() - 1; i > 0; i--) {
-            if (list.get(i) == 501) {
-                System.out.println(list.get(i));
-            }
-        }
-        long endNano = System.nanoTime();
-
-        System.out.println("linkedListCheckTest ------->" + (endNano - startNano + "  NS"));
+        long endNano = System.currentTimeMillis();
+        return (endNano - startNano);
     }
 }

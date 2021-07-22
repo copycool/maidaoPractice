@@ -6,6 +6,7 @@ public class CompareY implements Comparator<Point> {
 
     @Override
     public int compare(Point o1, Point o2) {
+
         if (o1 == o2) {
             return 0;
         }
@@ -22,6 +23,7 @@ public class CompareY implements Comparator<Point> {
             return 1;
         }
         return 0;
+
     }
 
 }

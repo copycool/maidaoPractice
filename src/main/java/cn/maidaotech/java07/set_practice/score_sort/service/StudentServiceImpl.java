@@ -23,10 +23,6 @@ public class StudentServiceImpl implements StudentService {
         for (int i = 0; i <= 40; i++) {
             map.put(count + (i + 1), new Student((count + (i + 1)), (str + (i + 1)), (random.nextInt(101 - 50) + 50)));
         }
-
-        map.forEach((k, v) -> {
-            System.out.println(k + ":" + v + "\t");
-        });
         return map;
     }
 
