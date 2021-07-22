@@ -9,13 +9,6 @@ import java.util.stream.Collectors;
 public class SortOutput {
     public static void main(String[] args) {
         String str = "The identifier of the encoding used a to encode the bytes in value";
-        /*for(int i = 0; i <= str.length()-1;i ++){//遍历字符串
-                char ch;
-                if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'){//判断字符是否在A-Z之间（大写）
-                    ch = (char) (str.charAt(i)+32);
-            }
-            str.indexOf("T");
-        }*/
 
         String[] splitStr = str.split(" ");
         
@@ -23,7 +16,6 @@ public class SortOutput {
         List<String> list1 = Arrays.stream(splitStr).collect(Collectors.toList());
         System.out.println("排序前："+list1);
         
-
         List<String> collect = Arrays.stream(splitStr).sorted().collect(Collectors.toList());
         System.out.println("排序后："+collect );
 
