@@ -10,31 +10,15 @@ import java.util.stream.Collectors;
 
 public class Question14 {
     public static void main(String[] args) {
-        
+
         //创建一副牌
-        String[] typePoker = {"a","b","c","d"};  //分别代表黑、红、花、块
-
-        String[] numPoker = {"1","2","3","4","5","6","7","8","9","10","11","12","13"}; //分别代表13中牌
-
-        List<String> list = new ArrayList<>();
-        //生成52张不同类型的牌
-        for (int i = 0; i < typePoker.length; i++) {
-            for (int j = 0; j < numPoker.length; j++) {
-                list.add(typePoker[i].toString()+numPoker[j].toString());
-            }
-        }
-        //添加大小王
-        list.add("大王");
-        list.add("小王");
-        System.out.println(list);
+        List<String> list = createPoker();
 
         //洗牌
         shufflePoker(list);
-
         System.out.println(list);
 
         //摸牌：3个游戏者轮流一次摸一张直到剩下3张牌
-
         List<Players> playersList = new ArrayList<>();   //创建三个游戏者
         List<String>  aHandList = new ArrayList<>();     //存放三个底牌
         playersPlayCards(list,playersList,aHandList);
@@ -54,6 +38,31 @@ public class Question14 {
                 players -> System.out.println(players.getName()+"的牌为："+players.getPoker())
         );
     }
+
+
+    /**
+     * 创建一副牌
+     * @return
+     */
+    public static List<String> createPoker(){
+        List<String> list = new ArrayList<>();
+        //创建一副牌
+        String[] typePoker = {"a","b","c","d"};  //分别代表黑、红、花、块
+
+        String[] numPoker = {"1","2","3","4","5","6","7","8","9","10","11","12","13"}; //分别代表13中牌
+
+        //生成54张不同类型的牌
+        for (int i = 0; i < typePoker.length; i++) {
+            for (int j = 0; j < numPoker.length; j++) {
+                list.add(typePoker[i].toString()+numPoker[j].toString());
+            }
+        }
+        //添加大小王
+        list.add("大王");
+        list.add("小王");
+        return list;
+    }
+
 
     /**
      * 洗牌
