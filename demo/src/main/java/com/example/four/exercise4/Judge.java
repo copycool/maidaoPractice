@@ -3,73 +3,48 @@ package com.example.four.exercise4;
 
     
 
+
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.Arrays;
+
 import java.util.Collections;
 import java.util.List;
 
-import javax.naming.spi.DirStateFactory.Result;
 
 public class Judge {
     public static void main(String[] args) {
-        Collection a = new ArrayList();
-        Collections.addAll(a, 1,2,3,4);
-        
-        Collection b = new ArrayList();
-        Collections.addAll(b, 1,4,5,7);
-        System.out.println("a的集合"+a);
-        System.out.println("b的集合"+b);
-        System.out.println("交集为："+c);
-        System.out.println("并集为："+d);
-
-
+       List<Integer> list1 = null;
+       List<Integer> list2 = null;
+       {
+           list1 = initListA();
+           list2 = initListB();
+           list1.retainAll(list2);
+           System.out.println("交集："+ list1);
+       }
+       {
+           list1 = initListA();
+           list2 = initListB();
+           list1.removeAll(list2);
+           list1.addAll(list2);
+           Collections.sort(list2);
+           System.out.println("并集:" + list1);
+       }
+       {
+           list1 = initListA();
+           list2 = initListB();
+           list1.removeAll(list2);
+           System.out.println("差集："+ list1);
+       }
     }
-    public List intersection(int[] a,int[] b){
-        List<Integer> c = new ArrayList<>();
-        int i = 0,j = 0;
-        while (i<a.length && j<b.length) {
-            if(a[i]<b[j]){
-                i++;
-            }else if (a[i]>b[j]) {
-                j++;
-            }else{
-                c.add(a[i]);
-                i++;
-                j++;
-            }
-            
-        }
-        return c;
+    private static List<Integer> initListA(){
+    List<Integer> list = new ArrayList<>();
+    list.addAll(Arrays.asList(1,2,3,4,5));
+    return list;
     }
-    public List union(int[] a,int[] b){
-        List<Integer> d = new ArrayList<>();
-        int i = 0,j = 0;
-        while (i<a.length && j<b.length) {
-            if (a[i]<b[j]) {
-                d.add(a[i]);
-                i++;
-                
-            }else if (a[i]>b[i]) {
-                d.add(b[j]);
-                j++;
-                
-            }else{
-                d.add(a[i]);
-                i++;
-                j++;
-            }
-            
-        }
-        while(i<a.length){
-            d.add(a[i]);
-            i++;
-        }
-        while(j<b.length){
-            d.add(b[j]);
-            j++;
-        }
-        return d;
+    private static List<Integer> initListB(){
+        List<Integer> list = new ArrayList<>();
+        list.addAll(Arrays.asList(1,3,4,5,6));
+        return list;
     }
-    
 }
     
