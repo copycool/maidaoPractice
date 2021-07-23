@@ -2,9 +2,11 @@ package cn.maidaotech.java07.Test;
 
 
 
-import cn.maidaotech.java07.chapter03.Address;
+import java.util.HashMap;
+
+// import cn.maidaotech.java07.chapter03.Address;
 import cn.maidaotech.java07.chapter03.Circle;
-import cn.maidaotech.java07.chapter03.Student;
+// import cn.maidaotech.java07.chapter03.Student;
 
 public class AnyTest {
     public static void main(String[] args) {
@@ -17,6 +19,7 @@ public class AnyTest {
         //  stu.message();
         Circle c1 = new Circle(1);
        System.out.println( c1.area());
+      
     }
     
    
