@@ -11,11 +11,14 @@ public class Control {
         for (int i = 1; i <= list.size()-3; i++) {
             if (i%3==0) {
                 gamerthree.put(i, list.get(i));
+                continue;
             }
             if (i%3==1) {
                 gamerone.put(i, list.get(i));
+                continue;
             }else{
                 gamertwo.put(i, list.get(i));
+                continue;
             }
         }
          Map<Integer,String> lastCard = new HashMap<>();
