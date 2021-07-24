@@ -1,5 +1,5 @@
 package cn.maidaotech.java07.chapter04;
-
+//如何判断两个集合是否有交集，并打印出他们的交集、并集和差集
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

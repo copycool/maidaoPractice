@@ -1,5 +1,5 @@
 package cn.maidaotech.java07.chapter04;
-
+//编写函数，去除List集合中的重复元素，不要改变元素的顺序
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
