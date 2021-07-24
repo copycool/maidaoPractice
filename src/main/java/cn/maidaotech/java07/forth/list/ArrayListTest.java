@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.forth;
+package cn.maidaotech.java07.forth.list;
 
 import java.util.ArrayList;
 

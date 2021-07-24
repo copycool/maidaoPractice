@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Text {
+public class Text  {
     public static void main(String[] args) {
-        List<Point> list=new ArrayList<Point>();
-        for(int i=0;i<20;i++){
+        List<Point> list = new ArrayList<Point>();
+        for (int i = 0; i < 20; i++) {
             Point p = new Point((int) (Math.random() * 10 + 1), (int) (Math.random() * 10 + 1));
             list.add(p);
         }
@@ -16,19 +16,21 @@ public class Text {
             System.out.print(p);
         }
         System.out.println();
-        
-        Point[] p1=new Point[list.size()];
-        list.toArray(p1);
-        Arrays.sort(p1);
-        for (Point p : p1) {
+        System.out.println("按X排序后：");
+        Point[] points = new Point[list.size()];
+        list.toArray(points);
+        Arrays.sort(points);
+        for (Point p : points) {
             System.out.print(p);
         }
         System.out.println();
-        System.out.println("按y排序后：");
+        System.out.println("按Y排序后：");
         Collections.sort(list,new CompareY());
         for (Point p : list) {
             System.out.print(p);
         }
-
     }
-}
+    }
+
+
+
