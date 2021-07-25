@@ -3,7 +3,7 @@ package cn.maidaotech.java07.chapter04.homework.exercise4;
 import java.util.HashSet;
 
 
-public class Test {
+public class HasSetTest {
     // 如何判断两个集合是否 有交集，并打印出他们的交集、并集和差集
     public static void main(String[] args) {
         HashSet<Integer> set1 = new HashSet<Integer>();

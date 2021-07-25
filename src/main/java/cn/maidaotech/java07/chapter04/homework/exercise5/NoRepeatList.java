@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Random;
 
-public class Test {
+public class NoRepeatList {
     // 去除 List 集合中的重复元素，不要改变元素的顺序
     public static void main(String[] args) {
         ArrayList<Integer> arrayList = new ArrayList<>();

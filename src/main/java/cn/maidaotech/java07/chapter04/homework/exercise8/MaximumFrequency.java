@@ -2,11 +2,12 @@ package cn.maidaotech.java07.chapter04.homework.exercise8;
 
 import java.util.Arrays;
 import java.util.Collection;
+// import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-public class Test {
+public class MaximumFrequency {
     // 读取个数不定的正整数，打印频率最高的，如果有多个一样的最高频率则都输出
     public static void main(String[] args) {
 
@@ -30,6 +31,9 @@ public class Test {
         }
 
         Collection<Integer> values = map.values();
+    
+    
+    
         Integer[] arrayValues = new Integer[values.size()];
         arrayValues = values.toArray(arrayValues);
         Arrays.sort(arrayValues);

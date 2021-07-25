@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
-public class Test {
+public class ArrayListTest {
     // 创建一个集合存入 20 个 10 以内的整数，遍历集合，删除所有指定数字的元素。
     //创建一个集合存入20个5以内的整数，遍历集合，删除所有指定数字的元素
     public static void main(String[] args) {

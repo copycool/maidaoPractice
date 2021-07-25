@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Test {
+public class Landord {
     // 创建一副牌洗牌摸牌：
     // 3个游戏者轮流一次摸一张直到剩下3张牌抢地主：
     // 随机一名游戏者获得3张底牌看牌：打印输出每位游戏者的手牌

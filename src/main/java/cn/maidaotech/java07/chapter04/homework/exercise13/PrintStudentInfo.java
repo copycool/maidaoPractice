@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class Test {
+public class PrintStudentInfo {
     // 某班有40个学生，学号为190101~190140，
     // 全部参加Java集合阶段测试，给出所有同学的成绩（可随机产生，范围为50~100），
     // 请编写从程序将本班各位同学的成绩从高到低排序打印输出。

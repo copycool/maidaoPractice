@@ -2,7 +2,7 @@ package cn.maidaotech.java07.chapter04.homework.exercise7;
 
 import java.util.StringTokenizer;
 
-public class Test {
+public class AlphabeticalOrder {
     // 从控制台输入一段英文，将其中的单词按照字母排序后打印输出。
     public static void main(String[] args) {
 
