@@ -13,7 +13,6 @@ public class Question14 {
 
         //创建一副牌
         List<String> list = createPoker();
-
         //洗牌
         shufflePoker(list);
         System.out.println(list);
@@ -47,7 +46,7 @@ public class Question14 {
     public static List<String> createPoker(){
         List<String> list = new ArrayList<>();
         //创建一副牌
-        String[] typePoker = {"a","b","c","d"};  //分别代表黑、红、花、块
+        String[] typePoker = {"🌑","🖤","⚜","🔶"};  //分别代表黑、红、花、块
 
         String[] numPoker = {"1","2","3","4","5","6","7","8","9","10","11","12","13"}; //分别代表13中牌
 
