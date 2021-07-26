@@ -1,12 +1,11 @@
 package cn.maidaotech.java07.chapter02;
-import java.util.Arrays;
-import java.util.Scanner;
 import java.util.Scanner;
 
 public class JudegUsername {
     //编程检测用户名的合法性，用户名需满足以下条件：
     //长度8到20个字符
-    //只能英文字母、数字必须以大写字母开头
+    //只能英文字母、数字
+    //必须以大写字母开头
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("输入用户名");

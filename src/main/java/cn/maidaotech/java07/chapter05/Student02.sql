@@ -7,7 +7,7 @@ create table student(
     `last_name` varchar(30) not null,
     `sex` tinyint(1) not null,
     `school` varchar(50) nut null,
-    peimary kay (`id`)
+    primary kay (`id`)
 );
 
  insert into student (id,first_name,last_name,sex,school) values (001,'Ann','Erica',1,'西亚斯');

@@ -1,7 +1,4 @@
 package cn.maidaotech.java07.chapter02.comprehensive;
-
-import java.time.LocalDate;
-import java.time.Period;
 import java.util.Scanner;
 
 public class CheckEmail {

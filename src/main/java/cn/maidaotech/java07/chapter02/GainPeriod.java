@@ -1,5 +1,5 @@
 package cn.maidaotech.java07.chapter02;
-import java.util.Scanner;
+
 public class GainPeriod {
     //从键盘输入学生学号，例如2019年01期12号，输入20190112，
     //使用“/”和“%”运算符分解学号获得年份、期数和序号，并分别输出。
