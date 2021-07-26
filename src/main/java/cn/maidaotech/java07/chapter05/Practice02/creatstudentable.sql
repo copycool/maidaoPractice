@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `student`(
     `school` varchar(30) CHARACTER SET utf8mb4 DEFAULT NULL,
     PRIMARY KEY (`id`)
 )
-alter table student modify sex  varchar(8) CHARACTER SET utf8mb4 DEFAULT NULL COMMENT '性别';
+alter table student modify sex  tinyint(1) unsigned  COMMENT '性别 0代表女 1代表男';
