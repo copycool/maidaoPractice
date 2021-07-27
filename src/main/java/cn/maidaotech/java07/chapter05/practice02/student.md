@@ -11,16 +11,16 @@ CREATE TABLE `student`(
 )ENGINE=INNODB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8;
 
 /* a. */
-SELECT * 
-FROM `student` 
-WHERE 
+SELECT *
+FROM `student`
+WHERE
 first_name LIKE "a%";
 
 /* b */
-SELECT * 
-FROM `student` 
-WHERE 
-first_name = "Tom" 
+SELECT *
+FROM `student`
+WHERE
+first_name = "Tom"
 AND last_name = "Peter";
 
 /* c */
@@ -28,7 +28,7 @@ SELECT *
 FROM `student`
 WHERE
 first_name > "Angle"
-AND 
+AND
 first_name < "Peter"
 
 /* d */
@@ -48,13 +48,13 @@ LIMIT 11,20;
 
 /* f */
 INSERT INTO `student`
-(first_name,last_name,sex,school,created_at,updated_at) 
-VALUES 
+(first_name,last_name,sex,school,created_at,updated_at)
+VALUES
 ("Tom","Peter","1","maidao","1234","1234"),
 ("Joker","Peter","1","maidao","1234","1234");
 
 /* g,h */
-UPDATE `student` 
+UPDATE `student`
 SET last_name = "Wilson"
 WHERE
 last_name = "Peter";
@@ -66,19 +66,19 @@ WHERE
 first_name = "Angela";
 
 /* j */
-SELECT COUNT(*) AS TOTAL 
+SELECT COUNT(*) AS TOTAL
 FROM `student`;
 
 /* k */
-ALTER TABLE `student` 
+ALTER TABLE `student`
 ADD age INT NOT NULL;
 
 /* L */
-ALTER TABLE `student` 
+ALTER TABLE `student`
 CHANGE first_name first_name VARCHAR(50) NOT NULL;
 
 /* m */
-ALTER TABLE `student` 
+ALTER TABLE `student`
 DROP age;
 
 /* n */
@@ -88,7 +88,7 @@ CREATE TABLE `person`(
 	`name` VARCHAR(50) NOT NULL,
 	PRIMARY KEY(`id`)
 )ENGINE=INNODB AUTO_INCREMENT=10000 DEFAULT CHARSET=utf8;
-INSERT INTO `person`(`name`) 
+INSERT INTO `person`(`name`)
 SELECT CONCAT(first_name," ",last_name) AS `name`
 FROM `student`;
 SELECT * FROM `person`;

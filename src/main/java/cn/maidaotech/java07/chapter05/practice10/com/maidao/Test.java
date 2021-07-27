@@ -1,8 +1,8 @@
-package com.maidao;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao;
 
-import com.maidao.dao.ISimpleDao;
-import com.maidao.dao.impl.SimpleDaoImpl;
-import com.maidao.model.Student;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.ISimpleDao;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.impl.SimpleDaoImpl;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.model.Student;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;

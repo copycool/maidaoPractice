@@ -1,4 +1,4 @@
-package com.maidao.config;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.config;
 
 public class JdbcConfig {
     private String driver;

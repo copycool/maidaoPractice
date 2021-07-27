@@ -1,6 +1,6 @@
-package com.maidao.proxy;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.proxy;
 
-import com.maidao.config.JdbcConfig;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.config.JdbcConfig;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

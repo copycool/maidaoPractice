@@ -1,4 +1,4 @@
-package com.maidao.dao.impl;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.impl;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;

@@ -1,8 +1,8 @@
-package com.maidao.dao.impl;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.impl;
 
-import com.maidao.dao.IConnectionHandler;
-import com.maidao.dao.IOrmHandler;
-import com.maidao.model.TableFields;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.IConnectionHandler;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.IOrmHandler;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.model.TableFields;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

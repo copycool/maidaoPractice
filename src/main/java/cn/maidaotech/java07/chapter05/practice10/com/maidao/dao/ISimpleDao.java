@@ -1,6 +1,6 @@
-package com.maidao.dao;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.dao;
 
-import com.maidao.model.TableFields;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.model.TableFields;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
@@ -10,7 +10,8 @@ public interface ISimpleDao<T extends TableFields> extends IOrmHandler, IConnect
 
     List<T> selectAll();
 
-    T selectById(T t) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException;
+    T selectById(T t) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException,
+            InstantiationException, IllegalAccessException;
 
     List<T> selectByOption(T t);
 

@@ -1,4 +1,4 @@
-package com.maidao.exception;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.exception;
 
 public class Test {
     public static void main(String[] args) {

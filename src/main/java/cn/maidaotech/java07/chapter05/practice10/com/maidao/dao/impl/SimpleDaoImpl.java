@@ -1,7 +1,7 @@
-package com.maidao.dao.impl;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.impl;
 
-import com.maidao.dao.ISimpleDao;
-import com.maidao.model.TableFields;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.ISimpleDao;
+import cn.maidaotech.java07.chapter05.practice10.com.maidao.model.TableFields;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.ResultSet;

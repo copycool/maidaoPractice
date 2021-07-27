@@ -1,5 +1,5 @@
 ```sql
-SELECT * 
+SELECT *
 FROM student;
 /* a */
 UPDATE `student`
@@ -25,8 +25,8 @@ WHERE
 id = 3;
 
 /* b */
-SELECT COUNT(*) AS total,c.`name` 
-FROM `student` AS s 
+SELECT COUNT(*) AS total,c.`name`
+FROM `student` AS s
 LEFT JOIN `clazz` AS c
 ON s.clazz_id = c.id
 GROUP BY s.clazz_id
@@ -54,24 +54,24 @@ SELECT SUM(sc.score) AS "总分",s.`first_name` AS "学生姓名"
 FROM `score` AS sc
 RIGHT JOIN `student` AS s
 ON sc.sno = s.sno
-WHERE 
+WHERE
 s.clazz_id = 1
 GROUP BY s.sno
 
 /* f */
 SELECT s.*
 FROM `student` AS s
-WHERE 
-NOT EXISTS(SELECT * 
-					 FROM `score` AS sc 
-					 WHERE 
-					 sc.score < 80 
+WHERE
+NOT EXISTS(SELECT *
+					 FROM `score` AS sc
+					 WHERE
+					 sc.score < 80
 					 AND sc.sno = s.sno)
 
 /* g */
 SELECT s.*
 FROM `student` AS s
-WHERE EXISTS(SELECT * 
+WHERE EXISTS(SELECT *
 						 FROM `score` AS sc
 						 WHERE s.sno = sc.sno
 						 AND sc.score < 60)
@@ -79,9 +79,9 @@ WHERE EXISTS(SELECT *
 /* h */
 SELECT AVG(sc.score) AS "平均分",sz.`name` AS "班级名称"
 FROM score AS sc
-RIGHT JOIN (SELECT s.sno,c.id AS `clazz_id`,c.`name` 
-						FROM `student` AS s 
-						LEFT JOIN clazz AS c 
+RIGHT JOIN (SELECT s.sno,c.id AS `clazz_id`,c.`name`
+						FROM `student` AS s
+						LEFT JOIN clazz AS c
 						ON s.clazz_id = c.id). AS sz
 ON sc.sno = sz.sno
 WHERE sc.cno = 1
