@@ -72,3 +72,11 @@ alter table student add `age` tinyint(1) unsigned comment '年龄';
 alter table student modify first_name varchar(50);
 
 alter table student drop age;
+
+create table if not exists `person`(
+`id` bigint(20) not null auto_increment,
+`name` varchar(30) character set utf8mb4 comment '姓名',
+primary key(`id`)
+)engine=InnoDB charset=utf8;
+
+insert into person(name) select concat(first_name,' ',last_name) from student;
