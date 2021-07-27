@@ -7,6 +7,7 @@ public class Product {
     private String name;
     private Float price;
     private Date createdDate;
+    private Boolean isOn;
 
     public Product(){}
 
@@ -114,4 +115,5 @@ public class Product {
     public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
     }
+
 }
