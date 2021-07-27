@@ -101,7 +101,7 @@ having min(score7.score)>=80);
 select stu7.* from score7,stu7 where score7.stu_id=stu7.stu_id and score<60;
 select * from stu7 where stu_id in(select stu_id from score7 where score<60);
 -- 查询某一门课各个班级的平均学生成绩，并按成绩由高到低排序；
-select avg(score) from score7 where cou_id=1230 GROUP BY class ORDER BY avg(score) desc;
+select avg(score),class from score7 where cou_id=1230 GROUP BY class ORDER BY avg(score) desc;
   
 
 -- 查询各科成绩最高分、最低分和平均分；2种
