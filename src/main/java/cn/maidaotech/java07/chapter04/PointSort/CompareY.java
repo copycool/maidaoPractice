@@ -9,7 +9,7 @@ import java.util.Comparator;
 public class CompareY implements Comparator<Point> {
 
     @Override
-    public int compare(Point o1, Point o2) {
+    public int compare(final Point o1, final Point o2) {
         if(o1.y > o2.y){
             return 1;
         }else if(o1.y < o2.y){
