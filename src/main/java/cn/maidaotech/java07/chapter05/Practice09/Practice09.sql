@@ -1,0 +1,1 @@
+alter table s_student add key `studentid_name`(`student_id`,`name`);

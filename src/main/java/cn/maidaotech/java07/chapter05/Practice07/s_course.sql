@@ -7,22 +7,11 @@ CREATE TABLE IF NOT EXISTS `s_course`(
 )
 
 select * from s_course ;
-alter table s_course  drop student_id;
-insert into s_course (student_id) values
-('20190101'),
-('20190102'),
-('20190103'),
-('20190104'),
-('20190105'),
-('20190201'),
-('20190202'),
-('20190203'),
-('20190204'),
-('20190205')
-
+alter table s_course add cno varchar(10) not null comment '课号';
+delete from s_course;
 insert into s_course (cno,course_name,is_compulsory) values
-    ('1001','语文','0'),
-    ('1002','数学','1'),
-    ('1003','英语','1');
+('1001','语文',0),
+('1002','数学',1),
+('1003','英语',1);
 
 select * from s_course;

@@ -1,13 +1,45 @@
 CREATE TABLE IF NOT EXISTS `student_grade`(
-    `id` int(20) not null ,
+    `id` int(20) not null auto_increment,
     `student_id` varchar(8) CHARACTER SET utf8mb4 NOT NULL COMMENT '学号',
     `cno` varchar(10) not null comment '课号',
     `stu_name` varchar(50) CHARACTER SET utf8mb4 NOT NULL,
-    `chinese_grade` tinyint(4) not null,
-    `math_grade` tinyint(4) not null,
-    `english_grade` tinyint(4) not null,
+  
     PRIMARY KEY (`id`)
 );
-alter table student_grade add `is_compulsory` tinyint UNSIGNED NOT NULL COMMENT '是否为选修课 0代表选修课 1代表必修课';
-select 
-insert into  `student_grade`(id,student_id,cno,stu_name,)
+alter table student_grade add grade tinyint(3) ;
+alter table student_grade modify id int (20) not null auto_increment;
+ 
+insert into  student_grade (student_id,stu_name,cno,grade) values
+    ('20190101','张三','1001',50),
+    ('20190102','李四','1001',60),
+    ('20190103','鸣人','1001',85),
+    ('20190104','王五','1001',90),
+    ('20190105','赵六','1001',75),
+    ('20190201','二一','1001',66),
+    ('20190202','二二','1001',89),
+    ('20190203','二三','1001',83),
+    ('20190204','二四','1001',88),
+    ('20190205','二五','1001',45),
+
+    ('20190101','张三','1002',59),
+    ('20190102','李四','1002',60),
+    ('20190103','鸣人','1002',90),
+    ('20190104','王五','1002',91),
+    ('20190105','赵六','1002',76),
+    ('20190201','二一','1002',63),
+    ('20190202','二二','1002',89),
+    ('20190203','二三','1002',86),
+    ('20190204','二四','1002',85),
+    ('20190205','二五','1002',37),
+    
+    ('20190101','张三','1003',65),
+    ('20190102','李四','1003',45),
+    ('20190103','鸣人','1003',85),
+    ('20190104','王五','1003',64),
+    ('20190105','赵六','1003',96),
+    ('20190201','二一','1003',31),
+    ('20190202','二二','1003',55),
+    ('20190203','二三','1003',9),
+    ('20190204','二四','1003',15),
+    ('20190205','二五','1003',80);
+select * from student_grade where  student_id='20190101';

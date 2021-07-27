@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.utitls;
+package cn.maidaotech.java07.chapter05.Practice10;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
