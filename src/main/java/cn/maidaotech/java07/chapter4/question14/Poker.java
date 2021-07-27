@@ -56,12 +56,13 @@ public class Poker {
     }
 
     public static void rob(List<String> list, List<String> a, List<String> b, List<String> c) {
-        double ran = Math.random() * 3;
+        int ran = ((int)(Math.random()*3));
+        System.out.println(ran);
 
-        if (ran < 1) {
+        if (ran == 0) {
             a.addAll(list);
             System.out.println("a抢到地主");
-        } else if (ran >= 1 && ran < 2) {
+        } else if (ran ==1) {
             b.addAll(list);
             System.out.println("b抢到地主");
         } else {
