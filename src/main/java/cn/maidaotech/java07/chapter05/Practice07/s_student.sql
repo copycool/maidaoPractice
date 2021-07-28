@@ -22,6 +22,6 @@ insert into s_student (student_id,name,class_id) values
     ('20190203','二三','19级02班'),
     ('20190204','二四','19级02班'),
     ('20190205','二五','19级02班');
-select * from s_student where name = '张洪磊';
+select * from s_student ;
 
 update s_student set name ='张洪磊' where name = '张三';

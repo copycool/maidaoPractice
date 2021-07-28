@@ -42,4 +42,5 @@ insert into  student_grade (student_id,stu_name,cno,grade) values
     ('20190203','二三','1003',9),
     ('20190204','二四','1003',15),
     ('20190205','二五','1003',80);
-select * from student_grade where  student_id='20190101';
+select * from student_grade;
+update student_grade set name ='张洪磊' where name = '张三';

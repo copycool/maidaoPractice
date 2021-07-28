@@ -9,6 +9,6 @@ alter table s_class change classname class_name varchar(20) character set utf8mb
 alter table s_class drop class_id;
  delete from s_class;
 insert into s_class (class_name) values 
-    ('软工一班'),
-    ('软工二班');
+    ('19级01班'),
+    ('19级02班');
 select * from s_class;

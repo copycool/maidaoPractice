@@ -2,25 +2,26 @@ package cn.maidaotech.java07.Test;
 
 
 
-import java.util.HashMap;
-
-// import cn.maidaotech.java07.chapter03.Address;
-import cn.maidaotech.java07.chapter03.Circle;
-// import cn.maidaotech.java07.chapter03.Student;
-
 public class AnyTest {
-    public static void main(String[] args) {
-    //    int[] array = {0,2,5,8};
-    //    Arrays.fill(array,1 );
-    //     System.out.println(Arrays.toString(array));
-        //  Address a1 = new Address("中国", "henan", "zhengZhou", "longhu", 461000);
-        //  System.out.println(a1.toString());
-        //  Student stu = new Student("name", "address", "sex", 2, 20, 30);
-        //  stu.message();
-        Circle c1 = new Circle(1);
-       System.out.println( c1.area());
-      
+    public static void main(String[] args){
+        int result = test4();
+        System.out.println(result);
     }
-    
+    public static int test4(){
+        //try 语句块中有 return 语句时的整体执行顺序
+        int i = 1;
+        try{
+            i++;
+            System.out.println("try block, i = "+i);
+            return i++;
+        }catch(Exception e){
+            i ++;
+            System.out.println("catch block i = "+i);
+            return i;
+        }finally{
+            i++;
+            System.out.println("finally block i = "+i);
+        }
+    }
    
 }

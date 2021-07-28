@@ -19,8 +19,10 @@ select * from student where first_name between 'Angela' and 'Peter';
 /*哪条SQL语句可返回唯一不同的值？DISTINCT*/
 select distinct first_name from student ;
 /*如何根据first_name列降序地从表中返回所有记录？*/
-select * from student order by first_name;
+select * from student order by first_name desc;
 /*只返回前十条记录呢？*/
+select * from student  limit 0,10;
+select * from student  limit 10,10;
 select * from student where id between 10 and 20
 /*第11到20条记录呢？*/
 select * from student where id between 20 and 30
