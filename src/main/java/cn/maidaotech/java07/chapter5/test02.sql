@@ -4,10 +4,10 @@ IF
 	`id` BIGINT( 20 ) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT "id",
 	`first_name` VARCHAR ( 30 ) NOT NULL COMMENT"学生名",
 	`last_name` VARCHAR ( 30 ) NOT NULL COMMENT "学生姓",
-	`sex` CHAR ( 2 ) NOT NULL COMMENT "性别",
+	`sex` TINYINT ( 1 ) NOT NULL COMMENT "性别:0男 1女 2未知",
 	`school` VARCHAR ( 30 ) NOT NULL COMMENT "学校",
-	`created_at` VARCHAR( 100 ) NOT NULL COMMENT "创建时间",
-	`updated_at` VARCHAR( 100 ) NOT NULL COMMENT"更新时间"
+	`created_at` BIGINT( 20 ) NOT NULL COMMENT "创建时间",
+	`updated_at` BIGINT( 20 ) NOT NULL COMMENT"更新时间"
 	) ENGINE = INNODB AUTO_INCREMENT = 1000 DEFAULT CHARSET = utf8;
 	INSERT INTO `student` (first_name,last_name,sex,school,created_at,updated_at)
 	VALUES("丸庚","陈","男","北京大学","2000.2.3","2021.4.13");
