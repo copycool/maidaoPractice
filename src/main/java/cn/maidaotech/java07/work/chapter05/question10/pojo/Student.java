@@ -8,9 +8,11 @@ import lombok.ToString;
 @Data
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
 public class Student {
-    private Long id;
+    public Student(long l, long m, long n, long o, String string, int i, int j, long p) {
+	}
+
+	private Long id;
 
     private Long sno;
 

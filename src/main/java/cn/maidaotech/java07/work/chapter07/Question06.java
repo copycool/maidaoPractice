@@ -12,8 +12,12 @@ public class Question06 implements Runnable {
 }
 class Test06{
     public static void main(String[] args) {
+        Question06 q =  new Question06();
+
+        
+
         for (int i = 0; i < 5; i++) {
-            new Thread(new Question06()).start();
+            new Thread(q).start();
         }
     }
 }

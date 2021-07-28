@@ -5,19 +5,19 @@ public class Station {
         Ticket ticket = new Ticket();
 
         new Thread(()->{
-            for (int i = 0; i < 15; i++) {
+            for (int i = 0; i < 40; i++) {
                 ticket.sellTicket();
             }
         },"窗口1").start();
 
         new Thread(()->{
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 40; i++) {
                 ticket.sellTicket();
             }
         },"窗口2").start();
 
         new Thread(()->{
-            for (int i = 0; i < 30; i++) {
+            for (int i = 0; i < 40; i++) {
                 ticket.sellTicket();
             }
         },"窗口3").start();
