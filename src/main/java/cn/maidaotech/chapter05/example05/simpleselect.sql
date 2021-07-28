@@ -97,3 +97,5 @@ CREATE TABLE IF NOT EXISTS `person`(
 )
 insert into `person`(`id`,`name`) select id, concat(first_name ,' ',last_name) from student 
 select * from person
+
+#除了文章标题，文章内容。其他的文字内容，都单表存储，用id查找。
