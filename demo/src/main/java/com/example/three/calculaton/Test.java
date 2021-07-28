@@ -1,7 +1,10 @@
 package com.example.three.calculaton;
 
 public class Test {
-    public static void main(String[] args) {
+    public static final String A = null;
+	public static final String B = null;
+
+	public static void main(String[] args) {
         Math m = new Math(50, 15);
        System.out.println("加法：" + m.getX() + "+" + m.getY() + "=" + m.plus());
        System.out.println("减法：" + m.getX() + "-" + m.getY() + "=" + m.minus());
