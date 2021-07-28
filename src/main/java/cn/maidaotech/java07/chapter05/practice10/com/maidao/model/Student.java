@@ -1,4 +1,4 @@
-package com.maidao.model;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.model;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package com.maidao.dao.util;
+package cn.maidaotech.java07.chapter05.practice10.com.maidao.dao.util;
 
 import java.sql.*;
 import java.util.ArrayList;

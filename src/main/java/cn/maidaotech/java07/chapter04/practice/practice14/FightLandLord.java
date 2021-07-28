@@ -11,7 +11,7 @@ public class FightLandLord {
 
     private static String[] types = { "黑桃", "红心", "方角", "梅花" };
     private static String[] values = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" };
-
+    
     private static Player player1 = new Player("xiaoli", new LinkedList<>());
     private static Player player2 = new Player("xiaowang", new LinkedList<>());
     private static Player player3 = new Player("xiaozhang", new LinkedList<>());
