@@ -4,24 +4,25 @@ CREATE TABLE `student`(
 `id` BIGINT(50) NOT NULL AUTO_INCREMENT COMMENT '学生学号', 
 `first_name` VARCHAR(50) NOT NULL COMMENT'姓氏', 
 `last_name` VARCHAR(50) NOT NULL COMMENT'名字', 
-`sex` INT(2) NOT NULL COMMENT'性别', 
-`school` VARCHAR(20) NOT NULL COMMENT'学校', 
+`sex` tinyINT(1) NOT NULL COMMENT'性别0男1女2未知', 
+`create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+`update_time` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
 PRIMARY KEY(`id`) 
 )ENGINE=INNODB DEFAULT CHARSET=utf8
 --初始化
-INSERT INTO `student`(`id`, `first_name`, `last_name`, `sex`, `school`)VALUES 
-(201712211101, "Angela", "Jane", 1, "郑州西亚斯学院"), 
-(201712211102, "Bob", "Peter", 0, "升达大学"),
-(201712211103, "cui", "cancan", 1, "河南工程学院"), 
-(201712211104, "liu", "meimei", 1, "河南工程学院"), 
-(201712211105, "zhang", "xiannv", 1, "河南工程学院"), 
-(201712211115, "biu", "shiry", 1, "河南工程学院"), 
-(201712211128, "Tom", "雪利", 1, "河南工程学院"), 
-(201712211129, "刘", "Peter", 1, "河南工程学院"), 
-(201712211106, "Tom", "灿灿", 1, "河南工程学院"), 
-(201712211109, "张", "Peter", 1, "河南工程学院"), 
-(201712211116, "李", "Peter", 1, "河南工程学院"), 
-(201712211119, "Tom", "苹果", 1, "河南工程学院");
+INSERT INTO `student`(`id`, `first_name`, `last_name`, `sex`)VALUES 
+(201712211101, "Angela", "Jane", 1), 
+(201712211102, "Bob", "Peter", 0),
+(201712211103, "cui", "cancan", 1), 
+(201712211104, "liu", "meimei", 1), 
+(201712211105, "zhang", "xiannv", 1), 
+(201712211115, "biu", "shiry", 1), 
+(201712211128, "Tom", "雪利", 1), 
+(201712211129, "刘", "Peter", 1), 
+(201712211106, "Tom", "灿灿", 1), 
+(201712211109, "张", "Peter", 1), 
+(201712211116, "李", "Peter", 1), 
+(201712211119, "Tom", "苹果", 1);
 --从表中选取 first_name 列的值以"a"开头的所有记录
 SELECT  * FROM student WHERE first_name LIKE "a%"; 
 --如何从表中选择 first_name 等于 Tom 而且 last_name 等于 Peter 的所有记录
