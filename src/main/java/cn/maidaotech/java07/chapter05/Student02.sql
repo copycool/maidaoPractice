@@ -7,7 +7,7 @@ create table student(
     `last_name` varchar(30) not null,
     `sex` tinyint(1) not null,
     `school` varchar(50) nut null,
-    primary kay (`id`)
+    primary key (`id`)
 );
 
  insert into student (id,first_name,last_name,sex,school) values (001,'Ann','Erica',1,'西亚斯');
@@ -57,11 +57,11 @@ select unique  同 distinct
 
 如何根据first_name列降序地从表中返回所有记录？只返回前十条记录呢？第7到10条记录呢？
  select first_name from student order by first_name desc;
- select first_name from student where id <=10;
-  select first_name from student where id >=7 and id<=10;
+  select first_name from student order by first_name desc LIMIT 0,10;
+  select first_name from student order by first_name desc LIMIT 10,10;
 
 如何向表中插入新的记录？如何向表中的last_name列插入Wilson？ (not null)
- insert into student (id,first_name,last_name,sex,school) values(null,'numm','Wilson',null,'null');
+ insert into student (id,first_name,last_name,sex,school) values(null,'null','Wilson',null,'null');
 
 
 如何把表中last_name列的Peter改为Wilson？

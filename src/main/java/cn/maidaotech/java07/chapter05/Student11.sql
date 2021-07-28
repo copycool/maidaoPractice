@@ -76,30 +76,61 @@ delimiter ;
 call insert_big_data2(400*100);
 
 查询所有记录，按创建时间倒序排列；
-SELECT * FROM big_data ORDER BY create_at DESC;    // 0.104s
+SELECT * FROM big_data ORDER BY create_at DESC;    // 0.137s
+alter table big_data add key `createat` (create_at);
+SELECT * FROM big_data ORDER BY create_at DESC;    //0.110s
+alter TABLE big_data drop key createat;
 
 查询所有记录，按用户名正序排列；
-SELECT * FROM big_data ORDER BY username ASC;   //0.113s
-
+SELECT * FROM big_data ORDER BY username ASC;   //0.122s
+alter table big_data add key `username` (username);
+select * from big_data ORDER BY username ASC;   //0.116s
+alter TABLE big_data drop key username;
 查询用户ID是6136（可以是其他ID，下同）的所有记录，按创建时间倒序排列；
 SELECT * FROM big_data WHERE user_id = 6136 ORDER BY create_at DESC;   //0.056s
+alter table big_data add key `userid` (user_id);
+
+select * from big_data where user_id = 6136 ORDER BY create_at DESC;    //0.045s
+
+alter TABLE big_data drop key userid;
+
 
 查询用户ID是6136，状态是1或2的所有记录，按创建时间倒序排列；
-SELECT * FROM big_data WHERE user_id = 6136 AND (STATUS = 1 or STATUS = 2) ORDER BY create_at DESC;   //0.059s
-SELECT * FROM big_data WHERE user_id = 6136 AND STATUS in( 1,2) ORDER BY create_at DESC;   //0.006s
+SELECT * FROM big_data WHERE user_id = 6136 AND STATUS in( 1,2) ORDER BY create_at DESC;   //0.068s
+alter table big_data add key `userid_create` (`user_id`,`create_at`);
+
+SELECT * FROM big_data WHERE user_id = 6136 AND STATUS in( 1,2) ORDER BY create_at DESC;    //0.048s
+
+alter TABLE big_data drop key userid_create;
 
 查询用户ID是6136，金额超过5000的所有记录，按创建时间倒序排列；
 SELECT * FROM big_data WHERE user_id = 6136 AND amount>5000 ORDER BY create_at DESC;     //0.053
+alter table big_data add key `userid_create` (`user_id`,`create_at`);
+
+SELECT * FROM big_data WHERE user_id = 6136 AND amount>5000 ORDER BY create_at DESC;    //0.041s  
+
+alter TABLE big_data drop key userid_create;
 
 查询用户ID是6136，状态是1，2018（包含）年以来的所有记录，按创建时间倒序排列；
-SELECT * FROM big_data WHERE user_id = 6136 AND status = 1 AND update_at >2017 ORDER BY create_at DESC;   //0.059 
+SELECT * FROM big_data WHERE user_id = 6136 AND status = 1 AND update_at >2017 ORDER BY create_at DESC;   //0.059s
+alter table big_data add key `userid_create` (`user_id`,`create_at`);
+
+SELECT * FROM big_data WHERE user_id = 6136 AND status = 1 AND update_at >2017 ORDER BY create_at DESC;   //0.042s
+
+alter TABLE big_data drop key userid_create;
+
 
 查询用户名为”mbk“，状态为5的所有记录，按修改时间倒序排列；
 SELECT * FROM big_data WHERE username = 'ryk' AND status = 5 ORDER BY update_at DESC;   //0.071
+alter table big_data add key `user_update` (`user_id`,`update_at`);
 
+SELECT * FROM big_data WHERE username = 'ryk' AND status = 5 ORDER BY update_at DESC;   //0.066s 
+
+alter TABLE big_data drop key user_update;
 查询各个状态的记录总数，和总金额；
-SELECT status,COUNT(*) as '记录总数',sum(amount) '总金额' FROM big_data GROUP BY status ORDER BY status ASC;   //0.067
+SELECT status,COUNT(*) as '记录总数',sum(amount) '总金额' FROM big_data GROUP BY status ORDER BY status ASC;   //0.067s
+alter table big_data add key `statu_amount` (`status`,`amount`);
 
-创建索引优化上述查询
-ALTER TABLE big_data add key create_key (create_at);
-SELECT * FROM big_data ORDER BY create_at DESC;
+SELECT status,COUNT(*) as '记录总数',sum(amount) '总金额' FROM big_data GROUP BY status ORDER BY status ASC;   //0.061s
+
+alter TABLE big_data drop key statu_amount;
