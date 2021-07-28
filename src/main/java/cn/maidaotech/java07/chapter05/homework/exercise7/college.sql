@@ -82,7 +82,7 @@ create table if not exists aclass(
  insert into student7(sno,name,sex,birthdate) values('20181905','陈佳楠4',0,1611086496);
  insert into student7(sno,name,sex,birthdate) values('20181906','陈佳楠5',0,1611086496);
  insert into student7(sno,name,sex,birthdate) values('20181907','陈佳楠6',0,1611086496);
-  insert into student7(sno,name,sex,birthdate) values('20181906','陈佳楠9',0,1611086496);
+ insert into student7(sno,name,sex,birthdate) values('20181906','陈佳楠9',0,1611086496);
  insert into student7(sno,name,sex,birthdate) values('20181907','陈佳楠10',0,1611086496);
  
  

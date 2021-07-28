@@ -79,18 +79,23 @@ CALL insert_big_data2(10001,2000000);
 
 --1
 select * from big_data order by create_at desc;
+select * from big_data order by create_at desc limit 0,10;
+alter table big_data add key `createat`(`create_at`);
 --2
 select * from big_data order by username;
 --3
 select * from big_data where user_id=158613 order by create_at desc;
+alter table big_data add key `userid_createat`(`userid`,`create_at`);
 --4
 select * from big_data where  user_id=158613  and status in(0,1) order by create_at desc;
+alter table big_data add key `userid_status_createat`(`user_id`,`status`,`create_at`)
 --5
 select * from big_data where user_id=158613 and amount>20 order by create_at desc;
 --6
 select * from big_data where user_id=158613 and status=1 and create_at>1514736000 order by create_at desc;
 --7
 select * from big_data where username='571f0deb-edae-11eb-8c8e-54bf644d44a2' and status=1 order by create_at desc;
+alter table big_data add key `username_status_createat`(`username`,`status`,`create_at`)
 --8
 select count(*)as count,sum(amount) as total_amount from big_data group by status;
 --9

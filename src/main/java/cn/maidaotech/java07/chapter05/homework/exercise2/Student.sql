@@ -23,7 +23,7 @@ create table if not EXISTS `student`(
 `first_name`  varchar(30)  character set utf8mb4 default null comment '名',
 `last_name`  varchar(30) character set utf8mb4  default null comment '姓',
 `sex` tinyint(2)  comment '性别',
-`school` varchar(30) comment '学校',
+`school` varchar(30) comment '学校',--应该存储学校的id
 primary key (`id`)
 )engine=InnoDB default charset=utf8;
 
