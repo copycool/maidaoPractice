@@ -39,12 +39,12 @@ SELECT *
 FROM `student`
 ORDER BY first_name
 DESC
-LIMIT 10;
+LIMIT 0,10;
 SELECT *
 FROM `student`
 ORDER BY first_name
 DESC
-LIMIT 11,20;
+LIMIT 10,10;
 
 /* f */
 INSERT INTO `student`
