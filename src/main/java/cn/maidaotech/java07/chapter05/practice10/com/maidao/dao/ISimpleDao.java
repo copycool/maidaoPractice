@@ -24,6 +24,4 @@ public interface ISimpleDao<T extends TableFields> extends IOrmHandler, IConnect
     Boolean deleteById(T t);
 
     T queryOne(String sql);
-
-    List<T> query(String sql);
 }
