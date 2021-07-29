@@ -12,7 +12,7 @@ public class WaitNotifyDemo {
             try {                
                 synchronized (object) {                    
                     System.out.println("begin wait time = " + System.currentTimeMillis());                    
-                    object.wait();                    
+                    object.wait();                    //释放锁
                     System.out.println("end wait time = " + System.currentTimeMillis());                
                 }            
             } catch (InterruptedException e) {                

@@ -12,7 +12,7 @@ public class Shutdown {
     Thread countThread = new Thread(one, "one");        
     countThread.start();        
     //睡眠100毫秒，确保线程countThread处于运行状态        
-    TimeUnit.MILLISECONDS.sleep(100);        
+    TimeUnit.MILLISECONDS.sleep(10);        
     countThread.interrupt();
     //mian线程对countThread进行中断    
     }
@@ -20,7 +20,7 @@ public class Shutdown {
         private long i=0l;       
         @Override        
         public void run() {            
-            while (!Thread.currentThread().isInterrupted()) {                   
+            while (!Thread.currentThread().isInterrupted()) {    //如果没有被中断               
                 i++;            
             }            
             System.out.println("count i = " + i);
