@@ -28,16 +28,18 @@ public class Windows extends Thread {
     public static void main(String[] args) {
         Windows t1 = new Windows();
         
-        Thread w =  new Thread(t1);
+        Thread w1 =  new Thread(t1);
+        Thread w2 =  new Thread(t1);
+        Thread w3 =  new Thread(t1);
 
 
-        w.setName("窗口1");
-        w.setName("窗口2");
-        w.setName("窗口3");
+        w1.setName("窗口1");
+        w2.setName("窗口2");
+        w3.setName("窗口3");
 
-        w.start();
-        w.start();
-        w.start();
+        w1.start();
+        w2.start();
+        w3.start();
     }
     
 }
