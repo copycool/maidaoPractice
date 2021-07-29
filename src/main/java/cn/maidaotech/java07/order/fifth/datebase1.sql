@@ -158,7 +158,7 @@ WHERE  s.sno=a.sno AND a.course_no=10
 SELECT course_no '课程号',MAX(score),MIN(score),AVG(score)
 FROM stu_score
 GROUP BY course_no
-WHERE course_no=10
+
 
 
 /* 分析上一题中SELECT查询语句的执行效率，并创建索引进行优化。 */

@@ -58,7 +58,7 @@ SELECT SUM(id) FROM student;
 /* 如何在已存在的student表中增加一列名为age表示年龄的列？
 如何修改first_name列的字符长度为50且不允许NULL值？
 如何删除表中的age列？ */
-ALTER TABLE student ADD age;
+ALTER TABLE student ADD age int not null;
 ALTER TABLE student MODIFY first_name CHAR(50) DEFAULT NOT NULL;
 ALTER TABLE student drop age;
 
