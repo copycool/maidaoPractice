@@ -7,31 +7,33 @@ c. 录入学生成绩要分布合理， */
 
 /* 学生表 */
 CREATE TABLE IF NOT EXISTS `student`(
-`id`BIGINT(20) NOT NULL AUTO_INCREMENT;
-`name` varchar(20) not null COMMENT '姓名',
-`class` varchar(20) not null comment '班级',
+`id`BIGINT(20) NOT NULL AUTO_INCREMENT,
+`name` varchar(50) not null COMMENT '姓名',
+`class_no` INT(20) not null comment '班级号',
 `sno` varchar(20) not null comment '学号',
 PRIMARY KEY (`id`)
 )ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-insert INTO student(name,class,sno) VALUES('张三','一班','21101');
-insert INTO student(name,class,sno) VALUES('李四','一班','21102');
-insert INTO student(name,class,sno) VALUES('王五','一班','21103');
-insert INTO student(name,class,sno) VALUES('李冰冰','二班','21201');
-insert INTO student(name,class,sno) VALUES('张丽丽','二班','21202');
-insert INTO student(name,class,sno) VALUES('刘西西','二班','21203');
-insert INTO student(name,class,sno) VALUES('赵六','一班','21104');
-insert INTO student(name,class,sno) VALUES('苏七','一班','21105');
-insert INTO student(name,class,sno) VALUES('白落落','一班','21204');
-insert INTO student(name,class,sno) VALUES('沈蔓蔓','一班','21205');
+insert INTO student(name,class_no,sno) VALUES
+('张三','01','21101'),
+('李四','01','21102'),
+('王五','01','21103'),
+('赵六','01','21104'),
+('苏七','01','21105'),
+('李冰冰','02','21201'),
+('张丽丽','02','21202'),
+('刘西西','02','21203'),
+('白落落','02','21204'),
+('沈蔓蔓','02','21205');
  
 /*班级信息 */
 CREATE TABLE IF NOT EXISTS `class`(
 `id`BIGINT(20) NOT NULL AUTO_INCREMENT,
-`class` varchar(20) not null comment '班级',
+`class_no` INT(20) not null comment '班级号',
+`class` VARCHAR(20) not null comment '班级',
 PRIMARY KEY (`id`)
 )ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
-insert INTO class(class) VALUES('一班');
-insert INTO class(class) VALUES('二班');
+insert INTO class(class_no,class) VALUES(01,'一班');
+insert INTO class(class_no,class) VALUES(02,'二班');
 
 /* 课程信息 */
 create TABLE IF NOT EXISTS `course`(
@@ -59,7 +61,7 @@ PRIMARY KEY (`id`)
 
 insert INTO score(sno,name,cno,score)
 VALUES
-('21101','张三',01,67),
+('21101','张三',01,54),
 ('21101','张三',02,98),
 ('21101','张三',03,89),
 ('21101','张三',04,83),
@@ -72,7 +74,7 @@ VALUES
 ('21103','王五',01,65),
 ('21103','王五',02,74),
 ('21103','王五',03,90),
-('21103','王五',04,76),
+('21103','王五',04,45),
 
 ('21104','赵六',01,88),
 ('21104','赵六',02,90),
@@ -113,14 +115,16 @@ VALUES
 /* a. 修改录入错误的学生姓名、学生成绩(至少写 3 条)； */
 update score set name='张大大' where sno='21101';
 update student set name='张大大' where sno='21101';
-update score set chinese_score= 69 where sno='21101';
+update score set score= 69 where sno='21101'AND cno=01;
+
 /* a. 统计每门课的学生人数；  */
 SELECT cno '课程编号' ,COUNT(sno) '选课人数' FROM score group BY cno;
 /* b. 查询某一门课程不及格的学生信息；  */
 SELECT * from student where sno in(SELECT sno from score where cno=01 and score<60);
 /* c. 查询某一个学生的各科成绩*/
 select * from score where sno in(select sno from student where name="张三");
-/* d. 查询一个班级每个学生的总成绩，并按总成绩由高到低排序；  */
+/* d. 
+；  */
 SELECT name,SUM(score) from score where name IN
 (select name from student where class="一班") 
 GROUP by name 
@@ -128,7 +132,7 @@ ORDER BY SUM(score) desc;
 /* e. 查询每门课都大于 80 分的学生信息；  */
 SELECT * from student where sno in (select sno FROM score  as s GROUP BY s.sno Having MIN(s.score)>80 );
 /* f. 查询至少有一门课程不及格的学生信息；  */
-SELECT * from student where sno in (select sno FROM score  as s GROUP BY s.sno Having MIN(s.score)<60 );
+SELECT * from student where sno in (select sno FROM score  as s GROUP BY s.sno Having min(s.score)<60 );
 /* g. 查询某一门课各个班级的平均学生成绩，并按成绩由高到低排序；  */
 select cno,avg(score) from score group BY cno order BY avg(score) desc;
 /* h. 查询各科成绩最高分、最低分和平均分；  */
