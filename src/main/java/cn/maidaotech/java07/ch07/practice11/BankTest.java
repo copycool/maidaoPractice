@@ -27,10 +27,10 @@ public class BankTest {
 
         @Override
         public void run() {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10; i++) {
                 try {
-                    bank.remittance(account, 10);
-                    System.out.println(Thread.currentThread().getName()+"汇款10元");
+                    bank.withdraw(account, 100);
+                    System.out.println(Thread.currentThread().getName()+"汇款100元");
                     Thread.yield();
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
@@ -55,10 +55,10 @@ public class BankTest {
 
         @Override
         public void run() {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 10; i++) {
                 try {
-                    bank.remittance(account, 10);
-                    System.out.println(Thread.currentThread().getName()+"取款10元");
+                    bank.remittance(account, 100);
+                    System.out.println(Thread.currentThread().getName()+"取款100元");
                     Thread.yield();
                 } catch (Exception e) {
                     // TODO Auto-generated catch block
