@@ -5,18 +5,18 @@ package cn.maidaotech.java07.chapter4.question10;
 */
 public class PartitionSquare {
     public static void main(String[] args) {
-        int length=168;
-        int wide=64;
-        System.out.println("最大正方形边长是: "+square(length, wide)+"米"); 
-        
+        int length = 168;
+        int wide = 64;
+        System.out.println("最大正方形边长是: " + square(length, wide) + "米");
+
     }
 
     private static int square(int Length, int wide) {
-        if(Length % wide == 0) {
+        if (Length % wide == 0) {
             return wide;
-        } else{
+        } else {
             return square(wide, Length % wide);
         }
-        
+
     }
 }

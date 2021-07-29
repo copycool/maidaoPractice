@@ -20,7 +20,7 @@ public class PointTest {
         }
         System.out.println();
         System.out.println("按X排序后： ");
-        Point[] points=new Point[list.size()];
+        Point[] points = new Point[list.size()];
         list.toArray(points);
         Arrays.sort(points);
         for (Point p : points) {
@@ -32,7 +32,6 @@ public class PointTest {
         for (Point p : list) {
             System.out.print(p);
         }
-
 
     }
 }

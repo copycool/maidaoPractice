@@ -1,12 +1,14 @@
 package cn.maidaotech.java07.chapter3.question6;
 
-public class Student extends Person{
+public class Student extends Person {
     private Double mathEmatics;
     private Double chineseEmatics;
-    public Student(){
+
+    public Student() {
 
     }
-    public Student(String name,String address,String sex,Integer age,Double mathematics,Double chineseematics){
+
+    public Student(String name, String address, String sex, Integer age, Double mathematics, Double chineseematics) {
         super(name, address, sex, age);
         this.mathEmatics = mathematics;
         this.chineseEmatics = chineseematics;
@@ -35,10 +37,12 @@ public class Student extends Person{
     public double getChineseematics() {
         return chineseEmatics;
     }
+
     public static void main(String[] args) {
-        Student stu=new Student();
-        Student stu1=new Student("小明","河南","男",96,180.3,160.6);
+        Student stu = new Student();
+        Student stu1 = new Student("小明", "河南", "男", 96, 180.3, 160.6);
         System.out.println(stu.message());
-        System.out.println(stu1.message());;
+        System.out.println(stu1.message());
+        ;
     }
 }

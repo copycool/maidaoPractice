@@ -16,49 +16,34 @@ public class JudgeIntersection {
         list2.add(1);
         list2.add(3);
 
-        List<Integer> listIntersection  = list1.stream().filter(item->list2.contains(item)).collect(Collectors.toList());
-        list1.retainAll(list2) ;
-        System.out.println("交集"+listIntersection);
+        List<Integer> listIntersection = list1.stream().filter(item -> list2.contains(item))
+                .collect(Collectors.toList());
+        list1.retainAll(list2);
+        System.out.println("交集" + listIntersection);
 
-        List<Integer> list3 =list1.stream().collect(Collectors.toList());
-        List<Integer> list4 =list2.stream().collect(Collectors.toList());
+        List<Integer> list3 = list1.stream().collect(Collectors.toList());
+        List<Integer> list4 = list2.stream().collect(Collectors.toList());
         list3.addAll(list4);
         Set<Integer> set = list3.stream().collect(Collectors.toSet());
-        System.out.println("去重并集："+set);
+        System.out.println("去重并集：" + set);
 
-
-        //list2的差集
-        List<Integer> listIntersection1  = list1.stream().filter(item->!list2.contains(item)).collect(Collectors.toList());
+        // list2的差集
+        List<Integer> listIntersection1 = list1.stream().filter(item -> !list2.contains(item))
+                .collect(Collectors.toList());
         System.out.println(listIntersection1);
 
-
-         //list1的差集
-         List<Integer> listIntersection2  = list2.stream().filter(item->!list1.contains(item)).collect(Collectors.toList());
-         System.out.println(listIntersection2);
-         /*
-         {
-            list1 = initListA();
-            list2 = initListB();
-            list1.retainAll(list2);
-            System.out.println("交集：" + list1);
-        }
-        {
-            list1 = initListA();
-            list2 = initListB();
-            list1.removeAll(list2);
-            list1.addAll(list2);
-            Collections.sort(list1);
-            System.out.println("并集：" + list1);
-        }
-        {
-            list1 = initListA();
-            list2 = initListB();
-            list1.removeAll(list2);
-            System.out.println("差集：" + list1);
-        }
- */
- 
-
+        // list1的差集
+        List<Integer> listIntersection2 = list2.stream().filter(item -> !list1.contains(item))
+                .collect(Collectors.toList());
+        System.out.println(listIntersection2);
+        /*
+         * { list1 = initListA(); list2 = initListB(); list1.retainAll(list2);
+         * System.out.println("交集：" + list1); } { list1 = initListA(); list2 =
+         * initListB(); list1.removeAll(list2); list1.addAll(list2);
+         * Collections.sort(list1); System.out.println("并集：" + list1); } { list1 =
+         * initListA(); list2 = initListB(); list1.removeAll(list2);
+         * System.out.println("差集：" + list1); }
+         */
 
     }
 }

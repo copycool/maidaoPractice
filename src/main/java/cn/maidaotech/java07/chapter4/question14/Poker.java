@@ -1,4 +1,5 @@
 package cn.maidaotech.java07.chapter4.question14;
+
 /*
 模拟斗地主
 创建一副牌洗牌摸牌：
@@ -23,7 +24,7 @@ public class Poker {
         list.add("小王");
         System.out.println(list);
         System.out.println("洗牌");
-        Collections.shuffle(list);//随机排列语句
+        Collections.shuffle(list);// 随机排列语句
         System.out.println(list);
         List<String> a = new ArrayList<>();
         List<String> b = new ArrayList<>();
@@ -56,13 +57,13 @@ public class Poker {
     }
 
     public static void rob(List<String> list, List<String> a, List<String> b, List<String> c) {
-        int ran = ((int)(Math.random()*3));
+        int ran = ((int) (Math.random() * 3));
         System.out.println(ran);
 
         if (ran == 0) {
             a.addAll(list);
             System.out.println("a抢到地主");
-        } else if (ran ==1) {
+        } else if (ran == 1) {
             b.addAll(list);
             System.out.println("b抢到地主");
         } else {

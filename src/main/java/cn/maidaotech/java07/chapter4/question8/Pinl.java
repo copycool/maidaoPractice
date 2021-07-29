@@ -8,7 +8,7 @@ import java.util.Map;
 //读取个数不定的正整数，打印频率最高的，如果有多个一样的最高频率则都输出。
 public class Pinl {
     public static void main(String[] args) {
-        List<Integer> list =new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < 30; i++) {
             list.add((int) (Math.random() * 10));
@@ -24,7 +24,6 @@ public class Pinl {
             }
         }
         System.out.println(entry.getKey() + "出现了" + max + "次");
-        
 
     }
 }

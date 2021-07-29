@@ -7,8 +7,8 @@ import java.util.Set;
 public class SetExample {
     public static void main(String[] args) {
         Set<Integer> set = new HashSet<>(20);
-        while (set.size()<20){
-            set.add((int)(Math.random()*30));
+        while (set.size() < 20) {
+            set.add((int) (Math.random() * 30));
         }
 
         System.out.println(set);

@@ -5,7 +5,6 @@ import java.util.Map;
 
 import cn.maidaotech.java07.chapter4.question12.model.Account;
 
-
 public class AccountServiceImpl implements AccountService {
     private static Map<Integer, Account> map = null;
     {

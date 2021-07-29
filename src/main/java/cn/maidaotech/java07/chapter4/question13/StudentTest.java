@@ -14,7 +14,7 @@ public class StudentTest {
         for (Student s : list) {
             System.out.println(s);
         }
-   
+
         System.out.println("排序后");
         list.stream().sorted().map(Student::toString).forEach(System.out::println);
     }
