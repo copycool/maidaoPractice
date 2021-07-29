@@ -15,7 +15,8 @@ public class SimpleDaoImpl<T extends TableFields> extends OrmConnectHandlerImpl 
     }
 
     @Override
-    public T selectById(T t) throws SQLException, ClassNotFoundException, InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public T selectById(T t) throws SQLException, ClassNotFoundException, InvocationTargetException,
+            NoSuchMethodException, InstantiationException, IllegalAccessException {
         executeConnect(); // 待会通过动态代理调用
         StringBuilder builder = new StringBuilder();
         builder.append("select * from ");
@@ -53,11 +54,6 @@ public class SimpleDaoImpl<T extends TableFields> extends OrmConnectHandlerImpl 
 
     @Override
     public T queryOne(String sql) {
-        return null;
-    }
-
-    @Override
-    public List<T> query(String sql) {
         return null;
     }
 }

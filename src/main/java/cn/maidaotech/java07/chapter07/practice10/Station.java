@@ -3,24 +3,23 @@ package cn.maidaotech.java07.chapter07.practice10;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Station {
-    private static List<Ticket> tickets = new ArrayList<>();
+public class Station implements Runnable {
+    private List<Window> windows = new ArrayList<>();
 
-    public static void main(String[] args) {
-        new Thread(new Window(tickets), "窗口1").start();
-        new Thread(new Window(tickets), "窗口2").start();
-        new Thread(new Window(tickets), "窗口3").start();
-
+    @Override
+    public void run() {
+        windows.forEach(o -> new Thread(o).start());
     }
 
-    static {
-        initTicket();
+    public Station(List<Window> windows) {
+        this.windows = windows;
     }
 
-    static List<Ticket> initTicket() {
-        for (int i = 1; i <= 100; i++) {
-            tickets.add(new Ticket(i, "ticket" + i));
-        }
-        return tickets;
+    public List<Window> getWindows() {
+        return windows;
+    }
+
+    public void setWindows(List<Window> windows) {
+        this.windows = windows;
     }
 }

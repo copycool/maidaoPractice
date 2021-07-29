@@ -27,6 +27,6 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "票名： " + ticketName + ", 编号： " + ticketNumber;
+        return "票名： " + ticketName + "\t编号： " + ticketNumber;
     }
 }
