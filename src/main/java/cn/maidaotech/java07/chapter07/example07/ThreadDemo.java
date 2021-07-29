@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter07;
+package cn.maidaotech.java07.chapter07.example07;
 
 public class ThreadDemo extends Thread {
 

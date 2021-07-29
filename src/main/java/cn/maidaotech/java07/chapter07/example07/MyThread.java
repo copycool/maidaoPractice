@@ -1,13 +1,13 @@
-package cn.maidaotech.java07.chapter07;
+package cn.maidaotech.java07.chapter07.example07;
 
 public class MyThread extends Thread {
 
     @Override
     public void run() {
        try {
-        System.out.println("run threadName=" + this.currentThread().getName() + " begin=" + System.currentTimeMillis());
+        System.out.println("run threadName=" + Thread.currentThread().getName() + " begin=" + System.currentTimeMillis());
         Thread.sleep(2000);
-        System.out.println("run threadName=" + this.currentThread().getName() + " end=" + System.currentTimeMillis());
+        System.out.println("run threadName=" + Thread.currentThread().getName() + " end=" + System.currentTimeMillis());
        } catch (Exception e) {
            e.printStackTrace();
        }

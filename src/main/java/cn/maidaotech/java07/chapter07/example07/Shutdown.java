@@ -1,19 +1,13 @@
-package cn.maidaotech.java07.chapter07;
-
+package cn.maidaotech.java07.chapter07.example07;
 import java.util.concurrent.TimeUnit;
 
 public class Shutdown {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Runner r1 = new Runner();
         Thread countThread = new Thread(r1, "r1");
         countThread.start();
-        try {
-            TimeUnit.MILLISECONDS.sleep(100);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        
+        TimeUnit.MILLISECONDS.sleep(100);
         countThread.interrupt();
     }
     private static class Runner implements Runnable{
