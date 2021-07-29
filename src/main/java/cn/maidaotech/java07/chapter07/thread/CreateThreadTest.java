@@ -8,4 +8,15 @@ public class CreateThreadTest {
        // Thread.sleep(100);
         System.out.println("main"+Thread.currentThread().getName());
     }
+
+    public static class RunnableDemo implements Runnable{
+
+        @Override
+        public void run() {
+            // TODO Auto-generated method stub
+            System.out.println("111");
+        }
+        
+    }
+    
 }

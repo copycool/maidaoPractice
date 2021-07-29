@@ -1,4 +1,4 @@
-package cn.maidaotech.java07.chapter07.thread.waitNotify;
+package cn.maidaotech.java07.chapter07.waitNotify;
 
 public class WaitNotify {
     private static class MyThread1 extends Thread{
