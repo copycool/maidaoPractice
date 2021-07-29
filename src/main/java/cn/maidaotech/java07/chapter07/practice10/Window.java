@@ -36,9 +36,8 @@ public class Window implements Runnable {
                     .append(remain).append(" 张票。");
             System.out.println(buffer.toString());
             try {
-                Thread.currentThread().sleep(10);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }

@@ -8,7 +8,7 @@ public class Station implements Runnable {
 
     @Override
     public void run() {
-        windows.forEach(o -> new Thread(o).start());
+        windows.forEach(window -> new Thread(window).start());
     }
 
     public Station(List<Window> windows) {
