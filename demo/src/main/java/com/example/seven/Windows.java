@@ -4,14 +4,12 @@ public class Windows extends Thread{
     private static int ticket = 100;
     @Override
     public void run() {
-        while (true) {
-            if (ticket>0) {
-                System.out.println(getName()+"：卖票，剩"+ticket);
-                ticket--;
-            } else {
-                break;
+        synchronized(this){
+        while (ticket>0) {
+            System.out.println(getName()+"：卖票，剩"+ticket--);              
             }
         }
+    
     }
     public static void main(String[] args) {
         Windows t1 = new Windows();
