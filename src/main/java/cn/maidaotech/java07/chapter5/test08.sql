@@ -128,6 +128,9 @@ SELECT class_no FROM class_table s WHERE s.`class_name`='一班')) GROUP BY snum
 #查询每门课都大于80分的学生信息；select * from R inner join S on R.C=S.C;
 SELECT * FROM students WHERE snumber NOT IN(SELECT snumber FROM score WHERE scores<80);
 
+#查询至少有一门课程不及格的学生信息
+SELECT snumber,sname,gender FROM students WHERE snumber IN (SELECT snumber FROM score WHERE scores<60);
+
 SELECT * FROM score WHERE snumber = 2021004;
 
 #查询某一门课各个班级的平均学生成绩，并按成绩由高到低排序；
