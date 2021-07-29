@@ -11,7 +11,7 @@ public class Question08 {
 
        new Thread(new MyThread08(lockA,lockB),"T1").start();
        new Thread(new MyThread08(lockB,lockA),"T2").start();
-
+    }
 }
 
 /**
