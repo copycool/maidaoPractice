@@ -1,6 +1,5 @@
 package cn.maidaotech.java07.work.chapter07;
 
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -23,7 +22,36 @@ public class Question09 {
         new Thread(()->{
             data.printC();
         },"T3").start();
+        // printABC();
+    }
 
+    /**
+     * 方法二
+     * 
+     */
+    public static void printABC() {
+        Thread thread3 = new Thread(()->{
+            System.out.println("我是T3");
+        });
+        Thread thread2 = new Thread(() -> {
+            System.out.println("我是T2");
+            try {
+                thread3.start();
+                thread3.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+        Thread thread1 = new Thread(() -> {
+            System.out.println("我是T1");
+            try {
+                thread2.start();
+                thread2.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+       thread1.start();
     }
 }
 

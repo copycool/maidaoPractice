@@ -6,17 +6,12 @@ public class Question08 {
         /**
          * 方法一：
          */
-//        String lockA = "lockA";
-//        String lockB = "lockB";
-//
-//        new Thread(new MyThread08(lockA,lockB),"T1").start();
-//        new Thread(new MyThread08(lockB,lockA),"T2").start();
-        /**
-         * 方法二：
-         */
-        MyThread08_2 myThread08_2 = new MyThread08_2();
-        new Thread(myThread08_2).start();
-    }
+       String lockA = "lockA";
+       String lockB = "lockB";
+
+       new Thread(new MyThread08(lockA,lockB),"T1").start();
+       new Thread(new MyThread08(lockB,lockA),"T2").start();
+
 }
 
 /**
@@ -37,17 +32,7 @@ public class Question08 {
  *         - locked <0x00000000d60afdf8> (a java.lang.String)
  *         at java.lang.Thread.run(Thread.java:748)
  */
-class MyThread08_2 implements Runnable{
 
-    @Override
-    public void run() {
-        long  i = 0L;
-        while (true){
-            i++;
-            System.out.println(Thread.currentThread().getName()+"死循环ing===>"+i);
-        }
-    }
-}
 class MyThread08 implements Runnable{
     private String lockA;
     private String lockB;

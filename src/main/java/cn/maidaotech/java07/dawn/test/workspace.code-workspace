@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\.."
+		},
+		{
+			"name": "testjps",
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\ideaworkspace\\数据结构\\testjps"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"typescript.disableAutomaticTypeAcquisition": true,
+		"maven.view": "hierarchical"
+	}
+}

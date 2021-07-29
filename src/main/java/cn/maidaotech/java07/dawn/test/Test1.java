@@ -1,14 +1,13 @@
 package cn.maidaotech.java07.dawn.test;
 
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test1 {
     public static void main(String[] args) {
-        int result = test4();
-        System.out.println("result:" + result);
+        // int result = test4();
+        // System.out.println("result:" + result);
+        System.out.println("ni zhen bang");
     }
 
     public static int test4() {
