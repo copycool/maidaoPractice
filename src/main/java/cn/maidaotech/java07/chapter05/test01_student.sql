@@ -3,6 +3,7 @@ CREATE TABLE student(
 `id` INT(20) NOT NULL AUTO_INCREMENT,
 `first_name` VARCHAR(20) NOT NULL,
 `last_name` VARCHAR(20) NOT NULL,
+-- `sex` tinynit not null,
 `sex` VARCHAR(4) NOT NULL,
 `school` VARCHAR(50) NOT NULL,
 PRIMARY KEY (`id`)
@@ -32,8 +33,8 @@ SELECT DISTINCT sex FROM student;
 
 -- 如何根据first_name列降序地从表中返回所有记录？只返回前十条记录呢？第11到20条记录呢？
 SELECT *FROM student ORDER BY first_name ASC;
-SELECT *FROM student ORDER BY first_name ASC LIMIT 0,10;
-SELECT *FROM student ORDER BY first_name ASC LIMIT 10,10;
+SELECT *FROM student ORDER BY first_name Desc LIMIT 0,10;
+SELECT *FROM student ORDER BY first_name Desc LIMIT 10,10;
 
 -- 如何向表中插入新的记录？
 INSERT INTO student(first_name,last_name,sex,school) VALUES('Weilian','Wilson','男','浙江大学');
@@ -41,7 +42,7 @@ INSERT INTO student(first_name,last_name,sex,school) VALUES('Weilian','Wilson','
 -- 如何向表中的last_name列插入Wilson？
 INSERT INTO student(last_name) VALUE('Wilson');
 
--- 如何把表中last_name列的Peter改为Wilson？
+-- 如何把表中last_name列的Peter改为Wilson？  先通过名字返回id
 UPDATE student SET last_name='Wilson' WHERE id=10001;
 
 -- 如何在表中删除first_name等于Angela的记录？

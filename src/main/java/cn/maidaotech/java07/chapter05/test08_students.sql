@@ -131,10 +131,15 @@ SELECT snumber,sname,gender,class_name FROM (
 SELECT *FROM students INNER JOIN score USING (snumber)) ss 
 LEFT JOIN classes USING(class_no) GROUP BY sname HAVING MIN(scores)>80;
 
+SELECT snumber,sname,gender FROM students WHERE snumber NOT IN (SELECT snumber FROM score WHERE scores<80);
+
+
 -- 查询至少有一门课程不及格的学生信息；
 SELECT snumber,sname,gender,class_name FROM (
 SELECT *FROM students INNER JOIN score USING (snumber)) ss 
 LEFT JOIN classes USING(class_no) GROUP BY sname HAVING MIN(scores)<60;
+
+SELECT snumber,sname,gender FROM students WHERE snumber IN (SELECT snumber FROM score WHERE scores<60);
 
 
 -- 查询某一门课各个班级的平均学生成绩，并按成绩由高到低排序；
@@ -148,3 +153,5 @@ WHERE s.course_no=001 GROUP BY class_no ORDER BY AVG DESC;
 SELECT course_no,MAX(scores) FROM score GROUP BY course_no;
 SELECT course_no,MIN(scores) FROM score GROUP BY course_no;
 SELECT course_no,AVG(scores) FROM score GROUP BY course_no;
+
+
