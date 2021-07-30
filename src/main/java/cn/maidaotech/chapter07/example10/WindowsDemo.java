@@ -10,7 +10,7 @@ public class WindowsDemo {
         for (int i = 0; i < 100; i++) {
             tickets.add(new Ticket("车票" + (i + 1)));
         }
-        Platform test = new Platform(tickets);
+        //Platform test = new Platform(tickets);
         Thread t1 = new Thread(new Platform(tickets));
         Thread t2 = new Thread(new Platform(tickets));
         Thread t3 = new Thread(new Platform(tickets));
